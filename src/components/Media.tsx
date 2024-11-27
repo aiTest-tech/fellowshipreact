@@ -1,4 +1,7 @@
+import { useEffect, useState } from "react";
+
 const Media = () => {
+
     return (
         <>
             <section className="ourportfolio section-pt-110 section-pb-110">

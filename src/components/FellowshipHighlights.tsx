@@ -53,7 +53,7 @@ const FellowshipHighlights: React.FC = () => {
         //         </div>
         //     </div>
         // </section>
-        <section className="py-12 bg-gray-50 relative">
+        <section className="section-pt-110 section-pb-110 bg-[url('assets/img/illusion.png')] relative">
             <img
                 src="assets/img/frame1.png"
                 alt="shape"

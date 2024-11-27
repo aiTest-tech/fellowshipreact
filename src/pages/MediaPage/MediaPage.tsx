@@ -1,10 +1,52 @@
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
+import { useEffect, useState } from 'react';
 
 const MediaPage = () => {
+    const [scrollProgress, setScrollProgress] = useState(0);
+    const updateScrollProgress = () => {
+        // Get total scrollable height
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPosition = window.scrollY;
+
+        // Calculate the percentage of page scrolled
+        const progress = (scrollPosition / scrollHeight) * 100;
+
+        // Update state with the calculated progress
+        setScrollProgress(progress);
+    };
+
+    useEffect(() => {
+        // Initialize AOS for animations
+        // AOS.init();
+
+        // Add scroll event listener
+        window.addEventListener('scroll', updateScrollProgress);
+
+        // Clean up the event listener on component unmount
+        return () => {
+            window.removeEventListener('scroll', updateScrollProgress);
+        };
+    }, []);
     return (
         <>
-            <Navbar />
+            <div className="w-full fixed top-0 left-0 z-50">
+                <Navbar />
+            </div>
+            <div
+                style={{ width: `${scrollProgress}%` }}
+                className="fixed top-0 left-0 h-1 bg-orange-500 transition-all duration-200 ease-in-out z-50"
+            ></div>
+            <div className="relative mt-[140px] max-w-md:mt-[50px] font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
+                <img
+                    src="https://cmogujarat.gov.in/sites/default/files/2024-08/cm-fellowship.jpg"
+                    alt="Banner Image"
+                    className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="min-h-[350px] relative z-50 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
+                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">Gallary</h2>
+                </div>
+            </div>
             <main className='fix'>
                 <section className="ourportfolio section-pt-110 section-pb-110">
                     <div className="container">

@@ -1,6 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage/HomePage"
 import MediaPage from "./pages/MediaPage/MediaPage"
+import Faqs from "./pages/FAQS/Faqs"
+import ContactUs from "./ContactUs"
+import JoinUs from "./pages/JoinUs/JoinUs"
+import AcademicPartner from "./components/AcademicPartner"
+import MeetOurFellows from "./pages/MeetOurFellows/MeetOurFellows"
 function App() {
 
   return (
@@ -9,6 +14,11 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/media" element={<MediaPage />} />
+          <Route path="/faqs" element={<Faqs />} />
+          <Route path="/contactUs" element={<ContactUs />} />
+          <Route path="/joinus" element={<JoinUs />} />
+          <Route path="/academic-partner" element={<AcademicPartner />} />
+          <Route path="meet-our-fellows" element={<MeetOurFellows />} />
         </Routes>
       </BrowserRouter>
     </>

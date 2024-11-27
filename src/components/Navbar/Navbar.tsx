@@ -137,7 +137,7 @@ const Navbar = () => {
                         </ul> */}
                                             </li>
                                             <li className="">
-                                                <a href="meetfellow.html">Meet Our Fellows</a>
+                                                <NavLink to="meet-our-fellows">Meet Our Fellows</NavLink>
                                                 {/* <ul class="sub-menu">
                            <li><a href="#">Demography</a></li>
                            <li class="menu-item-has-children">
@@ -154,7 +154,7 @@ const Navbar = () => {
                         </ul> */}
                                             </li>
                                             <li className="">
-                                                <a href="academic.html">Academic Partner</a>
+                                                <NavLink to="/academic-partner">Academic Partner</NavLink>
                                                 {/* <ul class="sub-menu">
                            <li><a href="#">E-governance</a></li>
                            <li><a href="#">Education</a></li>
@@ -178,9 +178,9 @@ const Navbar = () => {
                            <li><a href="#">Major Industries</a></li>
                         </ul> */}
                                             </li>
-                                            <li className="menu-item-has-children">
-                                                <a href="joinus.html">Join Us</a>
-                                                <ul className="sub-menu">
+                                            <li className="">
+                                                <NavLink to="/joinUs">Join Us</NavLink>
+                                                {/* <ul className="sub-menu">
                                                     <li>
                                                         <a href="#">Why Join</a>
                                                     </li>
@@ -190,8 +190,11 @@ const Navbar = () => {
                                                     <li>
                                                         <a href="#">Selection Process </a>
                                                     </li>
-                                                </ul>
+                                                </ul> */}
                                             </li>
+                                            {/* <li>
+                                                <a href="">key heighlight point</a>
+                                            </li> */}
                                             <li className="">
                                                 <NavLink to={'/faqs'}>FAQ's</NavLink>
                                                 {/* <ul class="sub-menu">
@@ -201,7 +204,7 @@ const Navbar = () => {
                         </ul> */}
                                             </li>
                                             <li className="">
-                                                <a href="contactUs.html">Contact</a>
+                                                <NavLink to="/contactUs">Contact</NavLink>
                                             </li>
                                         </ul>
                                     </div>

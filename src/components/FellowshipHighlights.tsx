@@ -60,9 +60,16 @@ const FellowshipHighlights: React.FC = () => {
                 className="rotateme roate-event-bg"
             />
             <div className="max-w-6xl mx-auto px-4 relative z-40">
-                <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">
-                    Why Choose the Sardar Patel Fellowship?
-                </h2>
+                <div className="container py-3 ">
+                    <div className="row align-items-center">
+                        <div className="col-lg-12 col-md-12">
+                            <div className="section__title port_double">
+                                <h2 className="title">Why Choose the Sardar Patel Fellowship</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -72,7 +79,7 @@ const FellowshipHighlights: React.FC = () => {
 
                     <div className="bg-white p-6 rounded-lg shadow-lg">
                         <h3 className="text-xl font-bold text-gray-900 mb-4">Duration</h3>
-                        <p className="text-lg text-gray-700">2 years</p>
+                        <p className="text-lg text-gray-700">1 years</p>
                     </div>
 
                     <div className="bg-white p-6 rounded-lg shadow-lg">

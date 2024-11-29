@@ -9,7 +9,7 @@ const ContactCard = (props: ContactProps) => {
     return (
         <>
             <div className="relative mb-32 max-w-sm mx-auto mt-24">
-                <div className="rounded-lg overflow-hidden shadow-lg bg-gray-50 h-[200px]">
+                <div className="rounded-lg overflow-hidden shadow-lg bg-gray-50 h-[220px]">
                     <div className="absolute -mt-16 w-full flex justify-center">
                         <div className="w-[110px] h-[110px]  border-4 border-gray-200 rounded-md bg-[#0A4C7B]">
                             {/* <img

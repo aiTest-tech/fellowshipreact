@@ -6,6 +6,7 @@ import ContactUs from "./ContactUs"
 import JoinUs from "./pages/JoinUs/JoinUs"
 import AcademicPartner from "./components/AcademicPartner"
 import MeetOurFellows from "./pages/MeetOurFellows/MeetOurFellows"
+import About from "./pages/About"
 function App() {
 
   return (
@@ -18,7 +19,8 @@ function App() {
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/joinus" element={<JoinUs />} />
           <Route path="/academic-partner" element={<AcademicPartner />} />
-          <Route path="meet-our-fellows" element={<MeetOurFellows />} />
+          <Route path="/meet-our-fellows" element={<MeetOurFellows />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
     </>

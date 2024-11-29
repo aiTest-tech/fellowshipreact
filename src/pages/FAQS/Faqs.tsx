@@ -118,7 +118,7 @@ const Faq: React.FC = () => {
                     alt="Banner Image"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="min-h-[350px] relative z-50 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
+                <div className="min-h-[350px] relative z-40 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
                     <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">Frequently Asked Questions</h2>
                 </div>
             </div>

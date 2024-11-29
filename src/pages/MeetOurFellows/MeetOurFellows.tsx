@@ -4,6 +4,55 @@ import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css'; // ag-Grid styles
 import 'ag-grid-community/styles/ag-theme-alpine.css'; // ag-Grid theme styles
 import Footer from '../../components/Footer/Footer';
+import ProfileCard from '../../components/ProfileCard';
+
+
+const fellows = [
+    {
+        id: 1,
+        name: 'Rahul Sharma',
+        image: 'assets/img/profile/placeholder.jpg',
+        bio: 'Tech innovator with 5 years of experience in AI and machine learning.'
+    },
+    {
+        id: 2,
+        name: 'Priya Patel',
+        image: 'assets/img/profile/placeholder.jpg',
+        bio: 'Social entrepreneur focusing on sustainable development initiatives.'
+    },
+    // Add more fellows as needed
+];
+
+
+const FellowCard = ({ fellow }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    return (
+        <div
+            className="relative rounded-lg overflow-hidden shadow-lg"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            <div className="relative">
+                <img
+                    src={fellow.image}
+                    alt={fellow.name}
+                    className="w-full h-[400px] object-cover transition-transform duration-300 ease-in-out"
+                />
+
+                <div
+                    className={`absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center 
+                        transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+                >
+                    <div className="text-center p-6 text-white">
+                        <h3 className="text-2xl font-bold mb-3">{fellow.name}</h3>
+                        <p className="text-base">{fellow.bio}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 const MeetOurFellows = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
@@ -213,11 +262,11 @@ const MeetOurFellows = () => {
     const columns = [
         { headerName: 'ID', field: 'id', sortable: true, filter: true },
         { headerName: 'Dept Allocated', field: 'deptAllocated', sortable: true, filter: true },
-        { headerName: 'fullName', field: 'fullName', sortable: true, filter: true },
-        { headerName: 'age', field: 'age', sortable: true, filter: true },
-        { headerName: 'postGraduation', field: 'postGraduation', sortable: true, filter: true },
+        { headerName: 'Name', field: 'fullName', sortable: true, filter: true },
+        { headerName: 'Age', field: 'age', sortable: true, filter: true },
+        { headerName: 'Post Graduation', field: 'postGraduation', sortable: true, filter: true },
         { headerName: 'PG University', field: 'pgUniversity', sortable: true, filter: true },
-        { headerName: 'bachelorsDegree', field: 'bachelorsDegree', sortable: true, filter: true },
+        { headerName: 'Bachelors Degree', field: 'bachelorsDegree', sortable: true, filter: true },
         { headerName: 'UG University', field: 'ugUniversity', sortable: true, filter: true },
     ];
 
@@ -236,18 +285,18 @@ const MeetOurFellows = () => {
                 style={{ width: `${scrollProgress}%` }}
                 className="fixed top-0 left-0 h-1 bg-orange-500 transition-all duration-200 ease-in-out z-50"
             ></div>
-            <div className="relative mt-28 max-w-md:mt-12 font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
+            <div className="relative mt-[140px] max-w-md:mt-12 font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
                 <img
                     src="https://cmogujarat.gov.in/sites/default/files/2024-08/cm-fellowship.jpg"
                     alt="Banner Image"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="min-h-[350px] relative z-50 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
+                <div className="min-h-[350px] relative z-40 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
                     <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">Meet Our Fellows</h2>
                 </div>
             </div>
             <main className="fix">
-                <div className="container-fluid contact bg-light py-5 bg-[url('assets/img/illusion.png')]">
+                {/* <div className="container-fluid contact bg-light py-5 bg-[url('assets/img/illusion.png')]">
                     <div className="container mx-auto p-4">
                         <div className="ag-theme-alpine" style={{ width: '100%' }}>
                             <AgGridReact
@@ -257,6 +306,68 @@ const MeetOurFellows = () => {
                                 domLayout="autoHeight"
                             />
                         </div>
+                    </div>
+                </div> */}
+
+                <div className="flex justify-center items-center container my-3 bg-[url('assets/img/illusion.png')] w-[100vw]">
+                    {/* Grid Layout for Profile Cards */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8">
+                        <ProfileCard
+                            name="Mr. Aaron Rajesh Christian"
+                            jobTitle="UI Developer"
+                            department="Health and Family Welfare"
+                            linkedinUrl="https://www.linkedin.com/in/john-smith"
+                            imageUrl="assets/img/profile/placeholder.jpg"
+                        />
+                        <ProfileCard
+                            name="Sports, Youth and Cultural Activities"
+                            jobTitle="UX Designer"
+                            department="Sports, Youth and Cultural Activities"
+                            linkedinUrl="https://www.linkedin.com/in/jane-doe"
+                            imageUrl="assets/img/profile/placeholder.jpg"
+                        />
+                        <ProfileCard
+                            name="Ms. Apoorvi Garg"
+                            jobTitle="Front-end Developer"
+                            department="ICDS - Women & Child Development"
+                            linkedinUrl="https://www.linkedin.com/in/michael-johnson"
+                            imageUrl="assets/img/profile/placeholder.jpg"
+                        />
+                        <ProfileCard
+                            name="Mr. Bhavdeep Keshavlal Nakum"
+                            jobTitle="Project Manager"
+                            department="Forest & Environment"
+                            linkedinUrl="https://www.linkedin.com/in/sarah-williams"
+                            imageUrl="assets/img/profile/placeholder.jpg"
+                        />
+                        <ProfileCard
+                            name="Mr. Jatan S Bhanvadiya"
+                            jobTitle="Project Manager"
+                            department="Commissionerate of Rural Development"
+                            linkedinUrl="https://www.linkedin.com/in/sarah-williams"
+                            imageUrl="assets/img/profile/placeholder.jpg"
+                        />
+                        <ProfileCard
+                            name="Mr. Kapil Kantibhai Dayma"
+                            jobTitle="Project Manager"
+                            department="Planning Division- GAD"
+                            linkedinUrl="https://www.linkedin.com/in/sarah-williams"
+                            imageUrl="assets/img/profile/placeholder.jpg"
+                        />
+                        <ProfileCard
+                            name="Dr. Kuldeep Vaidebhai Malam"
+                            jobTitle="Project Manager"
+                            department="Agriculture"
+                            linkedinUrl="https://www.linkedin.com/in/sarah-williams"
+                            imageUrl="assets/img/profile/placeholder.jpg"
+                        />
+                        <ProfileCard
+                            name="Mr. Kunal  Apastamb"
+                            jobTitle="Project Manager"
+                            department="Chief Minister's Office"
+                            linkedinUrl="https://www.linkedin.com/in/sarah-williams"
+                            imageUrl="assets/img/profile/placeholder.jpg"
+                        />
                     </div>
                 </div>
             </main>

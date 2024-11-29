@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -16,10 +17,7 @@ const Footer = () => {
                                     </div>
                                     <div className="footer__content footer__content-two">
                                         <p>
-                                            Gujarat – The Land of the Legends, stands bordered by Pakistan
-                                            and Rajasthan in the north east, Madhya Pradesh in the east, and
-                                            Maharashtra and the Union territories of Diu, Daman, Dadra and
-                                            Nagar Haveli in the south.
+                                            Sardar Patel Institute of Public Administration (SPIPA) Opp ISRO, Satellite Road, Satellite, Ahmedabad-380 015
                                         </p>
                                     </div>
                                     <div className="footer__social footer__social-two">
@@ -50,26 +48,29 @@ const Footer = () => {
                             </div>
                             <div className="col-xl-3 col-lg-5 col-md-6 ">
                                 <div className="footer__widget">
-                                    <h4 className="footer__widget-title">About Gujarat</h4>
+                                    <h4 className="footer__widget-title">CM Fellowship</h4>
                                     <div className="footer__link footer__link-two">
                                         <ul className="list-wrap">
                                             <li>
-                                                <a href="javascript:;">Gujarat at Glance</a>
+                                                <NavLink to="/about">About Fellowship</NavLink>
                                             </li>
                                             <li>
-                                                <a href="javascript:;">History</a>
+                                                <NavLink to="/meet-our-fellows">Meet our fellows</NavLink>
                                             </li>
                                             <li>
-                                                <a href="javascript:;">Gujarat Fact File</a>
+                                                <NavLink to="/academic-partner">Academic Partner</NavLink>
                                             </li>
                                             <li>
-                                                <a href="javascript:;">Why Gujarat?</a>
+                                                <NavLink to="/media">Media</NavLink>
                                             </li>
                                             <li>
-                                                <a href="javascript:;">Gujarat Tourism</a>
+                                                <NavLink to="/joinUs">Join Us</NavLink>
                                             </li>
                                             <li>
-                                                <a href="javascript:;">Art &amp; Culture of Gujarat</a>
+                                                <NavLink to="/faqs">FAQS</NavLink>
+                                            </li>
+                                            <li>
+                                                <NavLink to="/contactUs">Contact Us</NavLink>
                                             </li>
                                         </ul>
                                     </div>
@@ -78,27 +79,27 @@ const Footer = () => {
                             <div className="col-xl-3 col-lg-3 col-md-6">
                                 <div className="footer__widget">
                                     <h4 className="footer__widget-title footer__widget-title-two">
-                                        Important Functionaries
+                                        Important Links
                                     </h4>
                                     <div className="footer__link footer__link-two">
                                         <ul className="list-wrap">
                                             <li>
-                                                <a href="javascript:;">Governor</a>
+                                                <a href="https://cmogujarat.gov.in/en" target='_blank'>CMO Gujarat</a>
                                             </li>
                                             <li>
-                                                <a href="javascript:;">Ministers</a>
+                                                <a href="https://spipa.gujarat.gov.in/home" target='_blank'>SPIPA </a>
                                             </li>
                                             <li>
-                                                <a href="javascript:;">Chief Secretary</a>
+                                                <a href="https://dst.gov.in/" target='_blank'>Department of Science and Technology</a>
                                             </li>
                                             <li>
-                                                <a href="javascript:;">Chief Justice</a>
+                                                <a href="https://www.iima.ac.in/" target='_blank'>IIM Ahmedabad</a>
                                             </li>
                                             <li>
-                                                <a href="javascript:;">Collectors</a>
+                                                <a href="https://www.niti.gov.in/" target='_blank'>Niti aayog</a>
                                             </li>
                                             <li>
-                                                <a href="javascript:;">DDO</a>
+                                                <a href="https://www.digitalindia.gov.in/" target='_blank'>Digital India</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -107,13 +108,11 @@ const Footer = () => {
                             <div className="col-xl-3 col-lg-3 col-md-6">
                                 <div className="footer__widget">
                                     <h4 className="footer__widget-title footer__widget-title-two">
-                                        Business
+                                        Programs
                                     </h4>
                                     <div className="footer__link footer__link-two">
                                         <ul className="list-wrap">
-                                            <li>
-                                                <a href="javascript:;">The Investment Destination</a>
-                                            </li>
+
                                             <li>
                                                 <a href="javascript:;">Infrastructure</a>
                                             </li>

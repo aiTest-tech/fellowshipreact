@@ -38,7 +38,7 @@ const AcademicPartner = () => {
                 style={{ width: `${scrollProgress}%` }}
                 className="fixed top-0 left-0 h-1 bg-orange-500 transition-all duration-200 ease-in-out z-50"
             ></div>
-            <div className="relative mt-[140px] max-w-md:mt-[50px] font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
+            {/* <div className="relative mt-[140px] max-w-md:mt-[50px] font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
                 <img
                     src="https://cmogujarat.gov.in/sites/default/files/2024-08/cm-fellowship.jpg"
                     alt="Banner Image"
@@ -47,8 +47,8 @@ const AcademicPartner = () => {
                 <div className="min-h-[350px] relative z-50 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
                     <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">Academic Paetner</h2>
                 </div>
-            </div>
-            <main className="fix">
+            </div> */}
+            <main className="fix mt-[140px]">
                 <div className="min-h-screen bg-[url('assets/img/illusion.png')] py-10">
                     <div className="container py-3 ">
                         <div className="row align-items-center">
@@ -68,7 +68,7 @@ const AcademicPartner = () => {
                                     alt="Banner Image"
                                     className="absolute inset-0 w-full h-full object-cover"
                                 />
-                                <div className="min-h-[350px] relative z-50 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
+                                <div className="min-h-[350px] relative z-40 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
                                     <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">IIM-A Role in Fellowship Program</h2>
                                 </div>
                             </div>

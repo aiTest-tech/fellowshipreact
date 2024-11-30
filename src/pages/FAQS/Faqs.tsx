@@ -40,7 +40,7 @@ const faqData: FaqItem[] = [
     },
     {
         question: "How Many Fellows will be selected?",
-        answer: "20 fellows will be appointed at the end of the selection process in the fellowship programme, however, the actual need will be determined over time."
+        answer: "Upto 20 fellows will be appointed at the end of the selection process in the fellowship programme, however, the actual need will be determined over time."
     },
     {
         question: "What will be the Stipend paid to the Fellows?",

@@ -83,9 +83,9 @@ const AcademicPartner = () => {
 
                                     {/* List of Responsibilities */}
                                     <div className="space-y-4">
-                                        <div className="bg-gray-50 p-4 rounded-lg shadow-md">
+                                        {/* <div className="bg-gray-50 p-4 rounded-lg shadow-md">
                                             <h2 className="text-2xl font-semibold">• Evaluation of Personal Statement by IIM-A</h2>
-                                        </div>
+                                        </div> */}
 
                                         <div className="bg-gray-50 p-4 rounded-lg shadow-md">
                                             <h2 className="text-2xl font-semibold">• Concurrent Selection & Recommendation Committee (SRC):</h2>
@@ -119,12 +119,12 @@ const AcademicPartner = () => {
                                     </div>
 
                                     {/* Faculty Section */}
-                                    <div className="bg-white p-6 rounded-lg shadow-md mt-8">
+                                    {/* <div className="bg-white p-6 rounded-lg shadow-md mt-8">
                                         <h2 className="text-2xl font-semibold">Faculty Resources</h2>
                                         <p className="mt-2 text-lg">
                                             Prof Satish Deodhar is the Dean (Faculty) and Professor of Economics at IIM-A. He has a Bachelor's and a Master's in Economics from the Gokhale Institute of Politics and Economics, and a PhD in Agricultural Economics from The Ohio State University. He is the recipient of the Outstanding PhD Dissertation Award from the Food Distribution Research Society, USA.
                                         </p>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

@@ -30,8 +30,10 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
 
                     {/* Department and LinkedIn Icons */}
                     <div className="absolute bottom-0 left-0 w-full bg-[#0A4C7B] p-3 flex justify-between items-center z-20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                        <div className="flex justify-start items-center">
-                            <p className="font-medium text-white font-serif text-xl">{department}</p>
+                        {/* <div className="flex justify-start items-center bg-yellow-400"> */}
+                        <div className="">
+                            <h1 className="font-medium text-white font-serif text-sm">{department}</h1>
+                            <p className='text-[14px] text-white font-extrabold'>{name}</p>
                         </div>
                         <div className="flex justify-end items-center">
                             <a

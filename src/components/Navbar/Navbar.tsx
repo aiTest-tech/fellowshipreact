@@ -106,9 +106,9 @@
 //                                             <li className="">
 //                                                 <NavLink to="/academic-partner">Academic Partner</NavLink>
 //                                             </li>
-//                                             <li className="">
-//                                                 <NavLink to={'/media'}>Media</NavLink>
-//                                             </li>
+                                            // <li className="">
+                                            //     <NavLink to={'/media'}>Media</NavLink>
+                                            // </li>
 //                                             <li className="">
 //                                                 <NavLink to="/joinUs">Join Us</NavLink>
 //                                             </li>
@@ -445,6 +445,11 @@ const Navbar = () => {
                                         <li>
                                             <NavLink to="/academic-partner" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}>
                                                 Academic Partner
+                                            </NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink to="/media" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}>
+                                                Media
                                             </NavLink>
                                         </li>
                                         <li>

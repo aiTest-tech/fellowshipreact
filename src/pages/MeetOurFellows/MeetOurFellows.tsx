@@ -319,13 +319,13 @@ const MeetOurFellows = () => {
                             linkedinUrl="https://www.linkedin.com/in/john-smith"
                             imageUrl="assets/img/profile/placeholder.jpg"
                         />
-                        <ProfileCard
+                        {/* <ProfileCard
                             name="Sports, Youth and Cultural Activities"
                             jobTitle="UX Designer"
                             department="Sports, Youth and Cultural Activities"
                             linkedinUrl="https://www.linkedin.com/in/jane-doe"
                             imageUrl="assets/img/profile/placeholder.jpg"
-                        />
+                        /> */}
                         <ProfileCard
                             name="Ms. Apoorvi Garg"
                             jobTitle="Front-end Developer"
@@ -359,6 +359,13 @@ const MeetOurFellows = () => {
                             jobTitle="Project Manager"
                             department="Agriculture"
                             linkedinUrl="https://www.linkedin.com/in/sarah-williams"
+                            imageUrl="assets/img/profile/placeholder.jpg"
+                        />
+                        <ProfileCard
+                            name="Ms. Apoorvi Garg"
+                            jobTitle="Front-end Developer"
+                            department="ICDS - Women & Child Development"
+                            linkedinUrl="https://www.linkedin.com/in/michael-johnson"
                             imageUrl="assets/img/profile/placeholder.jpg"
                         />
                         <ProfileCard

@@ -15,6 +15,7 @@ import MediaPage from '../MediaPage/MediaPage';
 import Media from '../../components/Media';
 import AcademicPartner from '../../components/AcademicPartner';
 import FellowshipHighlights from '../../components/FellowshipHighlights';
+import ScrollToTopButton from '../../components/ScrollToTopButton';
 
 
 const HomePage = () => {
@@ -162,7 +163,7 @@ const HomePage = () => {
                 </section>
                 <FellowshipHighlights />
                 {/* <AcademicPartner /> */}
-                <div className="min-h-screen bg-[url('assets/img/illusion.png')] py-10">
+                <div className="bg-[url('assets/img/illusion.png')] py-10">
                     <div className="container py-3 ">
                         <div className="row align-items-center">
                             <div className="col-lg-12 col-md-12">
@@ -203,7 +204,7 @@ const HomePage = () => {
                     
                 </div> */}
                     <div className="col-lg-12">
-                        <div className="container py-3 ">
+                        <div className="container py-3">
                             <div className="row align-items-center">
                                 <div className="col-lg-12 col-md-12">
                                     <div className="section__title port_double">
@@ -247,27 +248,8 @@ const HomePage = () => {
 
                 </section>
                 <Media />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                {/* <h1>How are you brijesh</h1> */}
+                {/* <ScrollToTopButton /> */}
             </main>
             <div className='mt-[140px]'>
                 <Footer />

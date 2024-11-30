@@ -68,7 +68,7 @@ const ContactUs = () => {
                         <div className="row g-5">
                             <ContactCard h1="Address" para="Administrative Reforms & Training Division, General Administration Department,Govt. of Gujarat. Block No. 7, 1st Floor, New Sachivalaya,Gandhinagar, Gujarat" icon={<GiWorld color="white" className="w-[100px] h-[100px]" />} />
                             <ContactCard h1="Email" para="edpspipa@gmail.com" icon={<CgMail color="white" className="w-[100px] h-[100px]" />} />
-                            <ContactCard h1="Phone" para="079-26919900" icon={<FaPhone color="white" className="w-[100px] h-[100px]" />} />
+                            <ContactCard h1="Phone" para="079-23250333" icon={<FaPhone color="white" className="w-[100px] h-[100px]" />} />
 
 
                             <div

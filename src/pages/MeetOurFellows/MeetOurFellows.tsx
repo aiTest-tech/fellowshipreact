@@ -7,21 +7,21 @@ import Footer from '../../components/Footer/Footer';
 import ProfileCard from '../../components/ProfileCard';
 
 
-const fellows = [
-    {
-        id: 1,
-        name: 'Rahul Sharma',
-        image: 'assets/img/profile/placeholder.jpg',
-        bio: 'Tech innovator with 5 years of experience in AI and machine learning.'
-    },
-    {
-        id: 2,
-        name: 'Priya Patel',
-        image: 'assets/img/profile/placeholder.jpg',
-        bio: 'Social entrepreneur focusing on sustainable development initiatives.'
-    },
-    // Add more fellows as needed
-];
+// const fellows = [
+//     {
+//         id: 1,
+//         name: 'Rahul Sharma',
+//         image: 'assets/img/profile/placeholder.jpg',
+//         bio: 'Tech innovator with 5 years of experience in AI and machine learning.'
+//     },
+//     {
+//         id: 2,
+//         name: 'Priya Patel',
+//         image: 'assets/img/profile/placeholder.jpg',
+//         bio: 'Social entrepreneur focusing on sustainable development initiatives.'
+//     },
+//     // Add more fellows as needed
+// ];
 
 
 const FellowCard = ({ fellow }) => {
@@ -82,6 +82,9 @@ const MeetOurFellows = () => {
         pgUniversity: string;
         bachelorsDegree: string;
         ugUniversity: string;
+        linkedinUrl: string;
+        imgUrl: string;
+
     }
 
     // Sample data
@@ -94,7 +97,9 @@ const MeetOurFellows = () => {
             "postGraduation": "MBA",
             "pgUniversity": "IIT Madras",
             "bachelorsDegree": "B.Com",
-            "ugUniversity": "Ahmedabad University"
+            "ugUniversity": "Ahmedabad University",
+            "linkedinUrl": "https://www.linkedin.com/in/aaronch687/",
+            "imgUrl": "https://media.licdn.com/dms/image/v2/D4D03AQHbrvGjj1_SzQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1710917912446?e=2147483647&v=beta&t=YAQXrRCR7uFVV_-YmkHoxPvNNTbzwCszGH8LWAAYqcE"
         },
         {
             "id": 2,
@@ -104,7 +109,9 @@ const MeetOurFellows = () => {
             "postGraduation": "MBA Marketing",
             "pgUniversity": "N.R. Institute of Business Management,GLS Univeris",
             "bachelorsDegree": "BE Computer",
-            "ugUniversity": "Silver Oak College of Engineering and Technology"
+            "ugUniversity": "Silver Oak College of Engineering and Technology",
+            "linkedinUrl": "",
+            "imgUrl": "assets/img/profile/placeholder.jpg"
         },
         {
             "id": 3,
@@ -114,7 +121,9 @@ const MeetOurFellows = () => {
             "postGraduation": "Masters of Arts",
             "pgUniversity": "Tata Institute of Social Sciences Mumbai",
             "bachelorsDegree": "B.Tech",
-            "ugUniversity": "Kalinga Institute of Industrial Technology "
+            "ugUniversity": "Kalinga Institute of Industrial Technology ",
+            "linkedinUrl": "https://www.linkedin.com/in/aman-anand-199b179a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "imgUrl": "assets/img/profile/placeholder.jpg"
         },
         {
             "id": 4,
@@ -124,7 +133,9 @@ const MeetOurFellows = () => {
             "postGraduation": "PGDM",
             "pgUniversity": "Entrepreneurship Development Institute of India",
             "bachelorsDegree": "BBA",
-            "ugUniversity": "Ahmedabad University"
+            "ugUniversity": "Ahmedabad University",
+            "linkedinUrl": "http://linkedin.com/in/apoorvigarg26",
+            "imgUrl": "assets/img/profile/placeholder.jpg"
         },
         {
             "id": 5,
@@ -134,7 +145,9 @@ const MeetOurFellows = () => {
             "postGraduation": "MTech Part of Integrated Dual Degree program",
             "pgUniversity": "IIT-BHU Varanasi",
             "bachelorsDegree": "B.Tech",
-            "ugUniversity": "IIT BHU Varanasi"
+            "ugUniversity": "IIT BHU Varanasi",
+            "linkedinUrl": "http://www.linkedin.com/in/ashutoshjalan",
+            "imgUrl": "https://media.licdn.com/dms/image/v2/D5603AQFTmJX8NKdjTw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1719082984939?e=1738800000&v=beta&t=J0X3tJ44Z_vLUNFOkeTC3_QSe1E-kMjnUsd3lPLgObU"
         },
         {
             "id": 6,
@@ -144,7 +157,9 @@ const MeetOurFellows = () => {
             "postGraduation": "M.TECH Mechanical Engineering",
             "pgUniversity": "IIT-RAM",
             "bachelorsDegree": "B.E. Mechanical ",
-            "ugUniversity": "Gujarat Technological University"
+            "ugUniversity": "Gujarat Technological University",
+            "linkedinUrl": "https://www.linkedin.com/in/bhavdeep-nakum-7831b859?trk=contact-info",
+            "imgUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFfoRJ7n2arGg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1709878850672?e=1738800000&v=beta&t=BezLR2JIFxi_jW6rc8wl33PJoO9BDeOYOqSLDVDlb-8"
         },
         {
             "id": 7,
@@ -154,7 +169,9 @@ const MeetOurFellows = () => {
             "postGraduation": "M.A in Political Science",
             "pgUniversity": "University of Delhi",
             "bachelorsDegree": "B.A Hons in Political Science",
-            "ugUniversity": "The Maharaja Sayajirao University of Baroda"
+            "ugUniversity": "The Maharaja Sayajirao University of Baroda",
+            "linkedinUrl": "https://www.linkedin.com/in/jatan-bhanvadiya-a596991a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "imgUrl": "https://media.licdn.com/dms/image/v2/C5603AQHOQqJKjLrBng/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1588234424032?e=1738800000&v=beta&t=knkF10YHgKrE7r5q_FcSe2r1jEEmnaMWp_TRXTxK694"
         },
         {
             "id": 8,
@@ -164,7 +181,9 @@ const MeetOurFellows = () => {
             "postGraduation": "M.Tech Industrial Engineering",
             "pgUniversity": "Indian Institute of Technology, Kanpur",
             "bachelorsDegree": "B.E. Mechanical ",
-            "ugUniversity": "Gujarat Technological University"
+            "ugUniversity": "Gujarat Technological University",
+            "linkedinUrl": "https://www.linkedin.com/in/dr-kuldeep-malam-3757aa13b",
+            "imgUrl": "https://media.licdn.com/dms/image/v2/C5603AQGy2DWCkrqUCg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1522288707951?e=2147483647&v=beta&t=KsorsbZ56Wzw8Lal8vFIbJhIZ4eWVsaIgHC7qvdWMvk"
         },
         {
             "id": 9,
@@ -174,7 +193,9 @@ const MeetOurFellows = () => {
             "postGraduation": "M.Sc. Agriculture Agronomy",
             "pgUniversity": "Junagadh Agricultural University",
             "bachelorsDegree": "B.Sc. Hons. Agriculture",
-            "ugUniversity": "Junagadh Agricultural University"
+            "ugUniversity": "Junagadh Agricultural University",
+            "linkedinUrl": "https://www.linkedin.com/in/dr-kuldeep-malam-3757aa13b",
+            "imgUrl": "https://media.licdn.com/dms/image/v2/D4E03AQEFkT-hhdOS5Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720802257491?e=1738800000&v=beta&t=fFXYqk0ViACGtzQRD6lq5xTbZranpUCHNnPEe7X3Td0"
         },
         {
             "id": 10,
@@ -184,7 +205,9 @@ const MeetOurFellows = () => {
             "postGraduation": "MSc Behavioural and Economic Science",
             "pgUniversity": "University of Warwick United Kingdom",
             "bachelorsDegree": "BSc Economics Honours",
-            "ugUniversity": "Symbiosis School of Economics"
+            "ugUniversity": "Symbiosis School of Economics",
+            "linkedinUrl": "https://www.linkedin.com/in/kunalha/",
+            "imgUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFvCsqaWM21nQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1691348366602?e=1738800000&v=beta&t=yvp0Ea2zR6M8CkpeX6Fi6dN6E0FdFg1JJEv4Sa_6o6E"
         },
         {
             "id": 11,
@@ -194,7 +217,9 @@ const MeetOurFellows = () => {
             "postGraduation": "Water Resources Management",
             "pgUniversity": "Gujarat Technological University",
             "bachelorsDegree": "B.E Civil ",
-            "ugUniversity": "Gujarat Technological University"
+            "ugUniversity": "Gujarat Technological University",
+            "linkedinUrl": "https://www.linkedin.com/in/rupal-budhbhatti-003a7b72?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "imgUrl": "assets/img/profile/placeholder.jpg"
         },
         {
             "id": 12,
@@ -204,7 +229,9 @@ const MeetOurFellows = () => {
             "postGraduation": "Master of Planning MPL",
             "pgUniversity": "University of Southern California USC",
             "bachelorsDegree": "Bachelor of Planning ",
-            "ugUniversity": "CEPT University, Ahmedabad"
+            "ugUniversity": "CEPT University, Ahmedabad",
+            "linkedinUrl": "https://www.linkedin.com/in/saumya-lathia-24883891",
+            "imgUrl": "assets/img/profile/placeholder.jpg"
         },
         {
             "id": 13,
@@ -214,7 +241,9 @@ const MeetOurFellows = () => {
             "postGraduation": "MSc Water Science and Policy",
             "pgUniversity": "SHIV NADAR UNIVERSITY",
             "bachelorsDegree": "BSc Agriculture",
-            "ugUniversity": "SRI DEV SUMAN"
+            "ugUniversity": "SRI DEV SUMAN",
+            "linkedinUrl": "https://www.linkedin.com/in/shruti-singh-80b5a5168?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            "imgUrl": "assets/img/profile/placeholder.jpg"
         },
         {
             "id": 14,
@@ -224,7 +253,9 @@ const MeetOurFellows = () => {
             "postGraduation": "MA Society and Culture",
             "pgUniversity": "IIT Gandhinagar",
             "bachelorsDegree": "BA Journalism",
-            "ugUniversity": "Bangalore University"
+            "ugUniversity": "Bangalore University",
+            "linkedinUrl": "https://www.linkedin.com/in/tusharmeshram88",
+            "imgUrl": "https://media.licdn.com/dms/image/v2/C5103AQH0XuAdWMxb8A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1558092310903?e=1738800000&v=beta&t=wnb-JOomqhPlfWaNZEn21tCoyODE91dQvcWsSJlxEwo"
         },
         {
             "id": 15,
@@ -234,7 +265,9 @@ const MeetOurFellows = () => {
             "postGraduation": "ME Electrical",
             "pgUniversity": "Gujarat Technological University",
             "bachelorsDegree": "B.Tech Electrical",
-            "ugUniversity": "Gujarat Technological University"
+            "ugUniversity": "Gujarat Technological University",
+            "linkedinUrl": "https://www.linkedin.com/in/ajaj-shaikh-246231134",
+            "imgUrl": "https://media.licdn.com/dms/image/v2/D4D03AQG3-Q0b2P42eQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1682439173222?e=1738800000&v=beta&t=X8VP9iwWR4BAyAXPuK2QjXHclDRWJCoPubK3U8vS5-w"
         },
         {
             "id": 16,
@@ -244,7 +277,9 @@ const MeetOurFellows = () => {
             "postGraduation": "ME Computer Science",
             "pgUniversity": "Gujarat Technological University",
             "bachelorsDegree": "BE Computer",
-            "ugUniversity": "Gujarat Technological University"
+            "ugUniversity": "Gujarat Technological University",
+            "linkedinUrl": "https://in.linkedin.com/in/deep-patel-66410636",
+            "imgUrl": "https://media.licdn.com/dms/image/v2/D5603AQFyj_2tEXzbsg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1713603615326?e=1738800000&v=beta&t=DmE9FLFI1W0H6gXJoxkOircRUI7Qs0JpkhwUbtUZ59Y"
         },
         {
             "id": 17,
@@ -254,7 +289,9 @@ const MeetOurFellows = () => {
             "postGraduation": "M.Pharm",
             "pgUniversity": "Institute of Life Sciences, Ahmedabad",
             "bachelorsDegree": "B.Pharm",
-            "ugUniversity": "N M Padaliya Pharmacy College"
+            "ugUniversity": "N M Padaliya Pharmacy College",
+            "linkedinUrl": "https://www.linkedin.com/in/parag-patel-64228529?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            "imgUrl": "https://media.licdn.com/dms/image/v2/D5603AQEeBZDL_7lQ6w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730363825365?e=1738800000&v=beta&t=HpfKFisgjpF1Yso0R9c8LsRsXa1Ery6WrlXO9Zx_ugU"
         }
     ];
 
@@ -268,6 +305,8 @@ const MeetOurFellows = () => {
         { headerName: 'PG University', field: 'pgUniversity', sortable: true, filter: true },
         { headerName: 'Bachelors Degree', field: 'bachelorsDegree', sortable: true, filter: true },
         { headerName: 'UG University', field: 'ugUniversity', sortable: true, filter: true },
+        { headerName: 'linkedinUrl', field: 'linkedinUrl', sortable: true, filter: true },
+        { headerName: 'imgUrl', field: 'imgUrl', sortable: true, filter: true },
     ];
 
     // Grid options for ag-Grid
@@ -296,85 +335,23 @@ const MeetOurFellows = () => {
                 </div>
             </div>
             <main className="fix">
-                {/* <div className="container-fluid contact bg-light py-5 bg-[url('assets/img/illusion.png')]">
-                    <div className="container mx-auto p-4">
-                        <div className="ag-theme-alpine" style={{ width: '100%' }}>
-                            <AgGridReact
-                                gridOptions={gridOptions}
-                                rowData={initialData}
-                                columnDefs={columns}
-                                domLayout="autoHeight"
-                            />
-                        </div>
-                    </div>
-                </div> */}
+
 
                 <div className="flex justify-center items-center container my-3 bg-[url('assets/img/illusion.png')] w-[100vw]">
                     {/* Grid Layout for Profile Cards */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8">
-                        <ProfileCard
-                            name="Mr. Aaron Rajesh Christian"
-                            jobTitle="UI Developer"
-                            department="Health and Family Welfare"
-                            linkedinUrl="https://www.linkedin.com/in/john-smith"
-                            imageUrl="assets/img/profile/placeholder.jpg"
-                        />
-                        {/* <ProfileCard
-                            name="Sports, Youth and Cultural Activities"
-                            jobTitle="UX Designer"
-                            department="Sports, Youth and Cultural Activities"
-                            linkedinUrl="https://www.linkedin.com/in/jane-doe"
-                            imageUrl="assets/img/profile/placeholder.jpg"
-                        /> */}
-                        <ProfileCard
-                            name="Ms. Apoorvi Garg"
-                            jobTitle="Front-end Developer"
-                            department="ICDS - Women & Child Development"
-                            linkedinUrl="https://www.linkedin.com/in/michael-johnson"
-                            imageUrl="assets/img/profile/placeholder.jpg"
-                        />
-                        <ProfileCard
-                            name="Mr. Bhavdeep Keshavlal Nakum"
-                            jobTitle="Project Manager"
-                            department="Forest & Environment"
-                            linkedinUrl="https://www.linkedin.com/in/sarah-williams"
-                            imageUrl="assets/img/profile/placeholder.jpg"
-                        />
-                        <ProfileCard
-                            name="Mr. Jatan S Bhanvadiya"
-                            jobTitle="Project Manager"
-                            department="Commissionerate of Rural Development"
-                            linkedinUrl="https://www.linkedin.com/in/sarah-williams"
-                            imageUrl="assets/img/profile/placeholder.jpg"
-                        />
-                        <ProfileCard
-                            name="Mr. Kapil Kantibhai Dayma"
-                            jobTitle="Project Manager"
-                            department="Planning Division- GAD"
-                            linkedinUrl="https://www.linkedin.com/in/sarah-williams"
-                            imageUrl="assets/img/profile/placeholder.jpg"
-                        />
-                        <ProfileCard
-                            name="Dr. Kuldeep Vaidebhai Malam"
-                            jobTitle="Project Manager"
-                            department="Agriculture"
-                            linkedinUrl="https://www.linkedin.com/in/sarah-williams"
-                            imageUrl="assets/img/profile/placeholder.jpg"
-                        />
-                        <ProfileCard
-                            name="Ms. Apoorvi Garg"
-                            jobTitle="Front-end Developer"
-                            department="ICDS - Women & Child Development"
-                            linkedinUrl="https://www.linkedin.com/in/michael-johnson"
-                            imageUrl="assets/img/profile/placeholder.jpg"
-                        />
-                        <ProfileCard
-                            name="Mr. Kunal  Apastamb"
-                            jobTitle="Project Manager"
-                            department="Chief Minister's Office"
-                            linkedinUrl="https://www.linkedin.com/in/sarah-williams"
-                            imageUrl="assets/img/profile/placeholder.jpg"
-                        />
+                        {
+                            initialData.map((item, index) => (
+                                <>
+                                    <ProfileCard
+                                        name={item.fullName}
+                                        department={item.deptAllocated}
+                                        linkedinUrl={item.linkedinUrl}
+                                        imageUrl={item.imgUrl}
+                                    />
+                                </>
+                            ))
+                        }
                     </div>
                 </div>
             </main>

@@ -1,5 +1,6 @@
 // src/components/LatestNews.tsx
 import React from "react";
+import { useDispatch, useSelector } from 'react-redux';
 
 // Define the structure for each news item
 interface NewsCard {
@@ -31,6 +32,7 @@ const newsData: NewsCard[] = [
 ];
 
 const FellowshipHighlights: React.FC = () => {
+    const language = useSelector((state: RootState) => state.language.language);
     return (
         // <section className="news section-pt-110 section-pb-110">
         //     <img
@@ -64,7 +66,18 @@ const FellowshipHighlights: React.FC = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-12 col-md-12">
                             <div className="section__title port_double">
-                                <h2 className="title">Why Choose the Sardar Patel Fellowship</h2>
+                                {
+                                    language === 'English' ? (
+                                        <>
+                                            <h2 className="title">Why Choose the Sardar Patel Fellowship</h2>
+                                        </>
+                                    ) :
+                                        (
+                                            <>
+                                                <h2 className="title">શા માટે સરદાર પટેલ ફેલોશિપ પસંદ કરો</h2>
+                                            </>
+                                        )
+                                }
                             </div>
                         </div>
                     </div>

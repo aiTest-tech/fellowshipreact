@@ -99,7 +99,7 @@ const MeetOurFellows = () => {
             "bachelorsDegree": "B.Com",
             "ugUniversity": "Ahmedabad University",
             "linkedinUrl": "https://www.linkedin.com/in/aaronch687/",
-            "imgUrl": "https://media.licdn.com/dms/image/v2/D4D03AQHbrvGjj1_SzQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1710917912446?e=2147483647&v=beta&t=YAQXrRCR7uFVV_-YmkHoxPvNNTbzwCszGH8LWAAYqcE"
+            "imgUrl": "https://media.licdn.com/dms/image/v2/D4D03AQHbrvGjj1_SzQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1710917912446?e=1738800000&v=beta&t=PXurdVuHHjsMlSdoA1pOyR_5-nCd5d_gzTGytqCU0J0"
         },
         {
             "id": 2,
@@ -123,7 +123,7 @@ const MeetOurFellows = () => {
             "bachelorsDegree": "B.Tech",
             "ugUniversity": "Kalinga Institute of Industrial Technology ",
             "linkedinUrl": "https://www.linkedin.com/in/aman-anand-199b179a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            "imgUrl": "assets/img/profile/placeholder.jpg"
+            "imgUrl": "https://media.licdn.com/dms/image/v2/D4D03AQHuGwlmqogBQA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1707743055900?e=1738800000&v=beta&t=GXyrmWR2iVrFMgKW3SF_yUQnNOsyyxJOspm--j3Z-ko"
         },
         {
             "id": 4,
@@ -135,7 +135,7 @@ const MeetOurFellows = () => {
             "bachelorsDegree": "BBA",
             "ugUniversity": "Ahmedabad University",
             "linkedinUrl": "http://linkedin.com/in/apoorvigarg26",
-            "imgUrl": "assets/img/profile/placeholder.jpg"
+            "imgUrl": "https://media.licdn.com/dms/image/v2/D4D03AQHIxDkjTEq9bg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1697092650908?e=1738800000&v=beta&t=xZFv9o5P0QmHrBxCGAgVaztP74OCkSHIS7phV2Mn9QA"
         },
         {
             "id": 5,
@@ -147,7 +147,7 @@ const MeetOurFellows = () => {
             "bachelorsDegree": "B.Tech",
             "ugUniversity": "IIT BHU Varanasi",
             "linkedinUrl": "http://www.linkedin.com/in/ashutoshjalan",
-            "imgUrl": "https://media.licdn.com/dms/image/v2/D5603AQFTmJX8NKdjTw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1719082984939?e=1738800000&v=beta&t=J0X3tJ44Z_vLUNFOkeTC3_QSe1E-kMjnUsd3lPLgObU"
+            "imgUrl": "https://media.licdn.com/dms/image/sync/v2/D4E27AQH7o5-U3G64Lg/articleshare-shrink_800/articleshare-shrink_800/0/1715815056733?e=1734015600&v=beta&t=KjbzPDtKIyuXQd-0TINb82kWXekFF5H2mIpNKhyArqo"
         },
         {
             "id": 6,
@@ -159,7 +159,7 @@ const MeetOurFellows = () => {
             "bachelorsDegree": "B.E. Mechanical ",
             "ugUniversity": "Gujarat Technological University",
             "linkedinUrl": "https://www.linkedin.com/in/bhavdeep-nakum-7831b859?trk=contact-info",
-            "imgUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFfoRJ7n2arGg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1709878850672?e=1738800000&v=beta&t=BezLR2JIFxi_jW6rc8wl33PJoO9BDeOYOqSLDVDlb-8"
+            "imgUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFfoRJ7n2arGg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1709878850672?e=1738800000&v=beta&t=SIWRy7pQQ4PUzU3q6Jfg597sd_sSDvVD8UT3Agr9lqs"
         },
         {
             "id": 7,
@@ -171,7 +171,7 @@ const MeetOurFellows = () => {
             "bachelorsDegree": "B.A Hons in Political Science",
             "ugUniversity": "The Maharaja Sayajirao University of Baroda",
             "linkedinUrl": "https://www.linkedin.com/in/jatan-bhanvadiya-a596991a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            "imgUrl": "https://media.licdn.com/dms/image/v2/C5603AQHOQqJKjLrBng/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1588234424032?e=1738800000&v=beta&t=knkF10YHgKrE7r5q_FcSe2r1jEEmnaMWp_TRXTxK694"
+            "imgUrl": "https://media.licdn.com/dms/image/v2/C5603AQHOQqJKjLrBng/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1588234424055?e=1738800000&v=beta&t=dKvEBTTPQwFuPckt2jyPMM3r4HcVBDBwGaXQ-JW1C4Q"
         },
         {
             "id": 8,
@@ -182,8 +182,8 @@ const MeetOurFellows = () => {
             "pgUniversity": "Indian Institute of Technology, Kanpur",
             "bachelorsDegree": "B.E. Mechanical ",
             "ugUniversity": "Gujarat Technological University",
-            "linkedinUrl": "https://www.linkedin.com/in/dr-kuldeep-malam-3757aa13b",
-            "imgUrl": "https://media.licdn.com/dms/image/v2/C5603AQGy2DWCkrqUCg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1522288707951?e=2147483647&v=beta&t=KsorsbZ56Wzw8Lal8vFIbJhIZ4eWVsaIgHC7qvdWMvk"
+            "linkedinUrl": "https://www.linkedin.com/in/kapil-dayma/",
+            "imgUrl": "https://media.licdn.com/dms/image/v2/C5603AQGy2DWCkrqUCg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1522288707754?e=1738800000&v=beta&t=tuxRKC8o6Yypa3iskJhYIhIr9oLSStHPVR8gR8lGBRQ"
         },
         {
             "id": 9,
@@ -195,7 +195,7 @@ const MeetOurFellows = () => {
             "bachelorsDegree": "B.Sc. Hons. Agriculture",
             "ugUniversity": "Junagadh Agricultural University",
             "linkedinUrl": "https://www.linkedin.com/in/dr-kuldeep-malam-3757aa13b",
-            "imgUrl": "https://media.licdn.com/dms/image/v2/D4E03AQEFkT-hhdOS5Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720802257491?e=1738800000&v=beta&t=fFXYqk0ViACGtzQRD6lq5xTbZranpUCHNnPEe7X3Td0"
+            "imgUrl": "https://media.licdn.com/dms/image/v2/D4E03AQEFkT-hhdOS5Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720802257473?e=1738800000&v=beta&t=8vptr48_ZUhUnn-YB6eIWYet3Ee57lyLoJFPbeCOwQk"
         },
         {
             "id": 10,
@@ -207,7 +207,7 @@ const MeetOurFellows = () => {
             "bachelorsDegree": "BSc Economics Honours",
             "ugUniversity": "Symbiosis School of Economics",
             "linkedinUrl": "https://www.linkedin.com/in/kunalha/",
-            "imgUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFvCsqaWM21nQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1691348366602?e=1738800000&v=beta&t=yvp0Ea2zR6M8CkpeX6Fi6dN6E0FdFg1JJEv4Sa_6o6E"
+            "imgUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFvCsqaWM21nQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1691348366603?e=1738800000&v=beta&t=oI4a3kV12VBRc1ipnByg6tTHEYT4wpSMIpUxiSppCQ0"
         },
         {
             "id": 11,
@@ -231,7 +231,7 @@ const MeetOurFellows = () => {
             "bachelorsDegree": "Bachelor of Planning ",
             "ugUniversity": "CEPT University, Ahmedabad",
             "linkedinUrl": "https://www.linkedin.com/in/saumya-lathia-24883891",
-            "imgUrl": "assets/img/profile/placeholder.jpg"
+            "imgUrl": "https://media.licdn.com/dms/image/v2/C5603AQFnAASMRSxqLA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1559888901064?e=1738800000&v=beta&t=hWUL8mcVzMLDB6vpwuc575oQZCs9Nt2ihHgXzNQnqUg"
         },
         {
             "id": 13,
@@ -243,7 +243,7 @@ const MeetOurFellows = () => {
             "bachelorsDegree": "BSc Agriculture",
             "ugUniversity": "SRI DEV SUMAN",
             "linkedinUrl": "https://www.linkedin.com/in/shruti-singh-80b5a5168?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-            "imgUrl": "assets/img/profile/placeholder.jpg"
+            "imgUrl": "https://media.licdn.com/dms/image/v2/D4D03AQGFiVLVJE27Qw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1689939064249?e=1738800000&v=beta&t=K4NLNPkAr8wyFW69Zeyn5xPqV50Ix7MFYrhqzLmyQ-s"
         },
         {
             "id": 14,
@@ -255,7 +255,7 @@ const MeetOurFellows = () => {
             "bachelorsDegree": "BA Journalism",
             "ugUniversity": "Bangalore University",
             "linkedinUrl": "https://www.linkedin.com/in/tusharmeshram88",
-            "imgUrl": "https://media.licdn.com/dms/image/v2/C5103AQH0XuAdWMxb8A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1558092310903?e=1738800000&v=beta&t=wnb-JOomqhPlfWaNZEn21tCoyODE91dQvcWsSJlxEwo"
+            "imgUrl": "https://media.licdn.com/dms/image/v2/C5103AQH0XuAdWMxb8A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1558092310727?e=1738800000&v=beta&t=Xzy5JFotYyEeOBnDouScJ6N3L_DbEn7ll9OgBFyw0kA"
         },
         {
             "id": 15,
@@ -267,7 +267,7 @@ const MeetOurFellows = () => {
             "bachelorsDegree": "B.Tech Electrical",
             "ugUniversity": "Gujarat Technological University",
             "linkedinUrl": "https://www.linkedin.com/in/ajaj-shaikh-246231134",
-            "imgUrl": "https://media.licdn.com/dms/image/v2/D4D03AQG3-Q0b2P42eQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1682439173222?e=1738800000&v=beta&t=X8VP9iwWR4BAyAXPuK2QjXHclDRWJCoPubK3U8vS5-w"
+            "imgUrl": "https://media.licdn.com/dms/image/v2/D4D03AQG3-Q0b2P42eQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1682439173222?e=1738800000&v=beta&t=OM65cGU-yQUWpRBX7fbKT0vVv5Q22X9C-Zxttn_GSA4"
         },
         {
             "id": 16,
@@ -279,7 +279,7 @@ const MeetOurFellows = () => {
             "bachelorsDegree": "BE Computer",
             "ugUniversity": "Gujarat Technological University",
             "linkedinUrl": "https://in.linkedin.com/in/deep-patel-66410636",
-            "imgUrl": "https://media.licdn.com/dms/image/v2/D5603AQFyj_2tEXzbsg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1713603615326?e=1738800000&v=beta&t=DmE9FLFI1W0H6gXJoxkOircRUI7Qs0JpkhwUbtUZ59Y"
+            "imgUrl": "https://media.licdn.com/dms/image/v2/D5603AQFyj_2tEXzbsg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1713603615326?e=1738800000&v=beta&t=kfuL0p3WfsLtAvXP4Qr1Y9sUFtUrD5vi1Le8MVi393Y"
         },
         {
             "id": 17,
@@ -291,7 +291,7 @@ const MeetOurFellows = () => {
             "bachelorsDegree": "B.Pharm",
             "ugUniversity": "N M Padaliya Pharmacy College",
             "linkedinUrl": "https://www.linkedin.com/in/parag-patel-64228529?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-            "imgUrl": "https://media.licdn.com/dms/image/v2/D5603AQEeBZDL_7lQ6w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730363825365?e=1738800000&v=beta&t=HpfKFisgjpF1Yso0R9c8LsRsXa1Ery6WrlXO9Zx_ugU"
+            "imgUrl": "https://media.licdn.com/dms/image/v2/D5603AQEeBZDL_7lQ6w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1730363825367?e=1738800000&v=beta&t=pjFnkutdhdeXIwAeWDaJUAAAfuFM4HrbcQ3buVsh0sw"
         }
     ];
 

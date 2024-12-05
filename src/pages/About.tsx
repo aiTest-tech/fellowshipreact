@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
+import { useDispatch, useSelector } from 'react-redux';
 
 const About = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
+    const language = useSelector((state: RootState) => state.language.language);
     const updateScrollProgress = () => {
         // Get total scrollable height
         const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -57,24 +59,51 @@ const About = () => {
                             </div>
 
                             <div className="col-lg-6">
-                                <div className="about-content bg-white shadow py-4 px-5">
-                                    <h1 className="about-title font-extrabold text-2xl font-serif">Who We Are</h1>
-                                    <p className="py-2">
-                                        At the heart of our mission lies a commitment to fostering innovation, leadership, and societal progress.
-                                        Established with the vision of empowering future leaders, our organization has become a catalyst for change,
-                                        bridging the gap between potential and opportunity.
-                                    </p>
-                                    <h2 className="about-subtitle text-xl font-semibold mt-4">Our Vision</h2>
-                                    <p className="py-2">
-                                        To inspire and nurture talent, creating a platform where innovation meets impact. We aim to
-                                        cultivate a culture that drives sustainable development and addresses critical challenges of our time.
-                                    </p>
-                                    <h2 className="about-subtitle text-xl font-semibold mt-4">Our Mission</h2>
-                                    <p className="py-2">
-                                        Through comprehensive programs, strategic collaborations, and a focus on excellence, we strive to
-                                        shape leaders who contribute meaningfully to society, leaving a legacy of progress and innovation.
-                                    </p>
-                                </div>
+                                {
+                                    language === 'English' ? (
+                                        <>
+                                            <div className="about-content bg-white shadow py-4 px-5">
+                                                <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Vision</h1>
+                                                <p className="py-3 text-xl">
+                                                    To inspire and nurture talent, creating a platform where innovation meets impact. We aim to
+                                                    cultivate a culture that drives sustainable development and addresses critical challenges of our time.
+                                                </p>
+                                                <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Mission</h1>
+                                                <p className="py-3 text-xl">
+                                                    Through comprehensive programs, strategic collaborations, and a focus on excellence, we strive to
+                                                    shape leaders who contribute meaningfully to society, leaving a legacy of progress and innovation.
+                                                </p>
+                                                <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Objective</h1>
+                                                <p className="py-3 text-xl">
+                                                    Through comprehensive programs, strategic collaborations, and a focus on excellence, we strive to
+                                                    shape leaders who contribute meaningfully to society, leaving a legacy of progress and innovation.
+                                                </p>
+                                            </div>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <>
+                                                <div className="about-content bg-white shadow py-4 px-5">
+                                                    <h1 className="about-subtitle text-2xl font-semibold mt-4">આપણું વિઝન</h1>
+                                                    <p className="py-3 text-xl">
+                                                        પ્રતિભાને પ્રેરિત કરવા અને સંવર્ધન કરવા માટે, એક પ્લેટફોર્મ બનાવવું જ્યાં નવીનતા પ્રભાવને પહોંચી વળે. અમે લક્ષ્ય રાખ્યું છે
+                                                        એક સંસ્કૃતિ કેળવો જે ટકાઉ વિકાસ ચલાવે અને આપણા સમયના નિર્ણાયક પડકારોને સંબોધિત કરે.
+                                                    </p>
+                                                    <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Mission</h1>
+                                                    <p className="py-3 text-xl">
+                                                        વ્યાપક કાર્યક્રમો, વ્યૂહાત્મક સહયોગ અને શ્રેષ્ઠતા પર ધ્યાન કેન્દ્રિત કરીને, અમે પ્રયાસ કરીએ છીએ
+                                                        પ્રગતિ અને નવીનતાનો વારસો છોડીને સમાજમાં અર્થપૂર્ણ યોગદાન આપનારા નેતાઓને આકાર આપો.
+                                                    </p>
+                                                    <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Objective</h1>
+                                                    <p className="py-3 text-xl">
+                                                        વ્યાપક કાર્યક્રમો, વ્યૂહાત્મક સહયોગ અને શ્રેષ્ઠતા પર ધ્યાન કેન્દ્રિત કરીને, અમે પ્રયાસ કરીએ છીએ
+                                                        પ્રગતિ અને નવીનતાનો વારસો છોડીને સમાજમાં અર્થપૂર્ણ યોગદાન આપનારા નેતાઓને આકાર આપો.
+                                                    </p>
+                                                </div>
+                                            </>
+                                        </>
+                                    )
+                                }
                             </div>
 
                             <div className="col-lg-6 about-right">

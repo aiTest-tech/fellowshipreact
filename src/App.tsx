@@ -15,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<><ScrollToTopButton><HomePage /></ScrollToTopButton></>} />
+          {/* <Route path="/" element={<><HomePage /></>} /> */}
           <Route path="/academic-partner" element={<><ScrollToTopButton><AcademicPartner /></ScrollToTopButton></>} />
           <Route path="/media" element={<><ScrollToTopButton><MediaPage /></ScrollToTopButton></>} />
           <Route path="/faqs" element={<><ScrollToTopButton><Faqs /></ScrollToTopButton></>} />

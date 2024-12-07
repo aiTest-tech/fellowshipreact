@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useState } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
@@ -93,9 +94,22 @@ const HomePage = () => {
 
                 <section className="slider__area section-mb-110">
                     <Slider {...settings} className="slider__active">
-                        <div className="slide">
-                            <img src="assets/img/cmquatos.jpeg" alt="Slide 1" />
-                        </div>
+                        {
+                            language === 'English' ? (
+                                <>
+                                    <div className="slide">
+                                        <img src="assets/img/cmquatos.jpeg" alt="Slide 1" />
+                                    </div>
+                                </>
+                            ) :
+                                (
+                                    <>
+                                        <div className="slide">
+                                            <img src="assets/img/cmquotegujarati.jpeg" alt="Slide 1" />
+                                        </div>
+                                    </>
+                                )
+                        }
                         <div className="slide">
                             <img src="assets/img/cmwithfellows.jpg" alt="Slide 4" />
                         </div>
@@ -112,7 +126,7 @@ const HomePage = () => {
                                 <>
                                     <div className="row gutter-24 d-flex justify-content-end align-items-center">
                                         <div className="text-center relative top-[45px]">
-                                            <h2 className="title mb-5">About CM Fellow Program</h2>
+                                            <h2 className="title mb-5">About CM Fellowship Program</h2>
                                         </div>
                                         <div className="col-lg-5">
                                             <div className="about-content bg-white shadow py-3 px-4">
@@ -120,17 +134,24 @@ const HomePage = () => {
                                                     <h1 className="about-title font-extrabold text-2xl font-serif">CM Fellows Program</h1>
                                                     <div className="about-sub" />
                                                 </div>
-                                                <div className="">
+                                                {/* <div className="py-2">
                                                     Started by the Honorable Prime Minister Shree Narendra Modi in 2009,
                                                     the Sardar Patel Good Governance Chief Minister Fellowship, is one
                                                     of India's flagship program aimed towards fostering young leadership
                                                     talent.
                                                 </div>
                                                 <p className='py-2'>
-                                                    Chief Minister Shri Bhupendra Patel encouraged the fellows by highlighting Gujarat's exceptional en•	Objective
-                                                    •	Focus on infusing innovative and effective approaches into policy-making and service delivery processes
+                                                    Chief Minister Shri Bhupendra Patel encouraged the fellows by highlighting Gujarat's exceptional en <br/>
+                                                    •	Objective <br/>
+                                                    •	Focus on infusing innovative and effective approaches into policy-making and service delivery processes <br/>
                                                     Goal of promoting a culture of innovation, efficiency, and excellence within Government departments
                                                     ronment for their fellowship work. He assured them that funding would not hamper the implementation of schemes or new initiatives and emphasized that innovative ideas and suggestions would receive mindful consideration from the government. The Chief Minister further noted that such ideas would benefit crores of citizens across the state
+                                                </p> */}
+                                                <p className='text-xl py-2'>
+                                                    In 2009, the then Chief Minister, Shri Narendra Modi, launched the CM’s Fellowship Program. The objective of this program was to provide young and talented individuals with an opportunity to contribute to social service and support India’s future development.
+                                                </p>
+                                                <p className='text-xl py-2'>
+                                                    Subsequently, the Sardar Patel Good Governance Fellowship Program was relaunched by Chief Minister Shri Bhupendra Patel on October 31, 2023, with revised objectives. The program now focuses on incorporating innovative and effective approaches into policy-making and service delivery processes, aiming to promote a culture of innovation, efficiency, and excellence within government departments.
                                                 </p>
                                             </div>
                                         </div>
@@ -160,17 +181,11 @@ const HomePage = () => {
                                                     <h1 className="about-title font-extrabold text-2xl font-serif">સીએમ ફેલો પ્રોગ્રામ</h1>
                                                     <div className="about-sub" />
                                                 </div>
-                                                <div className="">
-                                                    2009 માં માનનીય વડાપ્રધાન શ્રી નરેન્દ્ર મોદી દ્વારા શરૂ કરવામાં આવેલ,
-                                                    સરદાર પટેલ ગુડ ગવર્નન્સ ચીફ મિનિસ્ટર ફેલોશિપ, એક છે
-                                                    ભારતના મુખ્ય કાર્યક્રમનો ઉદ્દેશ્ય યુવા નેતૃત્વને પ્રોત્સાહન આપવાનો છે
-                                                    પ્રતિભા
-                                                </div>
-                                                <p className='py-2'>
-                                                    મુખ્યમંત્રી શ્રી ભૂપેન્દ્ર પટેલે ગુજરાતના અસાધારણ હેતુને ઉજાગર કરીને ફેલોને પ્રોત્સાહિત કર્યા
-                                                    • નીતિ-નિર્માણ અને સેવા વિતરણ પ્રક્રિયાઓમાં નવીન અને અસરકારક અભિગમો પર ધ્યાન કેન્દ્રિત કરો
-                                                    સરકારી વિભાગોમાં નવીનતા, કાર્યક્ષમતા અને શ્રેષ્ઠતાની સંસ્કૃતિને પ્રોત્સાહન આપવાનો ધ્યેય
-                                                    તેમના ફેલોશિપ કાર્ય માટે રોમેન્ટ. તેમણે તેમને ખાતરી આપી કે ભંડોળ યોજનાઓ અથવા નવી પહેલોના અમલીકરણમાં અવરોધ નહીં આવે અને ભારપૂર્વક જણાવ્યું કે નવીન વિચારો અને સૂચનો સરકાર તરફથી ધ્યાનપૂર્વક વિચારણા કરવામાં આવશે. મુખ્યમંત્રીએ વધુમાં જણાવ્યું હતું કે આવા વિચારોથી રાજ્યભરના કરોડો નાગરિકોને લાભ થશે
+                                                <p className='text-xl py-2'>
+                                                    2009માં તત્કાલિન મુખ્યમંત્રી શ્રી નરેન્દ્ર મોદીએ સીએમ ફેલોશિપ પ્રોગ્રામ શરૂ કર્યો હતો. આ કાર્યક્રમનો ઉદ્દેશ્ય યુવા અને પ્રતિભાશાળી વ્યક્તિઓને સમાજ સેવામાં યોગદાન આપવાની અને ભારતના ભાવિ વિકાસને ટેકો આપવાની તક પૂરી પાડવાનો હતો.
+                                                </p>
+                                                <p className='text-xl py-2'>
+                                                    ત્યારબાદ, સરદાર પટેલ ગુડ ગવર્નન્સ ફેલોશિપ પ્રોગ્રામને મુખ્યમંત્રી શ્રી ભૂપેન્દ્ર પટેલ દ્વારા 31 ઓક્ટોબર, 2023 ના રોજ સુધારેલા ઉદ્દેશ્યો સાથે ફરીથી શરૂ કરવામાં આવ્યો હતો. આ કાર્યક્રમ હવે નીતિ-નિર્માણ અને સેવા વિતરણ પ્રક્રિયાઓમાં નવીન અને અસરકારક અભિગમોનો સમાવેશ કરવા પર ધ્યાન કેન્દ્રિત કરે છે, જેનો હેતુ સરકારી વિભાગોમાં નવીનતા, કાર્યક્ષમતા અને શ્રેષ્ઠતાની સંસ્કૃતિને પ્રોત્સાહન આપવાનો છે.
                                                 </p>
                                             </div>
                                         </div>

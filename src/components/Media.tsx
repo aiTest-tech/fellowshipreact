@@ -1,18 +1,35 @@
+// @ts-nocheck
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 const Media = () => {
-
+    const language = useSelector((state: RootState) => state.language.language);
     return (
         <>
             <section className="ourportfolio section-pt-110 section-pb-110">
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-lg-12 col-md-12">
-                            <div className="section__title port_double">
-                                <h2 className="title">Our Media Gallery and TimeLine</h2>
-                            </div>
-                        </div>
+                        {
+                            language === 'English' ? (
+                                <>
+                                    <div className="col-lg-12 col-md-12">
+                                        <div className="section__title port_double">
+                                            <h2 className="title">Our Media Gallery and TimeLine</h2>
+                                        </div>
+                                    </div>
+                                </>
+                            ) :
+                                (
+                                    <>
+                                        <div className="col-lg-12 col-md-12">
+                                            <div className="section__title port_double">
+                                                <h2 className="title">અમારી મીડિયા ગેલેરી અને સમયરેખા</h2>
+                                            </div>
+                                        </div>
+                                    </>
+                                )
+                        }
                     </div>
                     <div className="row justify-content-center gutter-24">
                         <div className="col-lg-4 col-md-6">

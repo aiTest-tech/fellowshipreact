@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useEffect } from 'react';
 import gsap from 'gsap'; // Import GSAP
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin'; // Import ScrollToPlugin

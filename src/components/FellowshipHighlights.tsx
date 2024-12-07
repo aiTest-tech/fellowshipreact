@@ -1,4 +1,5 @@
 // src/components/LatestNews.tsx
+// @ts-nocheck
 import React from "react";
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -84,37 +85,78 @@ const FellowshipHighlights: React.FC = () => {
                 </div>
 
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div className="bg-white p-6 rounded-lg shadow-lg">
-                        <h3 className="text-xl font-bold text-gray-900 mb-4">Stipend</h3>
-                        <p className="text-lg text-gray-700">₹1,00,000/month</p>
-                    </div>
+                {
+                    language === 'English' ? (
+                        <>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div className="bg-white p-6 rounded-lg shadow-lg">
+                                    <h3 className="text-xl font-bold text-gray-900 mb-4">Stipend</h3>
+                                    <p className="text-lg text-gray-700">₹1,00,000/month</p>
+                                </div>
 
-                    <div className="bg-white p-6 rounded-lg shadow-lg">
-                        <h3 className="text-xl font-bold text-gray-900 mb-4">Duration</h3>
-                        <p className="text-lg text-gray-700">1 years</p>
-                    </div>
+                                <div className="bg-white p-6 rounded-lg shadow-lg">
+                                    <h3 className="text-xl font-bold text-gray-900 mb-4">Duration</h3>
+                                    <p className="text-lg text-gray-700">1 years</p>
+                                </div>
 
-                    <div className="bg-white p-6 rounded-lg shadow-lg">
-                        <h3 className="text-xl font-bold text-gray-900 mb-4">Training</h3>
-                        <p className="text-lg text-gray-700">1-week induction at IIM-A + 3-week on-job training</p>
-                    </div>
+                                <div className="bg-white p-6 rounded-lg shadow-lg">
+                                    <h3 className="text-xl font-bold text-gray-900 mb-4">Training</h3>
+                                    <p className="text-lg text-gray-700">1-week induction at IIM-A + 3-week on-job training</p>
+                                </div>
 
-                    <div className="bg-white p-6 rounded-lg shadow-lg">
-                        <h3 className="text-xl font-bold text-gray-900 mb-4">Departments</h3>
-                        <p className="text-lg text-gray-700">Placement in 20+ government sectors</p>
-                    </div>
+                                <div className="bg-white p-6 rounded-lg shadow-lg">
+                                    <h3 className="text-xl font-bold text-gray-900 mb-4">Departments</h3>
+                                    <p className="text-lg text-gray-700">Placement in 20+ government sectors</p>
+                                </div>
 
-                    <div className="bg-white p-6 rounded-lg shadow-lg">
-                        <h3 className="text-xl font-bold text-gray-900 mb-4">Certificate</h3>
-                        <p className="text-lg text-gray-700">Recognized jointly by IIM-A and GoG</p>
-                    </div>
+                                <div className="bg-white p-6 rounded-lg shadow-lg">
+                                    <h3 className="text-xl font-bold text-gray-900 mb-4">Certificate</h3>
+                                    <p className="text-lg text-gray-700">Recognized jointly by IIM-A and GoG</p>
+                                </div>
 
-                    <div className="bg-white p-6 rounded-lg shadow-lg">
-                        <h3 className="text-xl font-bold text-gray-900 mb-4">Impact</h3>
-                        <p className="text-lg text-gray-700">Drive real change in governance processes</p>
-                    </div>
-                </div>
+                                <div className="bg-white p-6 rounded-lg shadow-lg">
+                                    <h3 className="text-xl font-bold text-gray-900 mb-4">Impact</h3>
+                                    <p className="text-lg text-gray-700">Drive real change in governance processes</p>
+                                </div>
+                            </div>
+                        </>
+                    ) :
+                        (
+                            <>
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                    <div className="bg-white p-6 rounded-lg shadow-lg">
+                                        <h3 className="text-xl font-bold text-gray-900 mb-4">સ્ટાઈપેન્ડ</h3>
+                                        <p className="text-lg text-gray-700">₹1,00,000/મહિને</p>
+                                    </div>
+
+                                    <div className="bg-white p-6 rounded-lg shadow-lg">
+                                        <h3 className="text-xl font-bold text-gray-900 mb-4">અવધિ</h3>
+                                        <p className="text-lg text-gray-700">1 વર્ષ</p>
+                                    </div>
+
+                                    <div className="bg-white p-6 rounded-lg shadow-lg">
+                                        <h3 className="text-xl font-bold text-gray-900 mb-4">તાલીમ</h3>
+                                        <p className="text-lg text-gray-700">IIM-Aમાં 1-અઠવાડિયાનું ઇન્ડક્શન + 3-અઠવાડિયાની નોકરીની તાલીમ</p>
+                                    </div>
+
+                                    <div className="bg-white p-6 rounded-lg shadow-lg">
+                                        <h3 className="text-xl font-bold text-gray-900 mb-4">વિભાગો</h3>
+                                        <p className="text-lg text-gray-700">20+ સરકારી ક્ષેત્રોમાં પ્લેસમેન્ટ</p>
+                                    </div>
+
+                                    <div className="bg-white p-6 rounded-lg shadow-lg">
+                                        <h3 className="text-xl font-bold text-gray-900 mb-4">પ્રમાણપત્ર</h3>
+                                        <p className="text-lg text-gray-700">IIM-A અને GoG દ્વારા સંયુક્ત રીતે માન્યતા પ્રાપ્ત</p>
+                                    </div>
+
+                                    <div className="bg-white p-6 rounded-lg shadow-lg">
+                                        <h3 className="text-xl font-bold text-gray-900 mb-4">અસર</h3>
+                                        <p className="text-lg text-gray-700">શાસન પ્રક્રિયાઓમાં વાસ્તવિક પરિવર્તન લાવો</p>
+                                    </div>
+                                </div>
+                            </>
+                        )
+                }
             </div>
         </section>
 

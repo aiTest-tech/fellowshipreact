@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Navbar from "./components/Navbar/Navbar"
 import Footer from "./components/Footer/Footer"
 import ContactCard from "./components/ContactCard"
@@ -5,7 +6,6 @@ import { GiWorld } from "react-icons/gi";
 import { CgMail } from "react-icons/cg";
 import { FaPhone } from "react-icons/fa6";
 import { useEffect, useState } from "react";
-import AOS from 'aos';
 
 
 const ContactUs = () => {

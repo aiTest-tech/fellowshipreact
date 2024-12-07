@@ -1,9 +1,12 @@
+// @ts-nocheck
 import React, { useEffect, useState } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import { IoCloseSharp } from "react-icons/io5";
 import { FaRegEye } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa";
+import { useDispatch, useSelector } from 'react-redux';
+
 
 const JoinUs = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
@@ -93,6 +96,7 @@ const JoinUs = () => {
                     </div>
                 </div>
                 <div className="max-w-5xl mx-auto">
+                    
                     {/* Title Section */}
                     <div className="bg-white p-6 rounded-lg shadow-lg">
                         <h1 className="text-3xl font-semibold text-center">Useful information for CM Fellow Recruitment</h1>

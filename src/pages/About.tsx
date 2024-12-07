@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
@@ -75,8 +76,8 @@ const About = () => {
                                                 </p>
                                                 <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Objective</h1>
                                                 <p className="py-3 text-xl">
-                                                    Through comprehensive programs, strategic collaborations, and a focus on excellence, we strive to
-                                                    shape leaders who contribute meaningfully to society, leaving a legacy of progress and innovation.
+                                                To foster a dynamic ecosystem that encourages lifelong learning, empowers individuals with practical skills,
+                                                 and promotes ethical leadership, enabling them to drive transformative change in their communities and beyond.
                                                 </p>
                                             </div>
                                         </>

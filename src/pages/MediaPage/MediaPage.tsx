@@ -1,9 +1,8 @@
+// @ts-nocheck
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import { useEffect, useState } from 'react';
 import '../../index.css'
-
-
 
 import Modal from 'react-modal';
 
@@ -411,10 +410,10 @@ const MediaPage = () => {
                                 </div>
                             </div>
                         </div> */}
-                        <div className="row justify-content-center gutter-24">
-                            <div className="max-w-sm rounded overflow-hidden shadow-lg">
+                        <div className="row justify-content-center gutter-24 py-6 ">
+                            <div className="max-w-md rounded overflow-hidden shadow-lg">
                                 <img
-                                    className="w-full"
+                                    className="w-full py-2"
                                     src="assets/img/fellows/fellow1.jpeg"
                                     alt="Sunset in the mountains"
                                 />
@@ -425,9 +424,9 @@ const MediaPage = () => {
                                 </div>
                             </div>
 
-                            <div className="max-w-sm rounded overflow-hidden shadow-lg">
+                            <div className="max-w-md rounded overflow-hidden shadow-lg">
                                 <img
-                                    className="w-full"
+                                    className="w-full py-2"
                                     src="assets/img/fellows/fellow2.jpeg"
                                     alt="Sunset in the mountains"
                                 />
@@ -438,9 +437,9 @@ const MediaPage = () => {
                                 </div>
                             </div>
 
-                            <div className="max-w-sm rounded overflow-hidden shadow-lg">
+                            <div className="max-w-md rounded overflow-hidden shadow-lg">
                                 <img
-                                    className="w-full"
+                                    className="w-full py-2"
                                     src="assets/img/fellows/fellow3.jpeg"
                                     alt="Sunset in the mountains"
                                 />

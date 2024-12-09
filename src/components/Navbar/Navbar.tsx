@@ -10,14 +10,10 @@ import { RootState } from '../../store/store'
 const Navbar = () => {
     const dispatch = useDispatch();
     const language = useSelector((state: RootState) => state.language.language);
-    console.log("brijesh language ====", language);
     const [isMenuVisible, setMenuVisible] = useState(false); // Controls mobile menu visibility
     const [openDropdownIndex, setOpenDropdownIndex] = useState(null); // Controls dropdown visibility
     const [islangtoggle, setislangtoggle] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuVisible(!isMenuVisible);
-    };
 
     const handleLanguageChange = (lang: string) => {
         dispatch(setLanguage(lang));
@@ -190,10 +186,310 @@ const Navbar = () => {
                                     }
 
                                 </div>
-                                <div className="mobile-nav-toggler" onClick={toggleMenu}>
+                                <div className="mobile-nav-toggler" onClick={() => {
+                                    setMenuVisible(!isMenuVisible);
+                                    alert(isMenuVisible);
+                                }}>
                                     <i className="tg-flaticon-menu-1" />
                                 </div>
                             </div>
+                            {/* Mobile Menu  */}
+                            {
+                                isMenuVisible && (
+                                    <>
+                                        <div className="tgmobile__menu">
+                                            <nav className="tgmobile__menu-box">
+                                                <div className="close-btn">
+                                                    <i className="tg-flaticon-close" />
+                                                </div>
+                                                <div className="nav-logo">
+                                                    <a href="index.html">
+                                                        <img
+                                                            src="assets/img/Gujarat-state-portal-logo.png"
+                                                            alt="Logo"
+                                                        />
+                                                    </a>
+                                                </div>
+                                                <div className="tgmobile__search">
+                                                    <form action="#">
+                                                        <input type="text" placeholder="Search here..." />
+                                                        <button>
+                                                            <i className="fas fa-search" />
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                                <div className="tgmobile__menu-outer">
+                                                    <ul className="navigation">
+                                                        <li className="active">
+                                                            <a href="#">
+                                                                <i className="fa fa-home" />
+                                                            </a>
+                                                        </li>
+                                                        <li className="menu-item-has-children">
+                                                            <a href="#">All About Gujarat</a>
+                                                            <ul className="sub-menu">
+                                                                <li>
+                                                                    <a href="#">Gujarat at a Glance</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">All Chief Ministers of Gujarat</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Gujarat Fact File</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Why Gujarat</a>
+                                                                </li>
+                                                                <li className="menu-item-has-children">
+                                                                    <a href="#">Gujarat Tourism</a>
+                                                                    <ul className="sub-menu">
+                                                                        <li>
+                                                                            <a href="#">Major Cities And Places</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">Religious Places</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">Forts and Palaces</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">Museums</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">Libraries</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">Historical Places</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">Hill Stations &amp; Tourist Spots</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">Heritage Hotels</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div className="dropdown-btn">
+                                                                        <span className="plus-line" />
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Wildlife</a>
+                                                                </li>
+                                                                <li className="menu-item-has-children">
+                                                                    <a href="#">Art Culture &amp; Lifestyle</a>
+                                                                    <ul className="sub-menu">
+                                                                        <li>
+                                                                            <a href="#">Arts</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">Culture &amp; Lifestyle</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">Music &amp; Dance</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">Handicrafts</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">Literature</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">Festivals</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">Fairs</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div className="dropdown-btn">
+                                                                        <span className="plus-line" />
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Sports and Recreation</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Land of the Legends</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Getting to Gujarat</a>
+                                                                </li>
+                                                            </ul>
+                                                            <div className="dropdown-btn">
+                                                                <span className="plus-line" />
+                                                            </div>
+                                                        </li>
+                                                        <li className="menu-item-has-children">
+                                                            <a href="#">State Profile</a>
+                                                            <ul className="sub-menu">
+                                                                <li>
+                                                                    <a href="#">Demography</a>
+                                                                </li>
+                                                                <li className="menu-item-has-children">
+                                                                    <a href="#">State Government Awards</a>
+                                                                    <ul className="sub-menu">
+                                                                        <li>
+                                                                            <a href="#">Awards During 2018</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">Awards During 2017</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">Awards During 2016</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">Awards During 2015</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">Awards During 2014</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div className="dropdown-btn">
+                                                                        <span className="plus-line" />
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Gujarat Govt. Departments</a>
+                                                                </li>
+                                                            </ul>
+                                                            <div className="dropdown-btn">
+                                                                <span className="plus-line" />
+                                                            </div>
+                                                        </li>
+                                                        <li className="menu-item-has-children">
+                                                            <a href="#">Major Initiatives</a>
+                                                            <ul className="sub-menu">
+                                                                <li>
+                                                                    <a href="#">E-governance</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Education</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Agriculture</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Women and Child Development</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Global Warming</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Infrastructure</a>
+                                                                </li>
+                                                            </ul>
+                                                            <div className="dropdown-btn">
+                                                                <span className="plus-line" />
+                                                            </div>
+                                                        </li>
+                                                        <li className="menu-item-has-children">
+                                                            <a href="#">Business</a>
+                                                            <ul className="sub-menu">
+                                                                <li>
+                                                                    <a href="#">Gujarat : The Investment Destination</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Infrastructure</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Special Economic Zones</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Investment Regions</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Policies</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Vibrant Gujarat Summit</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Industrial Parks</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Investment Opportunities</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Major Industries</a>
+                                                                </li>
+                                                            </ul>
+                                                            <div className="dropdown-btn">
+                                                                <span className="plus-line" />
+                                                            </div>
+                                                        </li>
+                                                        <li className="menu-item-has-children">
+                                                            <a href="#">E-Citizen</a>
+                                                            <ul className="sub-menu">
+                                                                <li>
+                                                                    <a href="#">Right to Information Act</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Act And Rules</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Budget</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Press Release</a>
+                                                                </li>
+                                                            </ul>
+                                                            <div className="dropdown-btn">
+                                                                <span className="plus-line" />
+                                                            </div>
+                                                        </li>
+                                                        <li className="menu-item-has-children">
+                                                            <a href="#">Media</a>
+                                                            <ul className="sub-menu">
+                                                                <li>
+                                                                    <a href="#">News</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Photo Gallery</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Video Gallery</a>
+                                                                </li>
+                                                            </ul>
+                                                            <div className="dropdown-btn">
+                                                                <span className="plus-line" />
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div className="social-links">
+                                                    <ul className="list-wrap">
+                                                        <li>
+                                                            <a href="#">
+                                                                <i className="fab fa-facebook-f" />
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i className="fab fa-twitter" />
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i className="fab fa-instagram" />
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i className="fab fa-linkedin-in" />
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i className="fab fa-youtube" />
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </nav>
+                                        </div>
+                                        <div className="tgmobile__menu-backdrop" />
+                                    </>
+                                )
+                            }
                         </div>
                     </div>
                 </div>

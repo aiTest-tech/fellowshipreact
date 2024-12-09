@@ -80,7 +80,7 @@ const HomePage = () => {
                             <img
                                 src="https://cmogujarat.gov.in/sites/default/files/2024-11/CM-Fellowship.jpg" // Replace with your image path
                                 alt="Popup Image"
-                                className="max-w-[90%] max-h-[90%] rounded-lg"
+                                className="sm:max-w-[80%] max-h-[80%] sm:rounded-lg"
                             />
                             <button
                                 onClick={hideImage}

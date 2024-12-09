@@ -8,6 +8,7 @@ import AcademicPartner from "./components/AcademicPartner"
 import MeetOurFellows from "./pages/MeetOurFellows/MeetOurFellows"
 import About from "./pages/About"
 import ScrollToTopButton from "./components/ScrollToTopButton"
+import Navbar from "./components/Navbar/Navbar"
 function App() {
 
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/joinus" element={<><ScrollToTopButton><JoinUs /></ScrollToTopButton></>} />
           <Route path="/meet-our-fellows" element={<><ScrollToTopButton><MeetOurFellows /></ScrollToTopButton></>} />
           <Route path="/about" element={<><ScrollToTopButton><About /></ScrollToTopButton></>} />
+          <Route path="/brijesh" element={<Navbar />} />
         </Routes>
       </BrowserRouter>
     </>

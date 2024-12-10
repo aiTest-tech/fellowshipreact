@@ -6,6 +6,8 @@ import 'ag-grid-community/styles/ag-grid.css'; // ag-Grid styles
 import 'ag-grid-community/styles/ag-theme-alpine.css'; // ag-Grid theme styles
 import Footer from '../../components/Footer/Footer';
 import ProfileCard from '../../components/ProfileCard';
+import { useDispatch, useSelector } from 'react-redux';
+
 
 
 // const fellows = [
@@ -27,6 +29,7 @@ import ProfileCard from '../../components/ProfileCard';
 
 const FellowCard = ({ fellow }) => {
     const [isHovered, setIsHovered] = useState(false);
+    const language = useSelector((state: RootState) => state.language.language);
 
     return (
         <div
@@ -57,6 +60,8 @@ const FellowCard = ({ fellow }) => {
 
 const MeetOurFellows = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
+    const language = useSelector((state: RootState) => state.language.language);
+
 
     // Update scroll progress
     const updateScrollProgress = () => {
@@ -332,7 +337,7 @@ const MeetOurFellows = () => {
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="min-h-[350px] relative z-40 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">Meet Our Fellows</h2>
+                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">{language === 'English' ? 'Meet Our Fellows': 'અમારા ફેલોને મળો'}</h2>
                 </div>
             </div>
             <main className="fix">

@@ -60,7 +60,7 @@ const faqData: FaqItem[] = [
     },
     {
         question: "Is there a provision of training for the fellows?",
-        answer: "Upon enrolment, a mandatory two-week training program will be arranged for all Individual Fellows, jointly conducted by SPIPA and IIM-A. The training includes a two-week attachment with the Head of Department (HOD) and introductory sessions within the department."
+        answer: "Upon enrolment, a mandatory two-week training program will be arranged for all Individual Fellows, jointly conducted by SPIPA and IIM-A."
     },
     {
         question: "What are the future career opportunities available to fellows?",

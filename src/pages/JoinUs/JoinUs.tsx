@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const JoinUs = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
+    const language = useSelector((state: RootState) => state.language.language);
     const updateScrollProgress = () => {
         // Get total scrollable height
         const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -38,10 +39,10 @@ const JoinUs = () => {
     const [pdfSrc, setPdfSrc] = useState("");
 
     // Sample array of project data (replace with actual data)
-    const projects = [
+    const projectsEnglish = [
         
         {
-            name: "Government Resolution no. GAD/MSM/e-file/1/2024/6058/ARTD2 dated 18/11/2024 in Gujarati.",
+            name: "Government Resolution no. GAD/MSM/e-file/1/2024/6058/ARTD2 dated 18/11/2024 in English.",
             viewUrl: "assets/docs/GAD_MSM_E-file_1_2023_6058_ARTD2_18112024_GU.pdf",
             downloadUrl: "assets/docs/GAD_MSM_E-file_1_2023_6058_ARTD2_18112024_GU.pdf"
         },
@@ -56,6 +57,26 @@ const JoinUs = () => {
             downloadUrl: "assets/docs/GAD_MSM_e-file_1_2023_7162_ARTD2_24112023_GU.pdf"
         },
     ];
+
+    const projectsGujarati = [
+        
+        {
+            name: "સરકારી ઠરાવ નં. GAD/MSM/e-file/1/2024/6058/ARTD2 તારીખ 18/11/2024 ગુજરાતીમાં.",
+            viewUrl: "assets/docs/GAD_MSM_E-file_1_2023_6058_ARTD2_18112024_GU.pdf",
+            downloadUrl: "assets/docs/GAD_MSM_E-file_1_2023_6058_ARTD2_18112024_GU.pdf"
+        },
+        {
+            name: "સરદાર પટેલ ગુડ ગવર્નન્સ સીએમ ફેલોશિપ પ્રોગ્રામ 2025-26 માટેની છેલ્લી જાહેરાત",
+            viewUrl: "assets/docs/Last_Advertisement_2025_26.pdf",
+            downloadUrl: "assets/docs/Last_Advertisement_2025_26.pdf"
+        },
+        {
+            name: "સામાન્ય વહીવટ વિભાગ સરકારી ઠરાવ નં. GAD/MSM/e-file/1/2023/7162/ARTD2 તારીખ 24/11/2023 ગુજરાતીમાં",
+            viewUrl: "assets/docs/GAD_MSM_e-file_1_2023_7162_ARTD2_24112023_GU.pdf",
+            downloadUrl: "assets/docs/GAD_MSM_e-file_1_2023_7162_ARTD2_24112023_GU.pdf"
+        },
+    ];
+
 
     const handleOpenPdf = (url) => {
         setPdfSrc(url); // Set the URL of the PDF to be viewed
@@ -178,7 +199,7 @@ const JoinUs = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {projects.map((project, index) => (
+                                    {projectsEnglish.map((project, index) => (
                                         <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                             <th
                                                 scope="row"

@@ -3,6 +3,8 @@ import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import { useEffect, useState } from 'react';
 import '../../index.css'
+import { useDispatch, useSelector } from 'react-redux';
+
 
 import Modal from 'react-modal';
 
@@ -230,6 +232,7 @@ const modalStyles = {
 
 
 const MediaPage = () => {
+    const language = useSelector((state: RootState) => state.language.language);
     const [scrollProgress, setScrollProgress] = useState(0);
     const updateScrollProgress = () => {
         // Get total scrollable height
@@ -271,7 +274,7 @@ const MediaPage = () => {
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="min-h-[350px] relative z-40 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">Gallery</h2>
+                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">{language === 'English' ? 'Gallery' : 'ગેલેરી'}</h2>
                 </div>
             </div>
             <main className='fix'>
@@ -281,7 +284,7 @@ const MediaPage = () => {
                         <div className="row align-items-center">
                             <div className="col-lg-12 col-md-12">
                                 <div className="section__title port_double">
-                                    <h2 className="title">Our Gallery</h2>
+                                    <h2 className="title">{language === 'English' ? 'Our Gallery' : "અમારી ગેલેરી"}</h2>
                                 </div>
                             </div>
                         </div>
@@ -419,7 +422,7 @@ const MediaPage = () => {
                                 />
                                 <div className="px-6 py-4">
                                     <p className="text-gray-700 text-base">
-                                        4th edition of the Global Renewable Energy Investors Meet and Expo (4th RE-INVEST) from 16th to 18th September, 2024 at Mahatma Mandir, Gandhinagar, Gujarat.
+                                        {language === 'English' ? "4th edition of the Global Renewable Energy Investors Meet and Expo (4th RE-INVEST) from 16th to 18th September, 2024 at Mahatma Mandir, Gandhinagar, Gujarat." : "16 થી 18 સપ્ટેમ્બર, 2024 દરમિયાન મહાત્મા મંદિર, ગાંધીનગર, ગુજરાત ખાતે ગ્લોબલ રિન્યુએબલ એનર્જી ઇન્વેસ્ટર્સ મીટ અને એક્સ્પો (ચોથી રિ-ઇન્વેસ્ટ) ની ચોથી આવૃત્તિ."}
                                     </p>
                                 </div>
                             </div>
@@ -432,7 +435,7 @@ const MediaPage = () => {
                                 />
                                 <div className="px-6 py-4">
                                     <p className="text-gray-700 text-base">
-                                        Field visit at GST bhavan
+                                        {language === 'English' ? "Field visit at GST bhavan" : "GST ભવન ખાતે ક્ષેત્રની મુલાકાત"}
                                     </p>
                                 </div>
                             </div>
@@ -445,7 +448,7 @@ const MediaPage = () => {
                                 />
                                 <div className="px-6 py-4">
                                     <p className="text-gray-700 text-base">
-                                        Field visit SWAGAT
+                                        {language === 'English' ? "Field visit SWAGAT" : "ક્ષેત્ર મુલાકાત SWAGAT"}
                                     </p>
                                 </div>
                             </div>

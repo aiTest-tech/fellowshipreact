@@ -224,7 +224,7 @@ const Navbar = () => {
                                     className="fixed right-0 h-screen w-[70vw] bg-[#0A4C7B] rounded-lg text-black flex justify-center items-center"
                                 >
                                     <div className="flex flex-col justify-center">
-                                        <div className="col-xl-2 relative -top-[120px]">
+                                        <div className="col-xl-2 relative -top-[80px]">
                                             <select
                                                 value={language}
                                                 onChange={(e) => handleLanguageChange(e.target.value)}
@@ -234,15 +234,33 @@ const Navbar = () => {
                                                 <option value="Gujarati">Gujarati</option>
                                             </select>
                                         </div>
+                                        {
+                                            language === 'English' ? (
+                                                <>
+                                                    <NavLink to={"/"} className="text-xl mb-4 px-4 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Home</span></NavLink>
+                                                    <NavLink to={"/about"} className="text-xl mb-4 px-4 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">About Us</span></NavLink>
+                                                    <NavLink to={"/meet-our-fellows"} className="text-xl mb-4 px-4  hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Meet Our Fellows</span></NavLink>
+                                                    <NavLink to={"/academic-partner"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Academic Partner</span></NavLink>
+                                                    <NavLink to={"/media"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Media</span></NavLink>
+                                                    <NavLink to={"/joinUs"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Join Us</span></NavLink>
+                                                    <NavLink to={"/faqs"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">FAQ'S</span></NavLink>
+                                                    <NavLink to={"/contactUs"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Contact</span></NavLink>
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <NavLink to={"/"} className="text-xl mb-4 px-4 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Home</span></NavLink>
+                                                    <NavLink to={"/about"} className="text-xl mb-4 px-4 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">અમારા વિશે</span></NavLink>
+                                                    <NavLink to={"/meet-our-fellows"} className="text-xl mb-4 px-4  hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">અમારા ફેલોને મળો</span></NavLink>
+                                                    <NavLink to={"/academic-partner"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">શૈક્ષણિક ભાગીદાર</span></NavLink>
+                                                    <NavLink to={"/media"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">મીડિયા</span></NavLink>
+                                                    <NavLink to={"/joinUs"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">અમારી સાથે જોડાઓ</span></NavLink>
+                                                    <NavLink to={"/faqs"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">FAQ'S</span></NavLink>
+                                                    <NavLink to={"/contactUs"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">સંપર્ક કરો</span></NavLink>
+                                                </>
+                                            )
+                                        }
 
-                                        <NavLink to={"/"} className="text-xl mb-4 px-4 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Home</span></NavLink>
-                                        <NavLink to={"/about"} className="text-xl mb-4 px-4 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">About Us</span></NavLink>
-                                        <NavLink to={"/meet-our-fellows"} className="text-xl mb-4 px-4  hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Meet Our Fellows</span></NavLink>
-                                        <NavLink to={"/academic-partner"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Academic Partner</span></NavLink>
-                                        <NavLink to={"/media"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Media</span></NavLink>
-                                        <NavLink to={"/joinUs"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Join Us</span></NavLink>
-                                        <NavLink to={"/faqs"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">FAQ'S</span></NavLink>
-                                        <NavLink to={"/contactUs"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Contact</span></NavLink>
+
                                     </div>
                                 </div>
                             )}

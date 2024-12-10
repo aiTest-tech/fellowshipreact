@@ -47,7 +47,7 @@ const About = () => {
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="min-h-[350px] relative z-40 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">About Us</h2>
+                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">{language === "English" ? 'About Us' : 'અમારા વિશે'}</h2>
                 </div>
             </div>
 
@@ -76,8 +76,8 @@ const About = () => {
                                                 </p>
                                                 <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Objective</h1>
                                                 <p className="py-3 text-xl">
-                                                To foster a dynamic ecosystem that encourages lifelong learning, empowers individuals with practical skills,
-                                                 and promotes ethical leadership, enabling them to drive transformative change in their communities and beyond.
+                                                    To foster a dynamic ecosystem that encourages lifelong learning, empowers individuals with practical skills,
+                                                    and promotes ethical leadership, enabling them to drive transformative change in their communities and beyond.
                                                 </p>
                                             </div>
                                         </>
@@ -90,12 +90,12 @@ const About = () => {
                                                         પ્રતિભાને પ્રેરિત કરવા અને સંવર્ધન કરવા માટે, એક પ્લેટફોર્મ બનાવવું જ્યાં નવીનતા પ્રભાવને પહોંચી વળે. અમે લક્ષ્ય રાખ્યું છે
                                                         એક સંસ્કૃતિ કેળવો જે ટકાઉ વિકાસ ચલાવે અને આપણા સમયના નિર્ણાયક પડકારોને સંબોધિત કરે.
                                                     </p>
-                                                    <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Mission</h1>
+                                                    <h1 className="about-subtitle text-2xl font-semibold mt-4">અમારું મિશન</h1>
                                                     <p className="py-3 text-xl">
                                                         વ્યાપક કાર્યક્રમો, વ્યૂહાત્મક સહયોગ અને શ્રેષ્ઠતા પર ધ્યાન કેન્દ્રિત કરીને, અમે પ્રયાસ કરીએ છીએ
                                                         પ્રગતિ અને નવીનતાનો વારસો છોડીને સમાજમાં અર્થપૂર્ણ યોગદાન આપનારા નેતાઓને આકાર આપો.
                                                     </p>
-                                                    <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Objective</h1>
+                                                    <h1 className="about-subtitle text-2xl font-semibold mt-4">અમારો ઉદ્દેશ</h1>
                                                     <p className="py-3 text-xl">
                                                         વ્યાપક કાર્યક્રમો, વ્યૂહાત્મક સહયોગ અને શ્રેષ્ઠતા પર ધ્યાન કેન્દ્રિત કરીને, અમે પ્રયાસ કરીએ છીએ
                                                         પ્રગતિ અને નવીનતાનો વારસો છોડીને સમાજમાં અર્થપૂર્ણ યોગદાન આપનારા નેતાઓને આકાર આપો.

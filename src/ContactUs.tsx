@@ -6,10 +6,13 @@ import { GiWorld } from "react-icons/gi";
 import { CgMail } from "react-icons/cg";
 import { FaPhone } from "react-icons/fa6";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "@reduxjs/toolkit/query";
 
 
 const ContactUs = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
+    const language = useSelector((state: RootState) => state.language.language);
     const updateScrollProgress = () => {
         // Get total scrollable height
         const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -50,7 +53,7 @@ const ContactUs = () => {
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="min-h-[350px] relative z-40 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">Contact Us</h2>
+                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">{language === 'English' ? "Contact Us" : "અમારો સંપર્ક કરો"}</h2>
                 </div>
             </div>
             <main className="fix">
@@ -60,15 +63,15 @@ const ContactUs = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-12 col-md-12">
                             <div className="section__title port_double">
-                                <h2 className="title">Contact Us</h2>
+                                <h2 className="title">{language === 'English' ? "Contact Us" : "અમારો સંપર્ક કરો"}</h2>
                             </div>
                         </div>
                     </div>
                     <div className="container py-5">
                         <div className="row g-5">
-                            <ContactCard h1="Address" para="Administrative Reforms & Training Division, General Administration Department,Govt. of Gujarat. Block No. 7, 1st Floor, New Sachivalaya,Gandhinagar, Gujarat" icon={<GiWorld color="white" className="w-[100px] h-[100px]" />} />
-                            <ContactCard h1="Email" para="edpspipa@gmail.com" icon={<CgMail color="white" className="w-[100px] h-[100px]" />} />
-                            <ContactCard h1="Phone" para="079-23250333" icon={<FaPhone color="white" className="w-[100px] h-[100px]" />} />
+                            <ContactCard h1={language === "English" ? "Address" : "સરનામું"} para={language === 'English' ? "Administrative Reforms & Training Division, General Administration Department,Govt. of Gujarat. Block No. 7, 1st Floor, New Sachivalaya,Gandhinagar, Gujarat" : "વહીવટી સુધારણા અને તાલીમ વિભાગ, સામાન્ય વહીવટ વિભાગ, સરકાર. ગુજરાતના. બ્લોક નં. 7, પહેલો માળ, નવું સચિવાલય, ગાંધીનગર, ગુજરાત"} icon={<GiWorld color="white" className="w-[100px] h-[100px]" />} />
+                            <ContactCard h1={language === 'English' ? "Email" : "ઈમેલ"} para="edpspipa@gmail.com" icon={<CgMail color="white" className="w-[100px] h-[100px]" />} />
+                            <ContactCard h1={language === 'English' ? "Phone" : "ફોન"} para={language === 'English' ? "079-23250333" : "079-23250333"} icon={<FaPhone color="white" className="w-[100px] h-[100px]" />} />
 
 
                             <div

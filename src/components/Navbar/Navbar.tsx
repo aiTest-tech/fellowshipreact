@@ -112,9 +112,9 @@ const Navbar = () => {
                         <div className="col-12">
                             <div className="tgmenu__wrap">
                                 <div className="logo">
-                                    <a href="index.html">
+                                    <NavLink to="/">
                                         <img src="assets/img/logo.jpeg" alt="Logo" />
-                                    </a>
+                                    </NavLink>
                                 </div>
                                 <div className="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
                                     {
@@ -224,13 +224,25 @@ const Navbar = () => {
                                     className="fixed right-0 h-screen w-[70vw] bg-[#0A4C7B] rounded-lg text-black flex justify-center items-center"
                                 >
                                     <div className="flex flex-col justify-center">
-                                        <NavLink to={"/about"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300"><span className="text-white text-xl font-extrabold">About Us</span></NavLink>
-                                        <NavLink to={"/meet-our-fellows"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300"><span className="text-white text-xl font-extrabold">Meet Our Fellows</span></NavLink>
-                                        <NavLink to={"/academic-partner"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300"><span className="text-white text-xl font-extrabold">Academic Partner</span></NavLink>
-                                        <NavLink to={"/media"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300"><span className="text-white text-xl font-extrabold">Media</span></NavLink>
-                                        <NavLink to={"/join-us"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300"><span className="text-white text-xl font-extrabold">Join Us</span></NavLink>
-                                        <NavLink to={"/faqs"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300"><span className="text-white text-xl font-extrabold">FAQ'S</span></NavLink>
-                                        <NavLink to={"/contact"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300"><span className="text-white text-xl font-extrabold">Contact</span></NavLink>
+                                        <div className="col-xl-2 relative -top-[120px]">
+                                            <select
+                                                value={language}
+                                                onChange={(e) => handleLanguageChange(e.target.value)}
+                                                className="bg-white text-gray-800 border border-gray-300 rounded-lg shadow-sm hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 px-4 py-2 w-full transition-all duration-300 ease-in-out"
+                                            >
+                                                <option value="English">English</option>
+                                                <option value="Gujarati">Gujarati</option>
+                                            </select>
+                                        </div>
+
+                                        <NavLink to={"/"} className="text-xl mb-4 px-4 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Home</span></NavLink>
+                                        <NavLink to={"/about"} className="text-xl mb-4 px-4 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">About Us</span></NavLink>
+                                        <NavLink to={"/meet-our-fellows"} className="text-xl mb-4 px-4  hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Meet Our Fellows</span></NavLink>
+                                        <NavLink to={"/academic-partner"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Academic Partner</span></NavLink>
+                                        <NavLink to={"/media"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Media</span></NavLink>
+                                        <NavLink to={"/joinUs"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Join Us</span></NavLink>
+                                        <NavLink to={"/faqs"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">FAQ'S</span></NavLink>
+                                        <NavLink to={"/contactUs"} className="text-xl mb-4 px-4 py-2 hover:bg-blue-500 transition-all duration-300 relative -top-[70px]" style={({ isActive }) => (isActive ? activeTabStyle : inactiveTabStyle)}><span className="text-white text-xl font-extrabold">Contact</span></NavLink>
                                     </div>
                                 </div>
                             )}

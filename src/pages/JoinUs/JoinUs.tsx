@@ -40,7 +40,7 @@ const JoinUs = () => {
 
     // Sample array of project data (replace with actual data)
     const projectsEnglish = [
-        
+
         {
             name: "Government Resolution no. GAD/MSM/e-file/1/2024/6058/ARTD2 dated 18/11/2024 in English.",
             viewUrl: "assets/docs/GAD_MSM_E-file_1_2023_6058_ARTD2_18112024_GU.pdf",
@@ -59,7 +59,7 @@ const JoinUs = () => {
     ];
 
     const projectsGujarati = [
-        
+
         {
             name: "સરકારી ઠરાવ નં. GAD/MSM/e-file/1/2024/6058/ARTD2 તારીખ 18/11/2024 ગુજરાતીમાં.",
             viewUrl: "assets/docs/GAD_MSM_E-file_1_2023_6058_ARTD2_18112024_GU.pdf",
@@ -79,7 +79,7 @@ const JoinUs = () => {
 
 
     const handleOpenPdf = (url) => {
-        setPdfSrc(url); // Set the URL of the PDF to be viewed
+        setPdfSrc(url);
         setIsPdfOpen(true);
     };
 
@@ -103,7 +103,7 @@ const JoinUs = () => {
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="min-h-[350px] relative z-40 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">Join Us</h2>
+                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">{language === 'English' ? "Join Us" : 'અમારી સાથે જોડાઓ'}</h2>
                 </div>
             </div>
             <div className="min-h-screen bg-[url('assets/img/illusion.png')] p-8">
@@ -111,51 +111,55 @@ const JoinUs = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-12 col-md-12">
                             <div className="section__title port_double">
-                                <h2 className="title">Join Us</h2>
+                                <h2 className="title">{language === 'English' ? "Join Us" : 'અમારી સાથે જોડાઓ'}</h2>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="max-w-5xl mx-auto">
-                    
+
                     {/* Title Section */}
                     <div className="bg-white p-6 rounded-lg shadow-lg">
-                        <h1 className="text-3xl font-semibold text-center">Useful information for CM Fellow Recruitment</h1>
-                        <p className="mt-4 text-center">Please read the instructions and follow carefully</p>
+                        <h1 className="text-3xl font-semibold text-center">{language === 'English' ? "Useful information for CM Fellow Recruitment" : "સીએમ ફેલોની ભરતી માટે ઉપયોગી માહિતી"}</h1>
+                        <p className="mt-4 text-center">{language === 'English' ? "Please read the instructions and follow carefully" : "કૃપા કરીને સૂચનાઓ વાંચો અને કાળજીપૂર્વક અનુસરો"}</p>
                     </div>
 
                     {/* Key Information */}
                     <div className="bg-white p-6 rounded-lg shadow-lg mt-6">
-                        <h2 className="text-xl font-semibold">Key Information</h2>
+                        <h2 className="text-xl font-semibold">{language === 'English' ? "Key Information" : "મુખ્ય માહિતી"}</h2>
                         <ul className="list-disc pl-6 space-y-2 mt-4">
-                            <li><strong>Monthly Stipend:</strong> Rs. 1,00,000/- + Rs. 10,000 (LTA)</li>
-                            <li><strong>Age Criteria:</strong> Should not be more than 35 years as on the last date of application</li>
-                            <li><strong>Application Fees:</strong> Rs. 500/- (Non-refundable)</li>
+                            <li><strong>Monthly Stipend:</strong> {language === 'English' ? "Rs. 1,00,000/- + Rs. 10,000 (LTA)" : "રૂ. 1,00,000/- + રૂ. 10,000 (LTA)"}</li>
+                            <li><strong>Age Criteria:</strong> {language === 'English' ? "Should not be more than 35 years as on the last date of application" : "અરજીની છેલ્લી તારીખે 35 વર્ષથી વધુ ન હોવી જોઈએ"}</li>
+                            <li><strong>Application Fees:</strong> {language === 'English' ? "Rs. 500/- (Non-refundable)" : "રૂ. 500/- (નૉન-રિફંડપાત્ર)"}</li>
                         </ul>
                     </div>
 
                     {/* Important Things to Consider */}
                     <div className="bg-white p-6 rounded-lg shadow-lg mt-6">
-                        <h2 className="text-xl font-semibold">Important Things to Consider While Applying</h2>
+                        <h2 className="text-xl font-semibold">{language === 'English' ? "Important Things to Consider While Applying" : "અરજી કરતી વખતે ધ્યાનમાં લેવા જેવી મહત્વની બાબતો"}</h2>
                         <ul className="list-disc pl-6 space-y-2 mt-4">
-                            <li>Applicants must fill their name as per the name in the SSC marksheet.</li>
-                            <li>Applicants must have passed 10th, 12th, and graduation with 60% marks.</li>
-                            <li>Applicant also has to fill the details if graduation or post graduation is done from Prime national institute </li>
-                            <li>Applicant also has to fill the details if graduation or post graduation is done from International/foreign University/Institute</li>
-                            <li>If the applicant has experience in a Government/Private organization for a period of three years or more, it should be indicated.</li>
-                            <li>In the online application, the applicant has to write a personal statement in 1000 to 1200 words about his/her suitability as a fellow And don't use special characters</li>
-                            <li>The subject/project mentioned in row-12, column-2 of the sheet mentioned in Annexure-2 of the resolution dated 24/11/2023 attached herewith shall be considered valid.</li>
+                            <li>{language === 'English' ? "Applicants must fill their name as per the name in the SSC marksheet." : "અરજદારોએ SSC માર્કશીટમાં નામ પ્રમાણે તેમનું નામ ભરવાનું રહેશે."}</li>
+                            <li>{language === 'English' ? "Applicants must have passed 10th, 12th, and graduation with 60% marks." : "અરજદારોએ 60% માર્ક્સ સાથે 10મું, 12મું અને ગ્રેજ્યુએશન પાસ કરેલ હોવું જોઈએ."}</li>
+                            <li>{language === 'English' ? "Applicant also has to fill the details if graduation or post graduation is done from Prime national institute" : "જો પ્રાઇમ નેશનલ ઇન્સ્ટિટ્યૂટમાંથી સ્નાતક અથવા અનુસ્નાતક કર્યું હોય તો અરજદારે વિગતો પણ ભરવાની રહેશે"} </li>
+                            <li>{language === 'English' ? "Applicant also has to fill the details if graduation or post graduation is done from International/foreign University/Institute" : "આંતરરાષ્ટ્રીય/વિદેશી યુનિવર્સિટી/સંસ્થામાંથી ગ્રેજ્યુએશન કે પોસ્ટ ગ્રેજ્યુએશન કર્યું હોય તો અરજદારે વિગતો પણ ભરવાની રહેશે."}</li>
+                            <li>{language === "English" ? "If the applicant has experience in a Government/Private organization for a period of three years or more, it should be indicated." : "જો અરજદારને સરકારી/ખાનગી સંસ્થામાં ત્રણ વર્ષ કે તેથી વધુ સમયગાળાનો અનુભવ હોય, તો તે દર્શાવવો જોઈએ."}</li>
+                            <li>{language === 'English' ? "In the online application, the applicant has to write a personal statement in 1000 to 1200 words about his/her suitability as a fellow And don't use special characters" : "ઓનલાઈન અરજીમાં, અરજદારે સાથી તરીકેની તેની યોગ્યતા વિશે 1000 થી 1200 શબ્દોમાં વ્યક્તિગત નિવેદન લખવું પડશે અને વિશેષ અક્ષરોનો ઉપયોગ કરશો નહીં."}</li>
+                            <li>{language === "English" ? "The subject/project mentioned in row-12, column-2 of the sheet mentioned in Annexure-2 of the resolution dated 24/11/2023 attached herewith shall be considered valid." : "આ સાથે જોડાયેલ 24/11/2023 ના ઠરાવના પરિશિષ્ટ-2 માં ઉલ્લેખિત શીટની પંક્તિ-12, કૉલમ-2 માં ઉલ્લેખિત વિષય/પ્રોજેક્ટ માન્ય ગણવામાં આવશે."}</li>
                         </ul>
                     </div>
 
                     {/* Document Download */}
                     <div className="bg-white p-6 rounded-lg shadow-lg mt-6">
-                        <h2 className="text-xl font-semibold">Government Resolutions</h2>
+                        <h2 className="text-xl font-semibold">{language === 'English' ? "Government Resolutions" : "સરકારી ઠરાવો"}</h2>
                         <p className="mt-4">
-                            The following document contains the General Administration Department GR no. GAD/MSM/e-file/1/202/7162/ARTD2 dated 24/11/2023 in Gujarati and English and GR no. GAD/MSM/e-file/1/2024/6058/ARTD2 dated 18/11/2024 in Gujarati.
+                            {
+                                language === 'English' ? "The following document contains the General Administration Department GR no. GAD/MSM/e-file/1/202/7162/ARTD2 dated 24/11/2023 in Gujarati and English and GR no. GAD/MSM/e-file/1/2024/6058/ARTD2 dated 18/11/2024 in Gujarati." : "નીચેના દસ્તાવેજમાં સામાન્ય વહીવટ વિભાગનો GR નં. GAD/MSM/e-file/1/202/7162/ARTD2 તારીખ 24/11/2023 ગુજરાતી અને અંગ્રેજીમાં અને GR નં. GAD/MSM/e-file/1/2024/6058/ARTD2 તારીખ 18/11/2024 ગુજરાતીમાં."
+                            }
                         </p>
                         <p className='py-2'>
-                            In case of any issue concerning out of the GR, the Gujarati version will be considered final.
+                            {
+                                language === 'English' ? "In case of any issue concerning out of the GR, the Gujarati version will be considered final." : "GR ની બહાર કોઈ પણ મુદ્દાના કિસ્સામાં, ગુજરાતી સંસ્કરણને અંતિમ ગણવામાં આવશે."
+                            }
                         </p>
                         {/* <div className="space-x-4">
                             <a
@@ -199,28 +203,60 @@ const JoinUs = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {projectsEnglish.map((project, index) => (
-                                        <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                            <th
-                                                scope="row"
-                                                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black"
-                                            >
-                                                {project.name}
-                                            </th>
-                                            <td className="px-6 py-4">
-                                                <div className='flex justify-between items-center gap-2'>
-                                                    <div className='cursor-pointer'>
-                                                        <FaRegEye onClick={() => handleOpenPdf(project.viewUrl)} />
-                                                    </div>
-                                                    <div className='cursor-pointer'>
-                                                        <a href={project.downloadUrl} download>
-                                                            <FaDownload />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    ))}
+                                    {
+                                        language === "English" ? (
+                                            <>
+                                                {projectsEnglish.map((project, index) => (
+                                                    <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                                        <th
+                                                            scope="row"
+                                                            className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black"
+                                                        >
+                                                            {project.name}
+                                                        </th>
+                                                        <td className="px-6 py-4">
+                                                            <div className='flex justify-between items-center gap-2'>
+                                                                <div className='cursor-pointer'>
+                                                                    <FaRegEye onClick={() => handleOpenPdf(project.viewUrl)} />
+                                                                </div>
+                                                                <div className='cursor-pointer'>
+                                                                    <a href={project.downloadUrl} download>
+                                                                        <FaDownload />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                ))}
+                                            </>
+                                        ) : (
+                                            <>
+                                                {projectsGujarati.map((project, index) => (
+                                                    <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                                        <th
+                                                            scope="row"
+                                                            className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black"
+                                                        >
+                                                            {project.name}
+                                                        </th>
+                                                        <td className="px-6 py-4">
+                                                            <div className='flex justify-between items-center gap-2'>
+                                                                <div className='cursor-pointer'>
+                                                                    <FaRegEye onClick={() => handleOpenPdf(project.viewUrl)} />
+                                                                </div>
+                                                                <div className='cursor-pointer'>
+                                                                    <a href={project.downloadUrl} download>
+                                                                        <FaDownload />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                ))}
+                                            </>
+                                        )
+                                    }
+
                                 </tbody>
                             </table>
                         </div>

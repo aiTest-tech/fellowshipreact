@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../store/store';
 
 // Define a type for the FAQ item
 type FaqItem = {
@@ -9,7 +11,7 @@ type FaqItem = {
 };
 
 // Define the FAQ data based on the provided questions and answers
-const faqData: FaqItem[] = [
+const faqDataEnglish: FaqItem[] = [
     {
         question: "What is the Sardar Patel Chief Minister Fellowship Program by the Government of Gujarat?",
         answer: "To contribute to the enhancement of Governance in the state of Gujarat by infusing innovative and effective approaches into policy-making and service delivery processes. To serve as a catalyst for transformation within government departments promoting a culture of innovation, efficiency, and excellence."
@@ -68,8 +70,68 @@ const faqData: FaqItem[] = [
     }
 ];
 
+const faqDataGujarati: FaqItem[] = [
+    {
+        question: "ગુજરાત સરકાર દ્વારા સરદાર પટેલ મુખ્યમંત્રી ફેલોશિપ પ્રોગ્રામ શું છે?",
+        answer: "નીતિ-નિર્માણ અને સેવા વિતરણ પ્રક્રિયાઓમાં નવીન અને અસરકારક અભિગમોનો ઉપયોગ કરીને ગુજરાત રાજ્યમાં શાસનની વૃદ્ધિમાં યોગદાન આપવું. નવીનતા, કાર્યક્ષમતા અને શ્રેષ્ઠતાની સંસ્કૃતિને પ્રોત્સાહન આપતા સરકારી વિભાગોમાં પરિવર્તન માટે ઉત્પ્રેરક તરીકે સેવા આપવી."
+    },
+    {
+        question: "મુખ્યમંત્રી ફેલોશિપ પ્રોગ્રામ કોણે શરૂ કર્યો?",
+        answer: "આ કાર્યક્રમ 31મી ઑક્ટોબર 2023ના રોજ માનનીય મુખ્યમંત્રી શ્રી ભૂપેન્દ્રભાઈ પટેલ દ્વારા શરૂ કરવામાં આવ્યો હતો."
+    },
+    {
+        question: "મુખ્ય પ્રધાન ફેલોશિપ, 2024 ની અવધિ શું છે?",
+        answer: "ફેલો 1 વર્ષના નિશ્ચિત સમયગાળા માટે રોકાયેલા રહેશે, જે એક સમયે 1 વર્ષ સુધી લંબાવી શકાય છે. જો કે, પ્રથમ વર્ષ પછી તેમની સંબંધિત હોદ્દા પર તેમનું ચાલુ રાખવું સ્પષ્ટ રીતે વ્યાખ્યાયિત મુખ્ય પ્રદર્શન સૂચકાંકોના આધારે સંતોષકારક વાર્ષિક પ્રદર્શન સમીક્ષા પર આધારિત છે."
+    },
+    {
+        question: "હું મુખ્ય પ્રધાન ફેલોશિપ, 2023 માટે ક્યારે અરજી કરી શકું?",
+        answer: "મુખ્યમંત્રી ફેલોશિપ માટેની અરજી પ્રક્રિયા 2જી ડિસેમ્બર 2023થી શરૂ થાય છે. અરજી સબમિટ કરવાની છેલ્લી તારીખ 30મી ડિસેમ્બર, 2023 છે."
+    },
+    {
+        question: "મુખ્યમંત્રી ફેલોશિપ, 2023 માટે અરજી ફી કેટલી છે?",
+        answer: "મુખ્યમંત્રી ફેલોશિપ માટેની અરજી ફી રૂ. 500."
+    },
+    {
+        question: "ફેલોશિપ માટે જરૂરી શૈક્ષણિક લાયકાત, ઉંમર અને અનુભવ શું છે?",
+        answer: "• ધોરણ 10 અને 12 લઘુત્તમ 60% સાથે પાસ\n• ન્યૂનતમ 60% સાથે સ્નાતકની ડિગ્રી\n• મુખ્ય રાષ્ટ્રીય સંસ્થાઓને મહત્વ આપવામાં આવશે\n• અરજીની છેલ્લી તારીખે ઉંમર 35 વર્ષથી વધુ હોવી જોઈએ નહીં\n• સંબંધિત વિષયનો ઓછામાં ઓછો 3 વર્ષનો અનુભવ"
+    },
+    {
+        question: "પસંદગી પ્રક્રિયાના વિવિધ તબક્કા શું છે?",
+        answer: "ગુજરાતમાં સરદાર પટેલ ગુડ ગવર્નન્સ સીએમ ફેલોશિપ માટેની પસંદગી પ્રક્રિયા સરકાર દ્વારા નિર્ધારિત ચોક્કસ માર્ગદર્શિકા અને નિયમોનું પાલન કરે છે. રસ ધરાવતા અરજદારોએ સત્તાવાર વેબસાઇટ https://spipa.gujarat.gov.in મારફતે અરજી કરવી પડશે અને રૂ.ની અરજી ફી ચૂકવવી પડશે. 500/-. પસંદગી પ્રક્રિયા સમાન પ્રવેશ, ખુલ્લી સ્પર્ધા અને પારદર્શિતાના સિદ્ધાંતોને અનુસરે છે. શરૂઆતમાં, સ્ક્રુટિની એન્ડ શોર્ટલિસ્ટિંગ કમિટી (એસએસસી) અરજીઓની સમીક્ષા કરે છે, યોગ્ય ઉમેદવારોને શોર્ટલિસ્ટ કરે છે. IIM-અમદાવાદના નિષ્ણાતો દ્વારા વ્યક્તિગત નિવેદનનું મૂલ્યાંકન કરવામાં આવશે. અંતિમ પસંદગી પસંદગી સમિતિ (SC) દ્વારા હાથ ધરવામાં આવે છે, જેમાં શૈક્ષણિક લાયકાત, કાર્ય અનુભવ (40% વેઇટેજ), વ્યક્તિગત નિવેદન (20% IIM-A દ્વારા મૂલ્યાંકન), અને વ્યક્તિગત ઇન્ટરવ્યુ (40% વેઇટેજ) ધ્યાનમાં લેવામાં આવે છે. SC કેસ-બાય-કેસ આધારે બહારના નિષ્ણાતોનો પણ સમાવેશ કરી શકે છે, જે એક વર્ષ માટે માન્ય અનામત યાદી છે."
+    },
+    {
+        question: "How Many Fellows will be selected?",
+        answer: "Upto 20 fellows will be appointed at the end of the selection process in the fellowship programme, however, the actual need will be determined over time."
+    },
+    {
+        question: "What will be the Stipend paid to the Fellows?",
+        answer: "Fellows selected for this program will receive a monthly stipend of Rs. 1,00,000. The continuation of the fellowship will be determined by mutual consent, and Individual Fellows will get a 10% increase in their Stipend."
+    },
+    {
+        question: "શું મને અરજી કરતી વખતે મૂળ દસ્તાવેજોની જરૂર છે?",
+        answer: "અરજી કરતી વખતે મૂળ દસ્તાવેજોની જરૂર નથી. આ દસ્તાવેજોમાંથી માહિતી અરજી ફોર્મમાં ભરવાની છે. ઇન્ટરવ્યુ માટે પસંદ કરાયેલા ઉમેદવારોના મૂળ દસ્તાવેજો ઇન્ટરવ્યુના દિવસે ચકાસવામાં આવે છે. જણાવેલ માહિતી અને મૂળ દસ્તાવેજોમાં કોઈપણ વિસંગતતા માટે ઉમેદવારને પ્રતિબંધિત કરવામાં આવી શકે છે અથવા કાનૂની કાર્યવાહીનો સામનો કરવો પડી શકે છે."
+    },
+    {
+        question: "એક સાથી તરીકે, હું કોને જાણ કરીશ?",
+        answer: "ફેલો સીધા વરિષ્ઠ સરકારી અધિકારીઓ હેઠળ કામ કરશે, જે ફેલોને માર્ગદર્શન આપશે. ફેલો આ અધિકારીઓ સાથે વારંવાર વાર્તાલાપ કરશે અને તેમને તેમની સોંપણીઓ પર અપડેટ કરશે. ફેલોએ તેમનો માસિક અહેવાલ તેમના માર્ગદર્શકોને સબમિટ કરવાનો રહેશે. માનનીય મુખ્યમંત્રી જ્યારે જરૂર પડશે ત્યારે ફેલોની સોંપણીઓની પણ સમીક્ષા કરશે."
+    },
+    {
+        question: "ફેલો દ્વારા હાથ ધરવામાં આવેલા કામ / સોંપણીઓનું સ્વરૂપ શું છે?",
+        answer: "આ કાર્ય ચોક્કસ વિષયોની આસપાસ ફરશે, દરેક સોંપણીને માર્ગદર્શન આપવા માટે પૂર્વનિર્ધારિત સમસ્યાનું નિવેદન સાથે હશે. વિષયો નીચે મુજબ છે.\n\n• PM Poshan (MDM) અને ICDS યોજનાઓના અમલીકરણમાં સુધારો\n• વિકાસલક્ષી વિસ્તારો/બ્લોક પ્રોગ્રામ: બાળકોમાં બગાડ/સ્ટન્ટિંગ ઘટાડવું\n• માધ્યમિક/ઉચ્ચતર માધ્યમિક સ્તરે વિજ્ઞાન અને ગણિત પ્રવાહમાં વિદ્યાર્થીઓની નોંધણીમાં સુધારો કરવો.\n• માધ્યમિક અને ઉચ્ચતર માધ્યમિક શાળાઓમાં કુલ વિદ્યાર્થીઓની નોંધણીમાં સુધારો\n• PMJAY યોજના હેઠળ સરકારી હોસ્પિટલો/સુવિધાઓના વાર્ષિક આવકના હિસ્સામાં સુધારો કરવો\n• જાહેર કાર્યક્રમો માટે સરકારમાં લાઇટ હાઉસ ટેકનોલોજી અપનાવવા માટેની વ્યૂહરચના વિકસાવવી\n• મ્યુનિસિપલ કચરાનું રિસાયક્લિંગ – પ્રવાહી અને ઘન કચરો\n• રાજ્યમાં કુદરતી ખેતીને પ્રોત્સાહન આપવા વ્યૂહરચના બનાવો\n• સંપૂર્ણ સિંચાઈ ક્ષમતાની સિદ્ધિ અને નર્મદા જળ સંસાધનોનો શ્રેષ્ઠ ઉપયોગ\n• પ્રવાસન પ્રમોશન: હેરિટેજ, વન્યજીવન, બીચ, કોન્ફરન્સ, રમતગમત, શહેર, સરહદ, ધાર્મિક, સર્કિટ વગેરે\n• પ્રદૂષણ નિયંત્રણ: ઔદ્યોગિક અને શહેરી: આ વિષય પર સમસ્યા નિવેદન\n• પોલિસી ઇન્ટેલિજન્સ યુનિટ ફ્રેમવર્ક\n• સુશાસન પ્રથા તરીકે તાલીમ અને ક્ષમતા નિર્માણની સ્થાપના કરવી.\n• ગ્રામીણ કચરાનું રિસાયક્લિંગ – પ્રવાહી અને ઘન કચરો\n• તકનીકી અને નાણાકીય - ડિસ્કોમનું કાર્ય\n• Viksit 2047 ગુજરાત ધ્યેય અને વિવિધ સૂચકાંકોની કામગીરી\n• Study of cultural relations between Gujarat and other states\n• એમબીકેવીવાય – મુખ્ય મંત્રી ભવિષ્યલક્ષી કૌશલ્યા વિકાસ યોજના\n• વિકાસશીલ કાસ્ટ કલ્યાણ વિભાગ (વિદેશ અભ્યાસ લોન યોજના) દ્વારા ઓફર કરાયેલ આંતરરાષ્ટ્રીય અભ્યાસ માટે શિષ્યવૃત્તિ કાર્યક્રમ\n• વૃદ્ધો અને વિકલાંગોને નાણાકીય સહાય યોજના\n• આદિવાસી વિસ્તારમાં આર્થિક અને સામાજિક વિકાસ માટે ટકાઉ આજીવિકા"
+    },
+    {
+        question: "Is there a provision of training for the fellows?",
+        answer: "Upon enrolment, a mandatory two-week training program will be arranged for all Individual Fellows, jointly conducted by SPIPA and IIM-A."
+    },
+    {
+        question: "ફેલો માટે ભાવિ કારકિર્દીની તકો શું ઉપલબ્ધ છે?",
+        answer: "સરકાર જેવી મહત્વપૂર્ણ અને વિશાળ સંસ્થા સાથે કામ કરવાનો અનુભવ ખૂબ જ દુર્લભ અને અનોખો અનુભવ છે. ફેલોશિપ પ્રોગ્રામ મેનેજમેન્ટ, કોમ્યુનિકેશન, પ્રોબ્લેમ સોલ્વિંગ, કોઠાસૂઝ વગેરે સંબંધિત વિવિધ કૌશલ્યોને વધારે છે. આ અનુભવ ફેલો માટે વિવિધ શૈક્ષણિક અને કારકિર્દીની તકો રજૂ કરે છે. નાગરિક સેવાઓ, જાહેર નીતિ, નીતિ નિર્માણ, મેનેજમેન્ટ, કન્સલ્ટન્સી, સામાજિક ક્ષેત્રમાં કારકિર્દી એ કેટલાક માર્ગો છે."
+    }
+]
+
 const Faq: React.FC = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
+    const language = useSelector((state: RootState) => state.language.language);
     const updateScrollProgress = () => {
         // Get total scrollable height
         const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -119,7 +181,7 @@ const Faq: React.FC = () => {
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="min-h-[350px] relative z-40 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">Frequently Asked Questions</h2>
+                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">{language === 'English' ? "Frequently Asked Questions" : "વારંવાર પૂછાતા પ્રશ્નો"}</h2>
                 </div>
             </div>
             <div className="w-full  bg-[url('assets/img/illusion.png')] bg-repeat-y">
@@ -127,28 +189,52 @@ const Faq: React.FC = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-12 col-md-12">
                             <div className="section__title port_double">
-                                <h2 className="title">Frequently Asked Questions</h2>
+                                <h2 className="title">{language === 'English' ? "Frequently Asked Questions" : "વારંવાર પૂછાતા પ્રશ્નો"}</h2>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="max-w-3xl mx-auto py-8 px-4">
-                    <h2 className="text-3xl font-semibold mb-6">Sardar Patel Chief Minister Fellowship Program - Frequently Asked Questions</h2>
+                    <h2 className="text-3xl font-semibold mb-6">{language === 'English' ? "Sardar Patel Chief Minister Fellowship Program - Frequently Asked Questions" : "સરદાર પટેલ મુખ્યમંત્રી ફેલોશિપ પ્રોગ્રામ - વારંવાર પૂછાતા પ્રશ્નો"}</h2>
                     <div className="space-y-4">
-                        {faqData.map((item, index) => (
-                            <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden">
-                                <button
-                                    onClick={() => toggleAnswer(index)}
-                                    className="w-full px-4 py-3 text-left bg-gray-100 hover:bg-gray-200 focus:outline-none">
-                                    <span className="font-medium text-lg">{item.question}</span>
-                                </button>
-                                {openIndex === index && (
-                                    <div className="px-4 py-3 text-gray-700 bg-gray-50">
-                                        <p>{item.answer}</p>
-                                    </div>
-                                )}
-                            </div>
-                        ))}
+                        {
+                            language === 'English' ? (
+                                <>
+                                    {faqDataEnglish.map((item, index) => (
+                                        <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden">
+                                            <button
+                                                onClick={() => toggleAnswer(index)}
+                                                className="w-full px-4 py-3 text-left bg-gray-100 hover:bg-gray-200 focus:outline-none">
+                                                <span className="font-medium text-lg">{item.question}</span>
+                                            </button>
+                                            {openIndex === index && (
+                                                <div className="px-4 py-3 text-gray-700 bg-gray-50">
+                                                    <p>{item.answer}</p>
+                                                </div>
+                                            )}
+                                        </div>
+                                    ))}
+                                </>
+                            ) : (
+                                <>
+                                    {faqDataGujarati.map((item, index) => (
+                                        <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden">
+                                            <button
+                                                onClick={() => toggleAnswer(index)}
+                                                className="w-full px-4 py-3 text-left bg-gray-100 hover:bg-gray-200 focus:outline-none">
+                                                <span className="font-medium text-lg">{item.question}</span>
+                                            </button>
+                                            {openIndex === index && (
+                                                <div className="px-4 py-3 text-gray-700 bg-gray-50">
+                                                    <p>{item.answer}</p>
+                                                </div>
+                                            )}
+                                        </div>
+                                    ))}
+                                </>
+                            )
+                        }
+
                     </div>
                 </div>
             </div>

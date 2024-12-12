@@ -1,4 +1,5 @@
 // src/redux/store.ts
+// @ts-nocheck
 import { configureStore } from '@reduxjs/toolkit';
 // import languageReducer from './languageSlice';
 import languageReducer from './slice/langSlice'

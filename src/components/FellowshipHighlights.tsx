@@ -100,7 +100,7 @@ const FellowshipHighlights: React.FC = () => {
 
                                 <div className="bg-white p-6 rounded-lg shadow-lg">
                                     <h3 className="text-xl font-bold text-gray-900 mb-4">Training</h3>
-                                    <p className="text-lg text-gray-700">1-week induction at IIM-A + 3-week on-job training</p>
+                                    <p className="text-lg text-gray-700">1-week induction at Indian Institute of Management Ahmedabad + 3-week on-job training</p>
                                 </div>
 
                                 <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -110,7 +110,7 @@ const FellowshipHighlights: React.FC = () => {
 
                                 <div className="bg-white p-6 rounded-lg shadow-lg">
                                     <h3 className="text-xl font-bold text-gray-900 mb-4">Certificate</h3>
-                                    <p className="text-lg text-gray-700">Recognized jointly by IIM-A and GoG</p>
+                                    <p className="text-lg text-gray-700">Recognized jointly by Indian Institute of Management Ahmedabad and Government of Gujarat</p>
                                 </div>
 
                                 <div className="bg-white p-6 rounded-lg shadow-lg">

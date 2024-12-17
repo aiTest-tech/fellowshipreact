@@ -73,7 +73,7 @@ const AcademicPartner = () => {
                                     className="absolute inset-0 w-full h-full object-cover"
                                 />
                                 <div className="min-h-[350px] relative z-40 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-                                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">{language === 'English' ? 'IIM-A Role in Fellowship Program' : 'IIM-એ ફેલોશિપ પ્રોગ્રામમાં ભૂમિકા'}</h2>
+                                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">{language === 'English' ? 'Indian Institute of Management - Ahmedabad Role in Fellowship Program' : 'IIM-એ ફેલોશિપ પ્રોગ્રામમાં ભૂમિકા'}</h2>
                                 </div>
                             </div>
 

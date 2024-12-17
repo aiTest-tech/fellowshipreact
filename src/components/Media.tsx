@@ -32,17 +32,11 @@ const Media = () => {
                         }
                     </div>
                     <div className="row justify-content-center gutter-24">
-                        <div className="col-lg-4 col-md-6">
+                        {/* <div className="col-lg-4 col-md-6">
                             <div className="portfoliosub">
                                 <NavLink to="/media">
                                     <img src="assets/img/imagegallary.jpeg" alt="img" />
                                 </NavLink>
-                                {/* <div className="pgallery">
-                                    <img src="assets/img/photogallery.png" />
-                                    <h5>
-                                        <a href="#">Photo Gallery</a>
-                                    </h5>
-                                </div> */}
                                 <div className="vector1">
                                     <img src="assets/img/Vector.png" />
                                 </div>
@@ -50,8 +44,8 @@ const Media = () => {
                                     <img src="assets/img/Vector1.png" />
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-lg-8 col-md-6">
+                        </div> */}
+                        <div className="col-lg-12 col-md-12">
                             <div className="portfoliosub">
                                 <NavLink to="/media">
                                     <img src="assets/img/timeline.jpeg" alt="img" />

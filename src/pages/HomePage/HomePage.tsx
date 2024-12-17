@@ -126,12 +126,12 @@ const HomePage = () => {
                                 <>
                                     <div className="row gutter-24 d-flex justify-content-end align-items-center">
                                         <div className="text-center relative top-[45px]">
-                                            <h2 className="title mb-5">About CM Fellowship Program</h2>
+                                            <h2 className="title mb-5">Sardar Patel Good Governance CM Fellowship Program</h2>
                                         </div>
                                         <div className="col-lg-5">
                                             <div className="about-content bg-white shadow py-3 px-4">
                                                 <div className="">
-                                                    <h1 className="about-title font-extrabold text-2xl font-serif">CM Fellows Program</h1>
+                                                    <h1 className="about-title font-extrabold text-2xl font-serif">Sardar Patel Good Governance CM Fellowship Program</h1>
                                                     <div className="about-sub" />
                                                 </div>
                                                 {/* <div className="py-2">

@@ -112,8 +112,8 @@ const About = () => {
                                 <img
                                     src="assets/img/cmgujarat.png"
                                     alt="About Us"
-                                    data-aos="fade-left"
-                                    data-aos-delay={200}
+                                    // data-aos="fade-left"
+                                    // data-aos-delay={200}
                                     className="img-fluid rounded shadow"
                                 />
                                 {/* </div> */}

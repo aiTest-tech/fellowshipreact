@@ -310,7 +310,7 @@ const MediaPage = () => {
                                 />
                                 <div className="px-6 py-4">
                                     <p className="text-gray-700 text-base">
-                                        {language === 'English' ? "Field visit at GST bhavan" : "GST ભવન ખાતે ક્ષેત્રની મુલાકાત"}
+                                        {language === 'English' ? "Field visit at GST Bhavan" : "GST ભવન ખાતે ક્ષેત્રની મુલાકાત"}
                                     </p>
                                 </div>
                             </div>
@@ -323,7 +323,7 @@ const MediaPage = () => {
                                 />
                                 <div className="px-6 py-4">
                                     <p className="text-gray-700 text-base">
-                                        {language === 'English' ? "Field visit SWAGAT" : "ક્ષેત્ર મુલાકાત SWAGAT"}
+                                        {language === 'English' ? "Field visit State Wide Attention on Grievances by Application of Technology" : "ક્ષેત્ર મુલાકાત SWAGAT"}
                                     </p>
                                 </div>
                             </div>
@@ -336,7 +336,7 @@ const MediaPage = () => {
                                 />
                                 <div className="px-6 py-4">
                                     <p className="text-gray-700 text-base">
-                                        {language === 'English' ? "Field visit SWAGAT" : "ક્ષેત્ર મુલાકાત SWAGAT"}
+                                        {language === 'English' ? "Field visit State Wide Attention on Grievances by Application of Technology" : "ક્ષેત્ર મુલાકાત SWAGAT"}
                                     </p>
                                 </div>
                             </div>
@@ -349,7 +349,7 @@ const MediaPage = () => {
                                 />
                                 <div className="px-6 py-4">
                                     <p className="text-gray-700 text-base">
-                                        {language === 'English' ? "Field visit SWAGAT" : "ક્ષેત્ર મુલાકાત SWAGAT"}
+                                        {language === 'English' ? "Field visit State Wide Attention on Grievances by Application of Technology" : "ક્ષેત્ર મુલાકાત SWAGAT"}
                                     </p>
                                 </div>
                             </div>
@@ -362,7 +362,7 @@ const MediaPage = () => {
                                 />
                                 <div className="px-6 py-4">
                                     <p className="text-gray-700 text-base">
-                                        {language === 'English' ? "Field visit SWAGAT" : "ક્ષેત્ર મુલાકાત SWAGAT"}
+                                        {language === 'English' ? "Field visit State Wide Attention on Grievances by Application of Technology" : "ક્ષેત્ર મુલાકાત SWAGAT"}
                                     </p>
                                 </div>
                             </div>

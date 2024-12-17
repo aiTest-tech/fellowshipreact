@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer'
 import { useEffect, useState } from 'react';
 import '../../index.css'
 import { useDispatch, useSelector } from 'react-redux';
+import { useGetMediaDataQuery } from '../../api/mediaApi'
 
 
 import Modal from 'react-modal';
@@ -232,6 +233,7 @@ const modalStyles = {
 
 
 const MediaPage = () => {
+    const { data, error, isError, isLoading } = useGetMediaDataQuery()
     const language = useSelector((state: RootState) => state.language.language);
     const [scrollProgress, setScrollProgress] = useState(0);
     const updateScrollProgress = () => {
@@ -289,84 +291,24 @@ const MediaPage = () => {
                             </div>
                         </div>
                         <div className="row justify-content-center gutter-24 py-6 ">
-                            <div className="max-w-md rounded overflow-hidden shadow-lg">
-                                <img
-                                    className="w-full py-2"
-                                    src="assets/img/fellows/fellow1.jpeg"
-                                    alt="Sunset in the mountains"
-                                />
-                                <div className="px-6 py-4">
-                                    <p className="text-gray-700 text-base">
-                                        {language === 'English' ? "4th edition of the Global Renewable Energy Investors Meet and Expo (4th RE-INVEST) from 16th to 18th September, 2024 at Mahatma Mandir, Gandhinagar, Gujarat." : "16 થી 18 સપ્ટેમ્બર, 2024 દરમિયાન મહાત્મા મંદિર, ગાંધીનગર, ગુજરાત ખાતે ગ્લોબલ રિન્યુએબલ એનર્જી ઇન્વેસ્ટર્સ મીટ અને એક્સ્પો (ચોથી રિ-ઇન્વેસ્ટ) ની ચોથી આવૃત્તિ."}
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="max-w-md rounded overflow-hidden shadow-lg">
-                                <img
-                                    className="w-full py-2"
-                                    src="assets/img/fellows/fellow2.jpeg"
-                                    alt="Sunset in the mountains"
-                                />
-                                <div className="px-6 py-4">
-                                    <p className="text-gray-700 text-base">
-                                        {language === 'English' ? "Field visit at GST Bhavan" : "GST ભવન ખાતે ક્ષેત્રની મુલાકાત"}
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="max-w-md rounded overflow-hidden shadow-lg">
-                                <img
-                                    className="w-full py-2"
-                                    src="assets/img/fellows/fellow3.jpeg"
-                                    alt="Sunset in the mountains"
-                                />
-                                <div className="px-6 py-4">
-                                    <p className="text-gray-700 text-base">
-                                        {language === 'English' ? "Field visit State Wide Attention on Grievances by Application of Technology" : "ક્ષેત્ર મુલાકાત SWAGAT"}
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="max-w-md rounded overflow-hidden shadow-lg">
-                                <img
-                                    className="w-full py-2"
-                                    src="assets/img/fellows/fellow3.jpeg"
-                                    alt="Sunset in the mountains"
-                                />
-                                <div className="px-6 py-4">
-                                    <p className="text-gray-700 text-base">
-                                        {language === 'English' ? "Field visit State Wide Attention on Grievances by Application of Technology" : "ક્ષેત્ર મુલાકાત SWAGAT"}
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="max-w-md rounded overflow-hidden shadow-lg">
-                                <img
-                                    className="w-full py-2"
-                                    src="assets/img/fellows/fellow3.jpeg"
-                                    alt="Sunset in the mountains"
-                                />
-                                <div className="px-6 py-4">
-                                    <p className="text-gray-700 text-base">
-                                        {language === 'English' ? "Field visit State Wide Attention on Grievances by Application of Technology" : "ક્ષેત્ર મુલાકાત SWAGAT"}
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="max-w-md rounded overflow-hidden shadow-lg">
-                                <img
-                                    className="w-full py-2"
-                                    src="assets/img/fellows/fellow3.jpeg"
-                                    alt="Sunset in the mountains"
-                                />
-                                <div className="px-6 py-4">
-                                    <p className="text-gray-700 text-base">
-                                        {language === 'English' ? "Field visit State Wide Attention on Grievances by Application of Technology" : "ક્ષેત્ર મુલાકાત SWAGAT"}
-                                    </p>
-                                </div>
-                            </div>
-
+                            {
+                                data?.map((element, index) => (
+                                    <>
+                                        <div className="max-w-md rounded overflow-hidden shadow-lg">
+                                            <img
+                                                className="w-full py-2"
+                                                src={element.img}
+                                                alt="Sunset in the mountains"
+                                            />
+                                            <div className="px-6 py-4">
+                                                <p className="text-gray-700 text-base">
+                                                    {language === 'English' ? `${element.title_eng}` : `${element.title_guj}`}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </>
+                                ))
+                            }
                         </div>
                     </div>
                     {/* <VideoCard videoUrl='https://www.youtube.com/watch?v=T84-zpPbkhM' /> */}

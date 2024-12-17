@@ -95,12 +95,12 @@ const Navbar = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="col-xl-2 relative">
+                        {/* <div className="col-xl-2 relative">
                             <select value={language} onChange={(e) => handleLanguageChange(e.target.value)} className="bg-white text-center px-2 ">
                                 <option value="English">English</option>
                                 <option value="Gujarati">Gujarati</option>
                             </select>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
@@ -224,7 +224,7 @@ const Navbar = () => {
                                     className="fixed right-0 h-screen w-[70vw] bg-[#0A4C7B] rounded-lg text-black flex justify-center items-center"
                                 >
                                     <div className="flex flex-col justify-center">
-                                        <div className="col-xl-2 relative -top-[80px]">
+                                        {/* <div className="col-xl-2 relative -top-[80px]">
                                             <select
                                                 value={language}
                                                 onChange={(e) => handleLanguageChange(e.target.value)}
@@ -233,7 +233,7 @@ const Navbar = () => {
                                                 <option value="English">English</option>
                                                 <option value="Gujarati">Gujarati</option>
                                             </select>
-                                        </div>
+                                        </div> */}
                                         {
                                             language === 'English' ? (
                                                 <>

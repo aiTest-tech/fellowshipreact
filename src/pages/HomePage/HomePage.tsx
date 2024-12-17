@@ -16,8 +16,11 @@ import FellowshipHighlights from '../../components/FellowshipHighlights';
 import ScrollToTopButton from '../../components/ScrollToTopButton';
 import { useDispatch, useSelector } from 'react-redux';
 import Accasability from '../../components/Accasability';
+import { useGetMediaDataQuery } from '../../api/mediaApi'
 
 const HomePage = () => {
+    const { data, error, isError, isLoading } = useGetMediaDataQuery()
+    console.log("brijesh data aa rahyo", data);
     const language = useSelector((state: RootState) => state.language.language);
     const [scrollProgress, setScrollProgress] = useState(0);
     const [showImage, setShowImage] = useState(true); // State to manage the image visibility

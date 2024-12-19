@@ -25,12 +25,12 @@ const faqDataEnglish: FaqItem[] = [
         question: "What is the duration of the Chief Minister Fellowship, 2024?",
         answer: "Fellows will be engaged for a fixed period of 1 year, which may be extended by 1 year at a time. However, their continuation in their respective positions beyond the first year would depend on a satisfactory Annual Performance Review based on clearly defined Key Performance Indicators."
     },
+    // {
+    //     question: "When can I apply for the Chief Minister Fellowship, 2023?",
+    //     answer: "The application process for the Chief Minister Fellowship starts on 2nd Dec 2023. The last date for the submission of the application is 30th Dec, 2023."
+    // },
     {
-        question: "When can I apply for the Chief Minister Fellowship, 2023?",
-        answer: "The application process for the Chief Minister Fellowship starts on 2nd Dec 2023. The last date for the submission of the application is 30th Dec, 2023."
-    },
-    {
-        question: "How much is the application fee for the Chief Minister Fellowship, 2023?",
+        question: "How much is the application fee for the Chief Minister Fellowship, 2024?",
         answer: "The application fee for the Chief Minister Fellowship is Rs. 500."
     },
     {

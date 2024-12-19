@@ -90,12 +90,12 @@ const FellowshipHighlights: React.FC = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                                 <div className="bg-white p-6 rounded-lg shadow-lg">
                                     <h3 className="text-xl font-bold text-gray-900 mb-4">Stipend</h3>
-                                    <p className="text-lg text-gray-700">₹1,00,000/month</p>
+                                    <p className="text-lg text-gray-700">₹1,00,000/month + 10,000 L.T.A</p>
                                 </div>
 
                                 <div className="bg-white p-6 rounded-lg shadow-lg">
                                     <h3 className="text-xl font-bold text-gray-900 mb-4">Duration</h3>
-                                    <p className="text-lg text-gray-700">1 years</p>
+                                    <p className="text-lg text-gray-700">1 year</p>
                                 </div>
 
                                 <div className="bg-white p-6 rounded-lg shadow-lg">

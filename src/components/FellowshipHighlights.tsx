@@ -33,6 +33,7 @@ const newsData: NewsCard[] = [
 
 const FellowshipHighlights: React.FC = () => {
     const language = useSelector((state: RootState) => state.language.language);
+    const fontsize = useSelector((state: RootState) => state.fontSize.size);
     return (
         // <section className="news section-pt-110 section-pb-110">
         //     <img
@@ -69,7 +70,7 @@ const FellowshipHighlights: React.FC = () => {
                                 {
                                     language === 'English' ? (
                                         <>
-                                            <h2 className="title">Why Choose the Sardar Patel Fellowship</h2>
+                                            <h2 className="title" style={{fontSize:fontsize + 4}}>Why Choose the Sardar Patel Fellowship</h2>
                                         </>
                                     ) :
                                         (
@@ -89,33 +90,33 @@ const FellowshipHighlights: React.FC = () => {
                         <>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                                 <div className="bg-white p-6 rounded-lg shadow-lg">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-4">Stipend</h3>
-                                    <p className="text-lg text-gray-700">₹1,00,000/month + 10,000 L.T.A</p>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-4" style={{fontSize:fontsize +4}}>Stipend</h3>
+                                    <p className="text-lg text-gray-700" style={{fontSize:fontsize +4}}>₹1,00,000/month + 10,000 L.T.A</p>
                                 </div>
 
                                 <div className="bg-white p-6 rounded-lg shadow-lg">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-4">Duration</h3>
-                                    <p className="text-lg text-gray-700">1 year</p>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-4" style={{fontSize:fontsize +4}}>Duration</h3>
+                                    <p className="text-lg text-gray-700" style={{fontSize:fontsize +4}}>1 year</p>
                                 </div>
 
                                 <div className="bg-white p-6 rounded-lg shadow-lg">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-4">Training</h3>
-                                    <p className="text-lg text-gray-700">1-week induction at Indian Institute of Management Ahmedabad + 3-week on-job training</p>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-4" style={{fontSize:fontsize +4}}>Training</h3>
+                                    <p className="text-lg text-gray-700" style={{fontSize:fontsize +4}}>1-week induction at Indian Institute of Management Ahmedabad + 3-week on-job training</p>
                                 </div>
 
                                 <div className="bg-white p-6 rounded-lg shadow-lg">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-4">Departments</h3>
-                                    <p className="text-lg text-gray-700">Placement in 20+ government sectors</p>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-4" style={{fontSize:fontsize +4}}>Departments</h3>
+                                    <p className="text-lg text-gray-700" style={{fontSize:fontsize +4}}>Placement in 20+ government sectors</p>
                                 </div>
 
                                 <div className="bg-white p-6 rounded-lg shadow-lg">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-4">Certificate</h3>
-                                    <p className="text-lg text-gray-700">Recognized jointly by Indian Institute of Management Ahmedabad and Government of Gujarat</p>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-4" style={{fontSize:fontsize +4}}>Certificate</h3>
+                                    <p className="text-lg text-gray-700" style={{fontSize:fontsize +4}}>Recognized jointly by Indian Institute of Management Ahmedabad and Government of Gujarat</p>
                                 </div>
 
                                 <div className="bg-white p-6 rounded-lg shadow-lg">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-4">Impact</h3>
-                                    <p className="text-lg text-gray-700">Drive real change in governance processes</p>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-4" style={{fontSize:fontsize +4}}>Impact</h3>
+                                    <p className="text-lg text-gray-700" style={{fontSize:fontsize +4}}>Drive real change in governance processes</p>
                                 </div>
                             </div>
                         </>

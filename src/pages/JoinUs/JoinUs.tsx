@@ -11,6 +11,8 @@ import { useDispatch, useSelector } from 'react-redux';
 const JoinUs = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
     const language = useSelector((state: RootState) => state.language.language);
+    const fontsize = useSelector((state: RootState) => state.fontSize.size);
+
     const updateScrollProgress = () => {
         // Get total scrollable height
         const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -103,7 +105,7 @@ const JoinUs = () => {
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="min-h-[350px] relative z-40 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">{language === 'English' ? "Join Us" : 'અમારી સાથે જોડાઓ'}</h2>
+                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200" style={{fontSize:fontsize + 8}}>{language === 'English' ? "Join Us" : 'અમારી સાથે જોડાઓ'}</h2>
                 </div>
             </div>
             <div className="min-h-screen bg-[url('assets/img/illusion.png')] p-8">
@@ -111,7 +113,7 @@ const JoinUs = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-12 col-md-12">
                             <div className="section__title port_double">
-                                <h2 className="title">{language === 'English' ? "Join Us" : 'અમારી સાથે જોડાઓ'}</h2>
+                                <h2 className="title" style={{fontSize:fontsize + 8}}>{language === 'English' ? "Join Us" : 'અમારી સાથે જોડાઓ'}</h2>
                             </div>
                         </div>
                     </div>
@@ -120,14 +122,14 @@ const JoinUs = () => {
 
                     {/* Title Section */}
                     <div className="bg-white p-6 rounded-lg shadow-lg">
-                        <h1 className="text-3xl font-semibold text-center">{language === 'English' ? "Useful information for CM Fellow Recruitment" : "સીએમ ફેલોની ભરતી માટે ઉપયોગી માહિતી"}</h1>
-                        <p className="mt-4 text-center">{language === 'English' ? "Please read the instructions and follow carefully" : "કૃપા કરીને સૂચનાઓ વાંચો અને કાળજીપૂર્વક અનુસરો"}</p>
+                        <h1 className="text-3xl font-semibold text-center" style={{fontSize:fontsize + 8}}>{language === 'English' ? "Useful information for CM Fellow Recruitment" : "સીએમ ફેલોની ભરતી માટે ઉપયોગી માહિતી"}</h1>
+                        <p className="mt-4 text-center" style={{fontSize:fontsize + 2}}>{language === 'English' ? "Please read the instructions and follow carefully" : "કૃપા કરીને સૂચનાઓ વાંચો અને કાળજીપૂર્વક અનુસરો"}</p>
                     </div>
 
                     {/* Key Information */}
                     <div className="bg-white p-6 rounded-lg shadow-lg mt-6">
-                        <h2 className="text-xl font-semibold">{language === 'English' ? "Key Information" : "મુખ્ય માહિતી"}</h2>
-                        <ul className="list-disc pl-6 space-y-2 mt-4">
+                        <h2 className="text-xl font-semibold" style={{fontSize:fontsize + 8}}>{language === 'English' ? "Key Information" : "મુખ્ય માહિતી"}</h2>
+                        <ul className="list-disc pl-6 space-y-2 mt-4" style={{fontSize:fontsize + 2}}>
                             <li><strong>Monthly Stipend:</strong> {language === 'English' ? "Rs. 1,00,000/- + Rs. 10,000 (LTA)" : "રૂ. 1,00,000/- + રૂ. 10,000 (LTA)"}</li>
                             <li><strong>Age Criteria:</strong> {language === 'English' ? "Should not be more than 35 years as on the last date of application" : "અરજીની છેલ્લી તારીખે 35 વર્ષથી વધુ ન હોવી જોઈએ"}</li>
                             <li><strong>Application Fees:</strong> {language === 'English' ? "Rs. 500/- (Non-refundable)" : "રૂ. 500/- (નૉન-રિફંડપાત્ર)"}</li>
@@ -136,8 +138,8 @@ const JoinUs = () => {
 
                     {/* Important Things to Consider */}
                     <div className="bg-white p-6 rounded-lg shadow-lg mt-6">
-                        <h2 className="text-xl font-semibold">{language === 'English' ? "Important Things to Consider While Applying" : "અરજી કરતી વખતે ધ્યાનમાં લેવા જેવી મહત્વની બાબતો"}</h2>
-                        <ul className="list-disc pl-6 space-y-2 mt-4">
+                        <h2 className="text-xl font-semibold" style={{fontSize:fontsize + 8}}>{language === 'English' ? "Important Things to Consider While Applying" : "અરજી કરતી વખતે ધ્યાનમાં લેવા જેવી મહત્વની બાબતો"}</h2>
+                        <ul className="list-disc pl-6 space-y-2 mt-4" style={{fontSize:fontsize + 2}}>
                             <li>{language === 'English' ? "Applicants must fill their name as per the name in the SSC marksheet." : "અરજદારોએ SSC માર્કશીટમાં નામ પ્રમાણે તેમનું નામ ભરવાનું રહેશે."}</li>
                             <li>{language === 'English' ? "Applicants must have passed 10th, 12th, and graduation with 60% marks." : "અરજદારોએ 60% માર્ક્સ સાથે 10મું, 12મું અને ગ્રેજ્યુએશન પાસ કરેલ હોવું જોઈએ."}</li>
                             <li>{language === 'English' ? "Applicant also has to fill the details if graduation or post graduation is done from Prime national institute" : "જો પ્રાઇમ નેશનલ ઇન્સ્ટિટ્યૂટમાંથી સ્નાતક અથવા અનુસ્નાતક કર્યું હોય તો અરજદારે વિગતો પણ ભરવાની રહેશે"} </li>
@@ -150,13 +152,13 @@ const JoinUs = () => {
 
                     {/* Document Download */}
                     <div className="bg-white p-6 rounded-lg shadow-lg mt-6">
-                        <h2 className="text-xl font-semibold">{language === 'English' ? "Government Resolutions" : "સરકારી ઠરાવો"}</h2>
-                        <p className="mt-4">
+                        <h2 className="text-xl font-semibold" style={{fontSize:fontsize + 8}}>{language === 'English' ? "Government Resolutions" : "સરકારી ઠરાવો"}</h2>
+                        <p className="mt-4" style={{fontSize:fontsize + 2}}>
                             {
                                 language === 'English' ? "The following document contains the General Administration Department GR no. GAD/MSM/e-file/1/202/7162/ARTD2 dated 24/11/2023 in Gujarati and English and GR no. GAD/MSM/e-file/1/2024/6058/ARTD2 dated 18/11/2024 in Gujarati." : "નીચેના દસ્તાવેજમાં સામાન્ય વહીવટ વિભાગનો GR નં. GAD/MSM/e-file/1/202/7162/ARTD2 તારીખ 24/11/2023 ગુજરાતી અને અંગ્રેજીમાં અને GR નં. GAD/MSM/e-file/1/2024/6058/ARTD2 તારીખ 18/11/2024 ગુજરાતીમાં."
                             }
                         </p>
-                        <p className='py-2'>
+                        <p className='py-2' style={{fontSize:fontsize + 2}}>
                             {
                                 language === 'English' ? "In case of any issue concerning out of the GR, the Gujarati version will be considered final." : "GR ની બહાર કોઈ પણ મુદ્દાના કિસ્સામાં, ગુજરાતી સંસ્કરણને અંતિમ ગણવામાં આવશે."
                             }

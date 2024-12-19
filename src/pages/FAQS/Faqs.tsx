@@ -133,6 +133,8 @@ const faqDataGujarati: FaqItem[] = [
 const Faq: React.FC = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
     const language = useSelector((state: RootState) => state.language.language);
+    const fontsize = useSelector((state: RootState) => state.fontSize.size);
+
     const updateScrollProgress = () => {
         // Get total scrollable height
         const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -190,13 +192,13 @@ const Faq: React.FC = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-12 col-md-12">
                             <div className="section__title port_double">
-                                <h2 className="title">{language === 'English' ? "Frequently Asked Questions" : "વારંવાર પૂછાતા પ્રશ્નો"}</h2>
+                                <h2 className="title" style={{fontSize:fontsize + 6}}>{language === 'English' ? "Frequently Asked Questions" : "વારંવાર પૂછાતા પ્રશ્નો"}</h2>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="max-w-3xl mx-auto py-8 px-4">
-                    <h2 className="text-3xl font-semibold mb-6">{language === 'English' ? "Sardar Patel Chief Minister Fellowship Program - Frequently Asked Questions" : "સરદાર પટેલ મુખ્યમંત્રી ફેલોશિપ પ્રોગ્રામ - વારંવાર પૂછાતા પ્રશ્નો"}</h2>
+                    <h2 className="text-3xl font-semibold mb-6" style={{fontSize:fontsize + 8}}>{language === 'English' ? "Sardar Patel Chief Minister Fellowship Program - Frequently Asked Questions" : "સરદાર પટેલ મુખ્યમંત્રી ફેલોશિપ પ્રોગ્રામ - વારંવાર પૂછાતા પ્રશ્નો"}</h2>
                     <div className="space-y-4">
                         {
                             language === 'English' ? (
@@ -206,11 +208,11 @@ const Faq: React.FC = () => {
                                             <button
                                                 onClick={() => toggleAnswer(index)}
                                                 className="w-full px-4 py-3 text-left bg-gray-100 hover:bg-gray-200 focus:outline-none">
-                                                <span className="font-medium text-lg">{item.question}</span>
+                                                <span className="font-medium text-lg" style={{fontSize:fontsize + 8}}>{item.question}</span>
                                             </button>
                                             {openIndex === index && (
                                                 <div className="px-4 py-3 text-gray-700 bg-gray-50">
-                                                    <p>{item.answer}</p>
+                                                    <p style={{fontSize:fontsize + 6}}>{item.answer}</p>
                                                 </div>
                                             )}
                                         </div>

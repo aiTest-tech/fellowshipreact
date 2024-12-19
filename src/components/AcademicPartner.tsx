@@ -8,6 +8,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const AcademicPartner = () => {
     const language = useSelector((state: RootState) => state.language.language);
+    const fontsize = useSelector((state: RootState) => state.fontSize.size);
+
     const [scrollProgress, setScrollProgress] = useState(0);
     const updateScrollProgress = () => {
         // Get total scrollable height
@@ -58,7 +60,7 @@ const AcademicPartner = () => {
                         <div className="row align-items-center">
                             <div className="col-lg-12 col-md-12">
                                 <div className="section__title port_double">
-                                    <h2 className="title">{language === 'English' ? 'Academic Partner' : 'શૈક્ષણિક ભાગીદાર'}</h2>
+                                    <h2 className="title" style={{fontSize:fontsize + 8}}>{language === 'English' ? 'Academic Partner' : 'શૈક્ષણિક ભાગીદાર'}</h2>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +75,7 @@ const AcademicPartner = () => {
                                     className="absolute inset-0 w-full h-full object-cover"
                                 />
                                 <div className="min-h-[350px] relative z-40 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-                                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">{language === 'English' ? 'Indian Institute of Management - Ahmedabad Role in Fellowship Program' : 'IIM-એ ફેલોશિપ પ્રોગ્રામમાં ભૂમિકા'}</h2>
+                                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200" style={{fontSize:fontsize + 16}}>{language === 'English' ? 'Indian Institute of Management - Ahmedabad Role in Fellowship Program' : 'IIM-એ ફેલોશિપ પ્રોગ્રામમાં ભૂમિકા'}</h2>
                                 </div>
                             </div>
 
@@ -81,7 +83,7 @@ const AcademicPartner = () => {
                             {/* Content Section */}
                             <div className="py-8 px-6 sm:px-12">
                                 <div className="space-y-6 text-gray-700">
-                                    <p className="text-xl">
+                                    <p className="text-xl" style={{fontSize:fontsize + 4}}>
                                         {
                                             language === 'English' ? 'The Indian Institute of Management Ahmedabad (IIM-A) plays a significant role in a program involving the selection and training of fellows.' : 'ઇન્ડિયન ઇન્સ્ટિટ્યૂટ ઑફ મેનેજમેન્ટ અમદાવાદ (IIM-A) ફેલોની પસંદગી અને તાલીમ સાથે સંકળાયેલા કાર્યક્રમમાં મહત્ત્વપૂર્ણ ભૂમિકા ભજવે છે.'
                                         }
@@ -94,15 +96,15 @@ const AcademicPartner = () => {
                                         </div> */}
 
                                         <div className="bg-gray-50 p-4 rounded-lg shadow-md">
-                                            <h2 className="text-2xl font-semibold">• {language === 'English' ? 'Selection & Recommendation Committee (SRC):' : 'પસંદગી અને ભલામણ સમિતિ (SRC):'}</h2>
-                                            <ul className="list-disc pl-6">
+                                            <h2 className="text-2xl font-semibold" style={{fontSize:fontsize + 8}}> {language === 'English' ? 'Selection & Recommendation Committee (SRC):' : 'પસંદગી અને ભલામણ સમિતિ (SRC):'}</h2>
+                                            <ul className="list-disc pl-6" style={{fontSize:fontsize + 4}}>
                                                 <li>{language === 'English' ? 'IIM-A is a part of the Committee as an Expert panelist. This committee is responsible for the final recommendation of fellows.' : 'IIM-A નિષ્ણાત પેનલિસ્ટ તરીકે સમિતિનો એક ભાગ છે. આ સમિતિ ફેલોની અંતિમ ભલામણ માટે જવાબદાર છે.'}</li>
                                             </ul>
                                         </div>
 
                                         <div className="bg-gray-50 p-4 rounded-lg shadow-md">
-                                            <h2 className="text-2xl font-semibold">• {language === 'English' ? 'Training Program:' : 'તાલીમ કાર્યક્રમ:'}</h2>
-                                            <ul className="list-disc pl-6">
+                                            <h2 className="text-2xl font-semibold" style={{fontSize:fontsize + 8}}>• {language === 'English' ? 'Training Program:' : 'તાલીમ કાર્યક્રમ:'}</h2>
+                                            <ul className="list-disc pl-6" style={{fontSize:fontsize + 4}}>
                                                 <li>{language === 'English' ? 'Duration: The training program lasts for one week.' : 'સમયગાળો: તાલીમ કાર્યક્રમ એક અઠવાડિયા સુધી ચાલે છે.'}</li>
                                                 <li>{language === 'English' ? 'Sessions: There are four sessions per day, each lasting 1 hour and 15 minutes.' : 'સત્રો: દરરોજ ચાર સત્રો હોય છે, દરેક 1 કલાક અને 15 મિનિટ ચાલે છે.'}</li>
                                                 <li>{language === 'English' ? 'Teaching Methodology: The program utilizes the "Case Method" for immersive learning.' : 'ટીચિંગ મેથડોલોજી: પ્રોગ્રામ ઇમર્સિવ લર્નિંગ માટે "કેસ મેથડ" નો ઉપયોગ કરે છે.'}</li>
@@ -110,15 +112,15 @@ const AcademicPartner = () => {
                                         </div>
 
                                         <div className="bg-gray-50 p-4 rounded-lg shadow-md">
-                                            <h2 className="text-2xl font-semibold">• {language === 'English' ? 'Fellow Evaluation:' : 'સાથી મૂલ્યાંકન:'}</h2>
-                                            <ul className="list-disc pl-6">
+                                            <h2 className="text-2xl font-semibold" style={{fontSize:fontsize + 8}}>• {language === 'English' ? 'Fellow Evaluation:' : 'સાથી મૂલ્યાંકન:'}</h2>
+                                            <ul className="list-disc pl-6" style={{fontSize:fontsize + 4}}>
                                                 <li>{language === 'English' ? "IIM-A is also involved in the evaluation of the fellows during their tenure. The evaluation process likely includes criteria related to the fellow's engagement, contributions, and overall development during the program." : "IIM-A તેમના કાર્યકાળ દરમિયાન ફેલોના મૂલ્યાંકનમાં પણ સામેલ છે. મૂલ્યાંકન પ્રક્રિયામાં સંભવતઃ કાર્યક્રમ દરમિયાન સાથીઓની સગાઈ, યોગદાન અને એકંદર વિકાસ સંબંધિત માપદંડોનો સમાવેશ થાય છે."}</li>
                                             </ul>
                                         </div>
 
                                         <div className="bg-gray-50 p-4 rounded-lg shadow-md">
-                                            <h2 className="text-2xl font-semibold">• {language === 'English' ? "Awarding Certification:" : 'પુરસ્કાર પ્રમાણપત્ર:'}</h2>
-                                            <ul className="list-disc pl-6">
+                                            <h2 className="text-2xl font-semibold" style={{fontSize:fontsize + 8}}>• {language === 'English' ? "Awarding Certification:" : 'પુરસ્કાર પ્રમાણપત્ર:'}</h2>
+                                            <ul className="list-disc pl-6" style={{fontSize:fontsize + 4}}>
                                                 <li>{language === 'English' ? "After the completion of the fellow's tenure, IIM-A collaborates with the GoG to award Fellowship Certification." : "સાથીનો કાર્યકાળ પૂર્ણ થયા પછી, IIM-A ફેલોશિપ પ્રમાણપત્ર આપવા માટે GoG સાથે સહયોગ કરે છે."}</li>
                                             </ul>
                                         </div>

@@ -17,6 +17,11 @@ import ScrollToTopButton from '../../components/ScrollToTopButton';
 import { useDispatch, useSelector } from 'react-redux';
 import Accasability from '../../components/Accasability';
 import { useGetMediaDataQuery } from '../../api/mediaApi'
+import {
+    increaseFontSize,
+    decreaseFontSize,
+    setFontSize,
+  } from "../../store/slice/font_increase_decrease";
 
 const HomePage = () => {
     const { data, error, isError, isLoading } = useGetMediaDataQuery()
@@ -24,6 +29,23 @@ const HomePage = () => {
     const language = useSelector((state: RootState) => state.language.language);
     const [scrollProgress, setScrollProgress] = useState(0);
     const [showImage, setShowImage] = useState(true); // State to manage the image visibility
+    
+    const fontSize = useSelector((state: RootState) => state.fontSize.size);
+    
+    const handleIncrease = () => {
+        dispatch(increaseFontSize());
+    };
+    
+    const handleDecrease = () => {
+        dispatch(decreaseFontSize());
+    };
+    
+    const handleCustomFontSize = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = parseInt(e.target.value, 10);
+        if (!isNaN(value)) {
+            dispatch(setFontSize(value));
+        }
+    };
 
     const updateScrollProgress = () => {
         const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -129,12 +151,12 @@ const HomePage = () => {
                                 <>
                                     <div className="row gutter-24 d-flex justify-content-end align-items-center">
                                         <div className="text-center relative top-[45px]">
-                                            <h2 className="title mb-5">Sardar Patel Good Governance CM Fellowship Program</h2>
+                                            <h2 className="title mb-5" style={{fontSize:fontSize + 8}}>Sardar Patel Good Governance CM Fellowship Program</h2>
                                         </div>
                                         <div className="col-lg-5">
                                             <div className="about-content bg-white shadow py-3 px-4">
                                                 <div className="">
-                                                    <h1 className="about-title font-extrabold text-2xl font-serif">Sardar Patel Good Governance CM Fellowship Program</h1>
+                                                    <h1 className="about-title font-extrabold text-2xl" style={{fontSize:fontSize + 8}}>Sardar Patel Good Governance CM Fellowship Program</h1>
                                                     <div className="about-sub" />
                                                 </div>
                                                 {/* <div className="py-2">
@@ -150,10 +172,10 @@ const HomePage = () => {
                                                     Goal of promoting a culture of innovation, efficiency, and excellence within Government departments
                                                     ronment for their fellowship work. He assured them that funding would not hamper the implementation of schemes or new initiatives and emphasized that innovative ideas and suggestions would receive mindful consideration from the government. The Chief Minister further noted that such ideas would benefit crores of citizens across the state
                                                 </p> */}
-                                                <p className='text-xl py-2'>
+                                                <p className='text-xl py-4' style={{fontSize:fontSize + 4}}>
                                                     In 2009, the then Chief Minister, Shri Narendra Modi, launched the CM’s Fellowship Program. The objective of this program was to provide young and talented individuals with an opportunity to contribute to social service and support India’s future development.
                                                 </p>
-                                                <p className='text-xl py-2'>
+                                                <p className='text-xl py-2' style={{fontSize:fontSize + 4}}>
                                                     Subsequently, the Sardar Patel Good Governance Fellowship Program was relaunched by Chief Minister Shri Bhupendra Patel on October 31, 2023, with revised objectives. The program now focuses on incorporating innovative and effective approaches into policy-making and service delivery processes, aiming to promote a culture of innovation, efficiency, and excellence within government departments.
                                                 </p>
                                             </div>

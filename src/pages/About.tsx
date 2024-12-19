@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from 'react-redux';
 const About = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
     const language = useSelector((state: RootState) => state.language.language);
+    const fontsize = useSelector((state: RootState) => state.fontSize.size);
+
     const updateScrollProgress = () => {
         // Get total scrollable height
         const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -56,7 +58,7 @@ const About = () => {
                     <div className="container">
                         <div className="row gutter-24 d-flex justify-content-center align-items-center">
                             <div className="text-center mb-5">
-                                <h2 className="title">About Us</h2>
+                                <h2 className="title" style={{fontSize:fontsize + 8}}>About Us</h2>
                             </div>
 
                             <div className="col-lg-6">
@@ -64,18 +66,18 @@ const About = () => {
                                     language === 'English' ? (
                                         <>
                                             <div className="about-content bg-white shadow py-4 px-5">
-                                                <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Vision</h1>
-                                                <p className="py-3 text-xl">
+                                                <h1 className="about-subtitle text-2xl font-semibold mt-4" style={{fontSize:fontsize + 8}}>Our Vision</h1>
+                                                <p className="py-3 text-xl" style={{fontSize:fontsize + 4}}>
                                                     To inspire and nurture talent, creating a platform where innovation meets impact. We aim to
                                                     cultivate a culture that drives sustainable development and addresses critical challenges of our time.
                                                 </p>
-                                                <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Mission</h1>
-                                                <p className="py-3 text-xl">
+                                                <h1 className="about-subtitle text-2xl font-semibold mt-4" style={{fontSize:fontsize + 8}}>Our Mission</h1>
+                                                <p className="py-3 text-xl" style={{fontSize:fontsize + 4}}>
                                                     Through comprehensive programs, strategic collaborations, and a focus on excellence, we strive to
                                                     shape leaders who contribute meaningfully to society, leaving a legacy of progress and innovation.
                                                 </p>
-                                                <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Objective</h1>
-                                                <p className="py-3 text-xl">
+                                                <h1 className="about-subtitle text-2xl font-semibold mt-4" style={{fontSize:fontsize + 8}}>Our Objective</h1>
+                                                <p className="py-3 text-xl" style={{fontSize:fontsize + 4}}>
                                                     To foster a dynamic ecosystem that encourages lifelong learning, empowers individuals with practical skills,
                                                     and promotes ethical leadership, enabling them to drive transformative change in their communities and beyond.
                                                 </p>

@@ -5,6 +5,8 @@ import { useSelector } from 'react-redux';
 
 const Media = () => {
     const language = useSelector((state: RootState) => state.language.language);
+    const fontsize = useSelector((state: RootState) => state.fontSize.size);
+
     return (
         <>
             <section className="ourportfolio section-pt-110 section-pb-110">
@@ -15,7 +17,7 @@ const Media = () => {
                                 <>
                                     <div className="col-lg-12 col-md-12">
                                         <div className="section__title port_double">
-                                            <h2 className="title">Our Media Gallery and TimeLine</h2>
+                                            <h2 className="title" style={{fontSize:fontsize + 4}}>Our Media Gallery and TimeLine</h2>
                                         </div>
                                     </div>
                                 </>

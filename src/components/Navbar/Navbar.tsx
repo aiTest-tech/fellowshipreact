@@ -12,16 +12,22 @@ import {
   decreaseFontSize,
   setFontSize,
 } from "../../store/slice/font_increase_decrease";
+import { toggleTheme } from '../../store/slice/themeSlice'
 import { FaPlus } from "react-icons/fa";
 import { FaMinusCircle } from "react-icons/fa";
+import { MdLightMode } from "react-icons/md";
+import { CgDarkMode } from "react-icons/cg";
+
+
 
 const Navbar = () => {
   const menuRef = useRef(null);
   const dispatch = useDispatch();
   const language = useSelector((state: RootState) => state.language.language);
+  const darkMode = useSelector((state: RootState) => state.theme.darkMode)
 
-  const [isMenuVisible, setMenuVisible] = useState(false); 
-  const [openDropdownIndex, setOpenDropdownIndex] = useState(null); 
+  const [isMenuVisible, setMenuVisible] = useState(false);
+  const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
   const [islangtoggle, setislangtoggle] = useState(false);
   const [ishamburgarclicked, setishamburgarclicked] = useState(false);
 
@@ -49,6 +55,10 @@ const Navbar = () => {
   const toggleDropdown = (index) => {
     setOpenDropdownIndex(openDropdownIndex === index ? null : index);
   };
+
+  const handleThemeToggle = () => {
+    dispatch(toggleTheme())
+  }
 
   useEffect(() => {
     if (isMenuVisible) {
@@ -120,6 +130,11 @@ const Navbar = () => {
                 <li>
                   <FaMinusCircle onClick={handleDecrease} className="cursor-pointer" />
                 </li>
+                <li>
+                  {
+                    darkMode ? <MdLightMode className="cursor-pointer" onClick={handleThemeToggle} size={24} /> : <CgDarkMode className="cursor-pointer" onClick={handleThemeToggle} size={24} />
+                  }
+                </li>
               </ul>
             </div>
             {/* <div className="col-xl-2 relative">
@@ -150,7 +165,7 @@ const Navbar = () => {
                 <div className="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
                   {language === "English" ? (
                     <>
-                      <ul className="navigation">
+                      <ul className="navigation" >
                         <li>
                           <NavLink
                             to="/"
@@ -169,7 +184,7 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
-                            <span style={{fontSize:fontSize}}>About Us</span>
+                            <span style={{ fontSize: fontSize }} className={`${darkMode ? "text-orange-600" : "text-black"}`}>About Us</span>
                           </NavLink>
                         </li>
                         <li>
@@ -179,7 +194,7 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
-                            <span style={{fontSize:fontSize}}>Meet Our Fellows</span>
+                            <span style={{ fontSize: fontSize }}>Meet Our Fellows</span>
                           </NavLink>
                         </li>
                         <li>
@@ -189,7 +204,7 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
-                            <span style={{fontSize:fontSize}}>Academic Partner</span>
+                            <span style={{ fontSize: fontSize }}>Academic Partner</span>
                           </NavLink>
                         </li>
                         <li>
@@ -199,7 +214,7 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
-                            <span style={{fontSize:fontSize}}>Media</span>
+                            <span style={{ fontSize: fontSize }}>Media</span>
                           </NavLink>
                         </li>
                         <li>
@@ -209,7 +224,7 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
-                            <span style={{fontSize:fontSize}}>Join Us</span>
+                            <span style={{ fontSize: fontSize }}>Join Us</span>
                           </NavLink>
                         </li>
                         <li>
@@ -219,7 +234,7 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
-                            <span style={{fontSize:fontSize}}>FAQ's</span>
+                            <span style={{ fontSize: fontSize }}>FAQ's</span>
                           </NavLink>
                         </li>
                         <li>
@@ -229,7 +244,7 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
-                            <span style={{fontSize:fontSize}}>Contact</span>
+                            <span style={{ fontSize: fontSize }}>Contact</span>
                           </NavLink>
                         </li>
                       </ul>

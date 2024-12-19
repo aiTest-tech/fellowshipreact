@@ -1,69 +1,17 @@
 // @ts-nocheck
 import React, { useEffect, useState } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
-import { AgGridReact } from 'ag-grid-react';
-import 'ag-grid-community/styles/ag-grid.css'; // ag-Grid styles
-import 'ag-grid-community/styles/ag-theme-alpine.css'; // ag-Grid theme styles
 import Footer from '../../components/Footer/Footer';
 import ProfileCard from '../../components/ProfileCard';
-import { useDispatch, useSelector } from 'react-redux';
-
-
-
-// const fellows = [
-//     {
-//         id: 1,
-//         name: 'Rahul Sharma',
-//         image: 'assets/img/profile/placeholder.jpg',
-//         bio: 'Tech innovator with 5 years of experience in AI and machine learning.'
-//     },
-//     {
-//         id: 2,
-//         name: 'Priya Patel',
-//         image: 'assets/img/profile/placeholder.jpg',
-//         bio: 'Social entrepreneur focusing on sustainable development initiatives.'
-//     },
-//     // Add more fellows as needed
-// ];
-
-
-const FellowCard = ({ fellow }) => {
-    const [isHovered, setIsHovered] = useState(false);
-    const language = useSelector((state: RootState) => state.language.language);
-
-    return (
-        <div
-            className="relative rounded-lg overflow-hidden shadow-lg"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-        >
-            <div className="relative">
-                <img
-                    src={fellow.image}
-                    alt={fellow.name}
-                    className="w-full h-[400px] object-cover transition-transform duration-300 ease-in-out"
-                />
-
-                <div
-                    className={`absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center 
-                        transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
-                >
-                    <div className="text-center p-6 text-white">
-                        <h3 className="text-2xl font-bold mb-3">{fellow.name}</h3>
-                        <p className="text-base">{fellow.bio}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-};
+import { useSelector } from 'react-redux';
 
 const MeetOurFellows = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
+    const [selectedFellow, setSelectedFellow] = useState(null);
+    const [showPopup, setShowPopup] = useState(false);
+
     const language = useSelector((state: RootState) => state.language.language);
 
-
-    // Update scroll progress
     const updateScrollProgress = () => {
         const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrollPosition = window.scrollY;
@@ -78,34 +26,18 @@ const MeetOurFellows = () => {
         };
     }, []);
 
-    // TableRow interface for type safety
-    interface TableRow {
-        id: number;
-        deptAllocated: string;
-        fullName: string;
-        age: number;
-        postGraduation: string;
-        pgUniversity: string;
-        bachelorsDegree: string;
-        ugUniversity: string;
-        linkedinUrl: string;
-        imgUrl: string;
-
-    }
-
-    // Sample data
-    const initialData: TableRow[] = [
+    const initialData = [
         {
-            "id": 1,
-            "deptAllocated": "Health and Family Welfare ",
-            "fullName": "Mr. Aaron Rajesh Christian",
-            "age": 28,
-            "postGraduation": "MBA",
-            "pgUniversity": "IIT Madras",
-            "bachelorsDegree": "B.Com",
-            "ugUniversity": "Ahmedabad University",
-            "linkedinUrl": "https://www.linkedin.com/in/aaronch687/",
-            "imgUrl": "https://media.licdn.com/dms/image/v2/D4D03AQHbrvGjj1_SzQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1710917912446?e=1738800000&v=beta&t=PXurdVuHHjsMlSdoA1pOyR_5-nCd5d_gzTGytqCU0J0"
+            id: 1,
+            deptAllocated: "Health and Family Welfare",
+            fullName: "Mr. Aaron Rajesh Christian",
+            age: 28,
+            postGraduation: "MBA",
+            pgUniversity: "IIT Madras",
+            bachelorsDegree: "B.Com",
+            ugUniversity: "Ahmedabad University",
+            linkedinUrl: "https://www.linkedin.com/in/aaronch687/",
+            imgUrl: "https://media.licdn.com/dms/image/v2/D4D03AQHbrvGjj1_SzQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1710917912446?e=1738800000&v=beta&t=PXurdVuHHjsMlSdoA1pOyR_5-nCd5d_gzTGytqCU0J0",
         },
         {
             "id": 2,
@@ -301,24 +233,13 @@ const MeetOurFellows = () => {
         }
     ];
 
-    // Column definitions for ag-Grid
-    const columns = [
-        { headerName: 'ID', field: 'id', sortable: true, filter: true },
-        { headerName: 'Dept Allocated', field: 'deptAllocated', sortable: true, filter: true },
-        { headerName: 'Name', field: 'fullName', sortable: true, filter: true },
-        { headerName: 'Age', field: 'age', sortable: true, filter: true },
-        { headerName: 'Post Graduation', field: 'postGraduation', sortable: true, filter: true },
-        { headerName: 'PG University', field: 'pgUniversity', sortable: true, filter: true },
-        { headerName: 'Bachelors Degree', field: 'bachelorsDegree', sortable: true, filter: true },
-        { headerName: 'UG University', field: 'ugUniversity', sortable: true, filter: true },
-        { headerName: 'linkedinUrl', field: 'linkedinUrl', sortable: true, filter: true },
-        { headerName: 'imgUrl', field: 'imgUrl', sortable: true, filter: true },
-    ];
+    const handleCardClick = (fellow) => {
+        setSelectedFellow(fellow);
+        setShowPopup(true);
+    };
 
-    // Grid options for ag-Grid
-    const gridOptions = {
-        paginationPageSize: 10,
-        pagination: true,
+    const closePopup = () => {
+        setShowPopup(false);
     };
 
     return (
@@ -330,38 +251,51 @@ const MeetOurFellows = () => {
                 style={{ width: `${scrollProgress}%` }}
                 className="fixed top-0 left-0 h-1 bg-orange-500 transition-all duration-200 ease-in-out z-50"
             ></div>
-            <div className="relative mt-[140px] max-w-md:mt-12 font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
-                <img
-                    src="public/assets/img/cm-fellowship.jpg"
-                    alt="Banner Image"
-                    className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className="min-h-[350px] relative z-40 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-                    <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">{language === 'English' ? 'Meet Our Fellows': 'અમારા ફેલોને મળો'}</h2>
-                </div>
-            </div>
-            <main className="fix">
-
-
+            <main className="relative mt-[140px]">
                 <div className="flex justify-center items-center container my-3 bg-[url('assets/img/illusion.png')] w-[100vw]">
-                    {/* Grid Layout for Profile Cards */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8">
-                        {
-                            initialData.map((item, index) => (
-                                <>
-                                    <ProfileCard
-                                        name={item.fullName}
-                                        department={item.deptAllocated}
-                                        linkedinUrl={item.linkedinUrl}
-                                        imageUrl={item.imgUrl}
-                                    />
-                                </>
-                            ))
-                        }
+                        {initialData.map((fellow) => (
+                            <ProfileCard
+                                key={fellow.id}
+                                name={fellow.fullName}
+                                department={fellow.deptAllocated}
+                                linkedinUrl={fellow.linkedinUrl}
+                                imageUrl={fellow.imgUrl}
+                                onClick={() => handleCardClick(fellow)}
+                            />
+                        ))}
                     </div>
                 </div>
             </main>
             <Footer />
+
+            {showPopup && selectedFellow && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                    <div className="bg-white p-6 rounded-lg shadow-lg relative max-w-md w-full">
+                        <button
+                            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+                            onClick={closePopup}
+                        >
+                            &times;
+                        </button>
+                        <img
+                            src={selectedFellow.imgUrl}
+                            alt={selectedFellow.fullName}
+                            className="w-full h-40 object-cover rounded-lg mb-4"
+                        />
+                        <h3 className="text-xl font-bold mb-2">{selectedFellow.fullName}</h3>
+                        <p>{selectedFellow.deptAllocated}</p>
+                        <a
+                            href={selectedFellow.linkedinUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-500 underline mt-4 block"
+                        >
+                            LinkedIn Profile
+                        </a>
+                    </div>
+                </div>
+            )}
         </>
     );
 };

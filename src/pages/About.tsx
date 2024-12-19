@@ -64,15 +64,14 @@ const About = () => {
                                     language === 'English' ? (
                                         <>
                                             <div className="about-content bg-white shadow py-4 px-5">
-                                                <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Vision</h1>
+                                                {/* <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Vision</h1> */}
                                                 <p className="py-3 text-xl">
-                                                    To inspire and nurture talent, creating a platform where innovation meets impact. We aim to
-                                                    cultivate a culture that drives sustainable development and addresses critical challenges of our time.
+                                                •	Guided by the leadership of Honorable Prime Minister, Hon CM Shri Bhupendra Bhai Patel aims to enhance Good  Governance in the state. <br />
+                                                •	Sardar Patel Good Governance CM Fellowship Program has been implemented by the Hon. Chief Minister. The plan is to appoint fellows who can contribute towards good governance in the state of Gujarat by using a modern and effective approach in policy making and service delivery processes and serve as catalysts for change in government departments and create an environment of innovation, efficiency and excellence.
                                                 </p>
-                                                <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Mission</h1>
+                                                <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Purpose</h1>
                                                 <p className="py-3 text-xl">
-                                                    Through comprehensive programs, strategic collaborations, and a focus on excellence, we strive to
-                                                    shape leaders who contribute meaningfully to society, leaving a legacy of progress and innovation.
+                                                    To contribute to the enhancement of governance in the state of Gujarat by infusing innovative and effective approaches into policy-making and service delivery processes. To serve as a catalyst for transformation within government departments promoting a culture of innovation, efficiency, and excellence.
                                                 </p>
                                                 <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Objective</h1>
                                                 <p className="py-3 text-xl">

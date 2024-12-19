@@ -18,9 +18,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import Accasability from '../../components/Accasability';
 import { useGetMediaDataQuery } from '../../api/mediaApi'
 
+
 const HomePage = () => {
     const { data, error, isError, isLoading } = useGetMediaDataQuery()
-    console.log("brijesh data aa rahyo", data);
+    const fontsize = useSelector((state: RootState) => state.fontSize.size);
+    console.log("fontsize", fontsize)
     const language = useSelector((state: RootState) => state.language.language);
     const [scrollProgress, setScrollProgress] = useState(0);
     const [showImage, setShowImage] = useState(true); // State to manage the image visibility
@@ -129,12 +131,12 @@ const HomePage = () => {
                                 <>
                                     <div className="row gutter-24 d-flex justify-content-end align-items-center">
                                         <div className="text-center relative top-[45px]">
-                                            <h2 className="title mb-5">Sardar Patel Good Governance CM Fellowship Program</h2>
+                                            <h2 className="title mb-5" style={{fontSize:fontsize + 8}}>Sardar Patel Good Governance CM Fellowship Program</h2>
                                         </div>
                                         <div className="col-lg-5">
                                             <div className="about-content bg-white shadow py-3 px-4">
                                                 <div className="">
-                                                    <h1 className="about-title font-extrabold text-2xl font-serif">Sardar Patel Good Governance CM Fellowship Program</h1>
+                                                    <h1 className="about-title font-extrabold text-2xl font-serif" style={{fontSize:fontsize+ 4}}>Sardar Patel Good Governance CM Fellowship Program</h1>
                                                     <div className="about-sub" />
                                                 </div>
                                                 {/* <div className="py-2">
@@ -150,7 +152,7 @@ const HomePage = () => {
                                                     Goal of promoting a culture of innovation, efficiency, and excellence within Government departments
                                                     ronment for their fellowship work. He assured them that funding would not hamper the implementation of schemes or new initiatives and emphasized that innovative ideas and suggestions would receive mindful consideration from the government. The Chief Minister further noted that such ideas would benefit crores of citizens across the state
                                                 </p> */}
-                                                <p className='text-xl py-2'>
+                                                <p className='text-xl py-2' style={{fontSize:fontsize + 4}}>
                                                     In 2009, the then Chief Minister, Shri Narendra Modi, launched the CM’s Fellowship Program. The objective of this program was to provide young and talented individuals with an opportunity to contribute to social service and support India’s future development.
                                                 </p>
                                                 <p className='text-xl py-2'>

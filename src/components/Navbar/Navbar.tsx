@@ -20,8 +20,8 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const language = useSelector((state: RootState) => state.language.language);
 
-  const [isMenuVisible, setMenuVisible] = useState(false); // Controls mobile menu visibility
-  const [openDropdownIndex, setOpenDropdownIndex] = useState(null); // Controls dropdown visibility
+  const [isMenuVisible, setMenuVisible] = useState(false); 
+  const [openDropdownIndex, setOpenDropdownIndex] = useState(null); 
   const [islangtoggle, setislangtoggle] = useState(false);
   const [ishamburgarclicked, setishamburgarclicked] = useState(false);
 
@@ -36,7 +36,7 @@ const Navbar = () => {
   };
 
   const handleCustomFontSize = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = parseInt(e.target.value, 10);
+    console.log("brijesh value", value);
     if (!isNaN(value)) {
       dispatch(setFontSize(value));
     }

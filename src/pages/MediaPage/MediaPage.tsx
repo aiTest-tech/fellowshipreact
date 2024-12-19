@@ -299,7 +299,7 @@ const MediaPage = () => {
       ></div>
       <div className="relative mt-[140px] max-w-md:mt-[50px] font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
         <img
-          src="https://cmogujarat.gov.in/sites/default/files/2024-08/cm-fellowship.jpg"
+          src="assets/img/cm-fellowship.jpg"
           alt="Banner Image"
           className="absolute inset-0 w-full h-full object-cover"
         />

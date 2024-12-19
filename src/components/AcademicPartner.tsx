@@ -68,7 +68,7 @@ const AcademicPartner = () => {
                             {/* Header with image */}
                             <div className="relative font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
                                 <img
-                                    src="https://content.jdmagicbox.com/comp/ahmedabad/62/079pf018562/catalogue/indian-institute-of-management-ahmedabad-vastrapur-ahmedabad-management-institutes-sorrvixey6.jpg"
+                                    src="assets/img/iima.jpg"
                                     alt="Banner Image"
                                     className="absolute inset-0 w-full h-full object-cover"
                                 />

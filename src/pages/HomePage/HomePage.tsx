@@ -81,7 +81,7 @@ const HomePage = () => {
                     <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 flex justify-center items-center">
                         <div className="relative">
                             <img
-                                src="https://cmogujarat.gov.in/sites/default/files/2024-11/CM-Fellowship.jpg" // Replace with your image path
+                                src="assets/img/cmfellowshippopup.jpg" // Replace with your image path
                                 alt="Popup Image"
                                 className="sm:max-w-[80%] max-h-[80%] sm:rounded-lg"
                             />

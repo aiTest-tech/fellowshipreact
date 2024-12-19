@@ -21,7 +21,7 @@ const ContactCard = (props: ContactProps) => {
             <h1 className="font-semibold text-4xl text-center mb-1 text-blue-600">
               {props.para == "edpspipa@gmail.com" ? (
                 <>
-                  <img src="EmailImage" />
+                  <img src={EmailImage} />
                 </>
               ) : (
                 <>{props.h1}</>

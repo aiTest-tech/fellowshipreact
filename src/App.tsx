@@ -10,7 +10,7 @@ import About from "./pages/About";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Navbar from "./components/Navbar/Navbar";
 import { useEffect } from "react";
-// import Accasability from "./components/Accasability";
+import AccessibilityOptions from "./components/Accassebility/AccessibilityOptions";
 function App() {
   useEffect(() => {
     console.log("app protocol", window.location.protocol);

@@ -162,7 +162,7 @@ const HomePage = () => {
                                         <div className="col-lg-6 about-right">
                                             <div className="about__img-five">
                                                 <img
-                                                    src="assets/img/about-img2.png"
+                                                    src="assets/img/cm-gujarat-1.png"
                                                     alt="img"
                                                     data-aos="fade-left"
                                                     data-aos-delay={200}
@@ -196,7 +196,7 @@ const HomePage = () => {
                                         <div className="col-lg-6 about-right">
                                             <div className="about__img-five">
                                                 <img
-                                                    src="assets/img/about-img2.png"
+                                                    src="assets/img/cm-gujarat-1.png"
                                                     alt="img"
                                                     data-aos="fade-left"
                                                     data-aos-delay={200}

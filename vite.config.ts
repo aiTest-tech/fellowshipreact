@@ -6,6 +6,9 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   server:{
-    port:5178
-  }
+    port:5178,
+    hmr: {
+      overlay: false,
+    },
+  },
 })

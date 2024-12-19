@@ -71,9 +71,8 @@ const ContactUs = () => {
                         <div className="row g-5">
                             <ContactCard h1={language === "English" ? "Address" : "સરનામું"} para={language === 'English' ? "Administrative Reforms & Training Division, General Administration Department,Govt. of Gujarat. Block No. 7, 1st Floor, New Sachivalaya,Gandhinagar, Gujarat" : "વહીવટી સુધારણા અને તાલીમ વિભાગ, સામાન્ય વહીવટ વિભાગ, સરકાર. ગુજરાતના. બ્લોક નં. 7, પહેલો માળ, નવું સચિવાલય, ગાંધીનગર, ગુજરાત"} icon={<GiWorld color="white" className="w-[100px] h-[100px]" />} />
                             <ContactCard h1={language === 'English' ? "Email" : "ઈમેલ"} para="edpspipa@gmail.com" icon={<CgMail color="white" className="w-[100px] h-[100px]" />} />
-                            <ContactCard h1={language === 'English' ? "Phone" : "ફોન"} para={language === 'English' ? "079-23250333" : "079-23250333"} icon={<FaPhone color="white" className="w-[100px] h-[100px]" />} />
-
-
+                            <ContactCard h1={language === 'English' ? "Email" : "ફોન"} para="079-23250333" icon={<FaPhone color="white" className="w-[100px] h-[100px]" />} />
+                                
                             <div
                                 className="col-12 wow fadeInUp"
                                 data-wow-delay="0.2s"

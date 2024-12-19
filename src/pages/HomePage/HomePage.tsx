@@ -155,7 +155,7 @@ const HomePage = () => {
                                                 <p className='text-xl py-2' style={{fontSize:fontsize + 4}}>
                                                     In 2009, the then Chief Minister, Shri Narendra Modi, launched the CM’s Fellowship Program. The objective of this program was to provide young and talented individuals with an opportunity to contribute to social service and support India’s future development.
                                                 </p>
-                                                <p className='text-xl py-2'>
+                                                <p className='text-xl py-2' style={{fontSize:fontsize + 4}} >
                                                     Subsequently, the Sardar Patel Good Governance Fellowship Program was relaunched by Chief Minister Shri Bhupendra Patel on October 31, 2023, with revised objectives. The program now focuses on incorporating innovative and effective approaches into policy-making and service delivery processes, aiming to promote a culture of innovation, efficiency, and excellence within government departments.
                                                 </p>
                                             </div>

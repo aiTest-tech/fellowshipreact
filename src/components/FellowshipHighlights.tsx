@@ -32,6 +32,7 @@ const newsData: NewsCard[] = [
 ];
 
 const FellowshipHighlights: React.FC = () => {
+    const fontsize = useSelector((state: RootState) => state.fontSize.size);
     const language = useSelector((state: RootState) => state.language.language);
     return (
         // <section className="news section-pt-110 section-pb-110">
@@ -69,7 +70,7 @@ const FellowshipHighlights: React.FC = () => {
                                 {
                                     language === 'English' ? (
                                         <>
-                                            <h2 className="title">Why Choose the Sardar Patel Fellowship</h2>
+                                            <h2 className="title" style={{fontSize:fontsize + 8}}>Why Choose the Sardar Patel Fellowship</h2>
                                         </>
                                     ) :
                                         (

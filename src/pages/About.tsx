@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from 'react-redux';
 const About = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
     const language = useSelector((state: RootState) => state.language.language);
+      const darkMode = useSelector((state: RootState) => state.theme.darkMode)
+    
     const fontsize = useSelector((state: RootState) => state.fontSize.size);
 
     const updateScrollProgress = () => {
@@ -53,7 +55,7 @@ const About = () => {
                 </div>
             </div>
 
-            <main className="fix mt-[140px] max-w-md:mt-[50px])] bg-[url('assets/img/illusion.png')]">
+            <main className={`fix mt-[120px] max-w-md:mt-[50px])] ${darkMode ? "bg-black" : "bg-[url('assets/img/illusion.png')]"}`}>
                 <section className="about__area section-pb-110">
                     <div className="container">
                         <div className="row gutter-24 d-flex justify-content-center align-items-center">

@@ -15,6 +15,8 @@ import PhoneImage from './assets/phonenumber.png';
 const ContactUs = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const language = useSelector((state: RootState) => state.language.language);
+  const darkMode = useSelector((state: RootState) => state.theme.darkMode)
+  
   const updateScrollProgress = () => {
     // Get total scrollable height
     const scrollHeight =
@@ -63,12 +65,12 @@ const ContactUs = () => {
         </div>
       </div>
       <main className="fix">
-        <div className="container-fluid contact bg-light py-5 bg-[url('assets/img/illusion.png')]">
+        <div className={`container-fluid contact bg-light py-5 ${darkMode ? "bg-black" : "bg-[url('assets/img/illusion.png')]"}`}>
           {/* <div className="container-fluid contact bg-light py-5 bg-[url('assets/img/about-bg.jpg')]"> */}
           <div className="row align-items-center">
             <div className="col-lg-12 col-md-12">
               <div className="section__title port_double">
-                <h2 className="title">
+                <h2 className={`title ${darkMode && "text-white"}`}>
                   {language === "English" ? "Contact Us" : "અમારો સંપર્ક કરો"}
                 </h2>
               </div>

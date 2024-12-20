@@ -6,10 +6,11 @@ import { useSelector } from 'react-redux';
 const Media = () => {
     const language = useSelector((state: RootState) => state.language.language);
     const fontsize = useSelector((state: RootState) => state.fontSize.size);
-
+    const darkMode = useSelector((state: RootState) => state.theme.darkMode)
+    
     return (
         <>
-            <section className="ourportfolio section-pt-110 section-pb-110">
+            <section className={`section-pt-110 section-pb-110 ${darkMode ? "bg-black" : "ourportfolio"}`}>
                 <div className="container">
                     <div className="row align-items-center">
                         {
@@ -17,7 +18,7 @@ const Media = () => {
                                 <>
                                     <div className="col-lg-12 col-md-12">
                                         <div className="section__title port_double">
-                                            <h2 className="title" style={{fontSize:fontsize + 4}}>Our Media Gallery and TimeLine</h2>
+                                            <h2 className={`title ${darkMode && "text-white"}`} style={{fontSize:fontsize + 4}}>Our Media Gallery and TimeLine</h2>
                                         </div>
                                     </div>
                                 </>

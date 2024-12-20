@@ -25,8 +25,8 @@ import {
 
 const HomePage = () => {
     const { data, error, isError, isLoading } = useGetMediaDataQuery()
-    console.log("brijesh data aa rahyo", data);
     const language = useSelector((state: RootState) => state.language.language);
+    const darkMode = useSelector((state: RootState) => state.theme.darkMode)
     const [scrollProgress, setScrollProgress] = useState(0);
     const [showImage, setShowImage] = useState(true); // State to manage the image visibility
     
@@ -144,14 +144,14 @@ const HomePage = () => {
                     </Slider>
                 </section>
 
-                <section className="about__area-five section-pb-110 pb-0">
+                <section className={`section-pb-110 pb-0 ${darkMode ? "bg-black" : "about__area-five"}`}>
                     <div className="container">
                         {
                             language === 'English' ? (
                                 <>
                                     <div className="row gutter-24 d-flex justify-content-end align-items-center">
                                         <div className="text-center relative top-[45px]">
-                                            <h2 className="title mb-5" style={{fontSize:fontSize + 8}}>Sardar Patel Good Governance CM Fellowship Program</h2>
+                                            <h2 className={`title mb-5 ${darkMode && "text-white"}`} style={{fontSize:fontSize + 8}}>Sardar Patel Good Governance CM Fellowship Program</h2>
                                         </div>
                                         <div className="col-lg-5">
                                             <div className="about-content bg-white shadow py-3 px-4">
@@ -235,7 +235,7 @@ const HomePage = () => {
 
                 <FellowshipHighlights />
                 <Media />
-                <div className="mt-[140px]">
+                <div className="">
                     <Footer />
                 </div>
             </main>

@@ -111,12 +111,10 @@ import Modal from "react-modal";
 
 const VideoCard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [mediaType, setMediaType] = useState(""); // 'photo' or 'video'
   const [mediaSrc, setMediaSrc] = useState(""); // URL of the clicked media
 
   // Function to open the modal
-  const openModal = (type, src) => {
-    setMediaType(type);
+  const openModal = (src) => {
     setMediaSrc(src);
     setIsModalOpen(true);
   };
@@ -124,83 +122,98 @@ const VideoCard = () => {
   // Function to close the modal
   const closeModal = () => {
     setIsModalOpen(false);
-    setMediaSrc(""); // Clear the media source
+    setMediaSrc("");
   };
 
   return (
     <>
-      <section className="ourportfolio section-pt-110 section-pb-110">
-        <div className="container">
-          <div className="row justify-content-center gutter-24">
-            <div className="col-lg-12 col-md-6">
-              <div className="portfoliosub">
-                <a
-                  href="javascript:void(0)"
-                  onClick={() =>
-                    openModal(
-                      "video",
-                      "https://www.youtube.com/embed/T84-zpPbkhM?t=1s"
-                    )
-                  }
-                >
-                  <img
-                    src="https://i.ytimg.com/vi/T84-zpPbkhM/hqdefault.jpg"
-                    alt="img"
-                    className="bg-contain"
-                  />
-                </a>
-                <div className="pgallery">
-                  <img
-                    className="cursor-pointer"
-                    src="assets/img/videogallery.png"
-                    onClick={() =>
-                      openModal(
-                        "video",
-                        "https://www.youtube.com/embed/T84-zpPbkhM?t=1s"
-                      )
-                    }
-                  />
-                  {/* <h5>
-                                        <a href="javascript:void(0)" >
-                                            Video Gallery
-                                        </a>
-                                    </h5> */}
-                </div>
-              </div>
-            </div>
+      {/* YouTube Card */}
+      <div className="max-w-sm bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 my-6">
+        <div className="relative group">
+          <img
+            src="https://i.ytimg.com/vi/T84-zpPbkhM/hqdefault.jpg"
+            alt="Video Thumbnail"
+            className="w-full object-cover group-hover:opacity-75 transition"
+          />
+          <div
+            className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition"
+            onClick={() =>
+              openModal("https://www.youtube.com/embed/T84-zpPbkhM?t=1s")
+            }
+          >
+            <button className="bg-red-600 text-white p-3 rounded-full shadow-md hover:bg-red-700">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14.752 11.168l-3.197-1.684A1 1 0 0010 10.382v3.236a1 1 0 001.555.832l3.197-1.684a1 1 0 000-1.768z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19.428 15.341A8 8 0 115.513 8.659a8.003 8.003 0 0113.915 6.682z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
-      </section>
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-gray-800 mb-2">
+            Inspiring Video Title
+          </h3>
+          <p className="text-gray-600 text-sm">
+            Click to watch the inspiring video and learn more about this topic.
+          </p>
+        </div>
+      </div>
 
       {/* Modal for Viewing Media */}
       {isModalOpen && (
-        <div className="modal" onClick={closeModal} style={modalStyles.overlay}>
+        <div
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+          onClick={closeModal}
+        >
           <div
-            className="modal-content"
+            className="bg-white rounded-lg shadow-lg overflow-hidden max-w-3xl w-full relative"
             onClick={(e) => e.stopPropagation()}
-            style={modalStyles.content}
           >
-            <span
-              className="close"
+            <button
+              className="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
               onClick={closeModal}
-              style={modalStyles.close}
             >
-              ×
-            </span>
-            {mediaType === "photo" ? (
-              <img src={mediaSrc} alt="media" style={modalStyles.media} />
-            ) : (
-              <div style={modalStyles.videoWrapper}>
-                <iframe
-                  src={mediaSrc}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  title="video"
-                  style={modalStyles.iframe}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
                 />
-              </div>
-            )}
+              </svg>
+            </button>
+            <div className="aspect-w-16 aspect-h-9">
+              <iframe
+                src={mediaSrc}
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title="video"
+                className="w-full h-full"
+              ></iframe>
+            </div>
           </div>
         </div>
       )}

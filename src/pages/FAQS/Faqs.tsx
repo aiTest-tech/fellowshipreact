@@ -134,6 +134,8 @@ const Faq: React.FC = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
     const language = useSelector((state: RootState) => state.language.language);
     const fontsize = useSelector((state: RootState) => state.fontSize.size);
+    const darkMode = useSelector((state: RootState) => state.theme.darkMode)
+    
 
     const updateScrollProgress = () => {
         // Get total scrollable height
@@ -187,27 +189,27 @@ const Faq: React.FC = () => {
                     <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200">{language === 'English' ? "Frequently Asked Questions" : "વારંવાર પૂછાતા પ્રશ્નો"}</h2>
                 </div>
             </div>
-            <div className="w-full  bg-[url('assets/img/illusion.png')] bg-repeat-y">
+            <div className={`w-full bg-repeat-y ${darkMode ? "bg-black" : "bg-[url('assets/img/illusion.png')]"}`}>
                 <div className="container py-3 ">
                     <div className="row align-items-center">
                         <div className="col-lg-12 col-md-12">
                             <div className="section__title port_double">
-                                <h2 className="title" style={{fontSize:fontsize + 6}}>{language === 'English' ? "Frequently Asked Questions" : "વારંવાર પૂછાતા પ્રશ્નો"}</h2>
+                                <h2 className={`title ${darkMode && "text-white"}`} style={{fontSize:fontsize + 6}}>{language === 'English' ? "Frequently Asked Questions" : "વારંવાર પૂછાતા પ્રશ્નો"}</h2>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="max-w-3xl mx-auto py-8 px-4">
-                    <h2 className="text-3xl font-semibold mb-6" style={{fontSize:fontsize + 8}}>{language === 'English' ? "Sardar Patel Chief Minister Fellowship Program - Frequently Asked Questions" : "સરદાર પટેલ મુખ્યમંત્રી ફેલોશિપ પ્રોગ્રામ - વારંવાર પૂછાતા પ્રશ્નો"}</h2>
+                    <h2 className={`text-3xl font-semibold mb-6 ${darkMode && "text-white"}`} style={{fontSize:fontsize + 8}}>{language === 'English' ? "Sardar Patel Chief Minister Fellowship Program - Frequently Asked Questions" : "સરદાર પટેલ મુખ્યમંત્રી ફેલોશિપ પ્રોગ્રામ - વારંવાર પૂછાતા પ્રશ્નો"}</h2>
                     <div className="space-y-4">
                         {
                             language === 'English' ? (
                                 <>
                                     {faqDataEnglish.map((item, index) => (
-                                        <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden">
+                                        <div key={index} className={`bg-white shadow-md rounded-lg overflow-hidden`}>
                                             <button
                                                 onClick={() => toggleAnswer(index)}
-                                                className="w-full px-4 py-3 text-left bg-gray-100 hover:bg-gray-200 focus:outline-none">
+                                                className={`w-full px-4 py-3 text-left bg-gray-100 hover:bg-gray-200 focus:outline-none ${darkMode ? "bg-black" : ""}`}>
                                                 <span className="font-medium text-lg" style={{fontSize:fontsize + 8}}>{item.question}</span>
                                             </button>
                                             {openIndex === index && (

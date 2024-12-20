@@ -61,6 +61,7 @@ const FellowCard = ({ fellow }) => {
 const MeetOurFellows = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
     const language = useSelector((state: RootState) => state.language.language);
+    const darkMode = useSelector((state: RootState) => state.theme.darkMode)
 
 
     // Update scroll progress
@@ -343,7 +344,7 @@ const MeetOurFellows = () => {
             <main className="fix">
 
 
-                <div className="flex justify-center items-center container my-3 bg-[url('assets/img/illusion.png')] w-[100vw]">
+                <div className={`flex justify-center items-center  my-3 w-[100vw] ${darkMode ? "bg-black" : "bg-[url('assets/img/illusion.png')]"}`}>
                     {/* Grid Layout for Profile Cards */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8">
                         {

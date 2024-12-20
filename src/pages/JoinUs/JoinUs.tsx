@@ -12,7 +12,8 @@ const JoinUs = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
     const language = useSelector((state: RootState) => state.language.language);
     const fontsize = useSelector((state: RootState) => state.fontSize.size);
-
+    const darkMode = useSelector((state: RootState) => state.theme.darkMode)
+    
     const updateScrollProgress = () => {
         // Get total scrollable height
         const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -108,12 +109,12 @@ const JoinUs = () => {
                     <h2 className="sm:text-4xl text-2xl font-bold mb-6 text-gray-200" style={{fontSize:fontsize + 8}}>{language === 'English' ? "Join Us" : 'અમારી સાથે જોડાઓ'}</h2>
                 </div>
             </div>
-            <div className="min-h-screen bg-[url('assets/img/illusion.png')] p-8">
+            <div className={`min-h-screen  p-8 ${darkMode ? "bg-black" : "bg-[url('assets/img/illusion.png')]"}`}>
                 <div className="container py-3 ">
                     <div className="row align-items-center">
                         <div className="col-lg-12 col-md-12">
                             <div className="section__title port_double">
-                                <h2 className="title" style={{fontSize:fontsize + 8}}>{language === 'English' ? "Join Us" : 'અમારી સાથે જોડાઓ'}</h2>
+                                <h2 className={`title ${darkMode && "text-white"}`} style={{fontSize:fontsize + 8}}>{language === 'English' ? "Join Us" : 'અમારી સાથે જોડાઓ'}</h2>
                             </div>
                         </div>
                     </div>

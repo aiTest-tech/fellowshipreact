@@ -9,7 +9,8 @@ import { useDispatch, useSelector } from 'react-redux';
 const AcademicPartner = () => {
     const language = useSelector((state: RootState) => state.language.language);
     const fontsize = useSelector((state: RootState) => state.fontSize.size);
-
+    const darkMode = useSelector((state: RootState) => state.theme.darkMode)
+    
     const [scrollProgress, setScrollProgress] = useState(0);
     const updateScrollProgress = () => {
         // Get total scrollable height
@@ -55,12 +56,12 @@ const AcademicPartner = () => {
                 </div>
             </div> */}
             <main className="fix mt-[140px]">
-                <div className="min-h-screen bg-[url('assets/img/illusion.png')] py-10">
+                <div className={`min-h-screen  py-10 ${darkMode ? "bg-black" : "bg-[url('assets/img/illusion.png')]"}`}>
                     <div className="container py-3 ">
                         <div className="row align-items-center">
                             <div className="col-lg-12 col-md-12">
                                 <div className="section__title port_double">
-                                    <h2 className="title" style={{fontSize:fontsize + 8}}>{language === 'English' ? 'Academic Partner' : 'શૈક્ષણિક ભાગીદાર'}</h2>
+                                    <h2 className={`title ${darkMode && "text-white"}`} style={{fontSize:fontsize + 8}}>{language === 'English' ? 'Academic Partner' : 'શૈક્ષણિક ભાગીદાર'}</h2>
                                 </div>
                             </div>
                         </div>
@@ -81,9 +82,9 @@ const AcademicPartner = () => {
 
 
                             {/* Content Section */}
-                            <div className="py-8 px-6 sm:px-12">
+                            <div className={`py-8 px-6 sm:px-12 ${darkMode && "bg-black"}`}>
                                 <div className="space-y-6 text-gray-700">
-                                    <p className="text-xl" style={{fontSize:fontsize + 4}}>
+                                    <p className={`text-xl ${darkMode && "text-white"}`} style={{fontSize:fontsize + 4}}>
                                         {
                                             language === 'English' ? 'The Indian Institute of Management Ahmedabad (IIM-A) plays a significant role in a program involving the selection and training of fellows.' : 'ઇન્ડિયન ઇન્સ્ટિટ્યૂટ ઑફ મેનેજમેન્ટ અમદાવાદ (IIM-A) ફેલોની પસંદગી અને તાલીમ સાથે સંકળાયેલા કાર્યક્રમમાં મહત્ત્વપૂર્ણ ભૂમિકા ભજવે છે.'
                                         }

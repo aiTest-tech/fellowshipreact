@@ -12,13 +12,18 @@ import {
   decreaseFontSize,
   setFontSize,
 } from "../../store/slice/font_increase_decrease";
+import { toggleTheme, setTheme } from "../../store/slice/themeSlice"
 import { FaPlus } from "react-icons/fa";
 import { FaMinusCircle } from "react-icons/fa";
+import { CgDarkMode } from "react-icons/cg";
+import { MdOutlineLightMode } from "react-icons/md";
+
 
 const Navbar = () => {
   const menuRef = useRef(null);
   const dispatch = useDispatch();
   const language = useSelector((state: RootState) => state.language.language);
+  const darkMode = useSelector((state: RootState) => state.theme.darkMode)
 
   const [isMenuVisible, setMenuVisible] = useState(false); // Controls mobile menu visibility
   const [openDropdownIndex, setOpenDropdownIndex] = useState(null); // Controls dropdown visibility
@@ -49,6 +54,10 @@ const Navbar = () => {
   const toggleDropdown = (index) => {
     setOpenDropdownIndex(openDropdownIndex === index ? null : index);
   };
+
+  const handleThemeToggle = () => {
+    dispatch(toggleTheme())
+  }
 
   useEffect(() => {
     if (isMenuVisible) {
@@ -83,7 +92,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <div className="tg-header__top tg-header__top-two">
+      <div className={`tg-header__top tg-header__top-two ${darkMode && "bg-black"}`}>
         <div className="container-fluid p-0">
           <div className="row align-items-center">
             <div className="col-xl-6">
@@ -120,6 +129,17 @@ const Navbar = () => {
                 <li>
                   <FaMinusCircle onClick={handleDecrease} className="cursor-pointer" />
                 </li>
+                {
+                  darkMode ? (
+                    <li>
+                      <MdOutlineLightMode size={20} onClick={handleThemeToggle} className="cursor-pointer" />
+                    </li>
+                  ) : (
+                    <li>
+                      <CgDarkMode size={20} onClick={handleThemeToggle} className="cursor-pointer" />
+                    </li>
+                  )
+                }
               </ul>
             </div>
             {/* <div className="col-xl-2 relative">
@@ -169,7 +189,7 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
-                            <span style={{fontSize:fontSize}}>About Us</span>
+                            <span style={{ fontSize: fontSize }}>About Us</span>
                           </NavLink>
                         </li>
                         <li>
@@ -179,7 +199,7 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
-                            <span style={{fontSize:fontSize}}>Meet Our Fellows</span>
+                            <span style={{ fontSize: fontSize }}>Meet Our Fellows</span>
                           </NavLink>
                         </li>
                         <li>
@@ -189,7 +209,7 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
-                            <span style={{fontSize:fontSize}}>Academic Partner</span>
+                            <span style={{ fontSize: fontSize }}>Academic Partner</span>
                           </NavLink>
                         </li>
                         <li>
@@ -199,7 +219,7 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
-                            <span style={{fontSize:fontSize}}>Media</span>
+                            <span style={{ fontSize: fontSize }}>Media</span>
                           </NavLink>
                         </li>
                         <li>
@@ -209,7 +229,7 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
-                            <span style={{fontSize:fontSize}}>Join Us</span>
+                            <span style={{ fontSize: fontSize }}>Join Us</span>
                           </NavLink>
                         </li>
                         <li>
@@ -219,7 +239,7 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
-                            <span style={{fontSize:fontSize}}>FAQ's</span>
+                            <span style={{ fontSize: fontSize }}>FAQ's</span>
                           </NavLink>
                         </li>
                         <li>
@@ -229,7 +249,7 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
-                            <span style={{fontSize:fontSize}}>Contact</span>
+                            <span style={{ fontSize: fontSize }}>Contact</span>
                           </NavLink>
                         </li>
                       </ul>

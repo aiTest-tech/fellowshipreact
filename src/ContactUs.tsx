@@ -8,13 +8,17 @@ import { FaPhone } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "@reduxjs/toolkit/query";
-import EmailImage from './assets/edpspipa@gmail.com.png';
-import PhoneImage from './assets/phonenumber.png';
-
+import EmailImage from "./assets/edpspipa@gmail.com.png";
+import PhoneImage from "./assets/phonenumber.png";
 
 const ContactUs = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const language = useSelector((state: RootState) => state.language.language);
+<<<<<<< HEAD
+=======
+  const darkMode = useSelector((state: RootState) => state.theme.darkMode);
+
+>>>>>>> be19eaa (dark mode light mode change final)
   const updateScrollProgress = () => {
     // Get total scrollable height
     const scrollHeight =
@@ -52,7 +56,7 @@ const ContactUs = () => {
       ></div>
       <div className="relative mt-[140px] font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
         <img
-          src="assets/img/cm-fellowship.jpg"
+          src="assets/img/illusion.png"
           alt="Banner Image"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -63,7 +67,15 @@ const ContactUs = () => {
         </div>
       </div>
       <main className="fix">
+<<<<<<< HEAD
         <div className="container-fluid contact bg-light py-5 bg-[url('assets/img/illusion.png')]">
+=======
+        <div
+          className={`container-fluid contact bg-light py-5 ${
+            darkMode ? "bg-black" : "bg-[url('assets/img/illusion.png')]"
+          }`}
+        >
+>>>>>>> be19eaa (dark mode light mode change final)
           {/* <div className="container-fluid contact bg-light py-5 bg-[url('assets/img/about-bg.jpg')]"> */}
           <div className="row align-items-center">
             <div className="col-lg-12 col-md-12">
@@ -100,12 +112,12 @@ const ContactUs = () => {
                 <div className="rounded-lg overflow-hidden shadow-lg bg-gray-50 h-[220px]">
                   <div className="absolute -mt-16 w-full flex justify-center">
                     <div className="w-[110px] h-[110px]  border-4 border-gray-200 rounded-md bg-[#0A4C7B]">
-                    <CgMail color="white" className="w-[100px] h-[100px]" />
+                      <CgMail color="white" className="w-[100px] h-[100px]" />
                     </div>
                   </div>
                   <div className="px-6 mt-20">
                     <h1 className="font-semibold text-4xl text-center mb-1 text-blue-600">
-                    Email
+                      Email
                     </h1>
                     <img src={EmailImage} className="ml-10" />
                   </div>
@@ -116,12 +128,12 @@ const ContactUs = () => {
                 <div className="rounded-lg overflow-hidden shadow-lg bg-gray-50 h-[220px]">
                   <div className="absolute -mt-16 w-full flex justify-center">
                     <div className="w-[110px] h-[110px]  border-4 border-gray-200 rounded-md bg-[#0A4C7B]">
-                    <FaPhone color="white" className="w-[100px] h-[100px]" />
+                      <FaPhone color="white" className="w-[100px] h-[100px]" />
                     </div>
                   </div>
                   <div className="px-6 mt-20">
                     <h1 className="font-semibold text-4xl text-center mb-1 text-blue-600">
-                    Phone
+                      Phone
                     </h1>
                     <img src={PhoneImage} className="ml-10" />
                   </div>

@@ -42,7 +42,7 @@ const About = () => {
             ></div>
             <div className="relative mt-[140px] max-w-md:mt-12 font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
                 <img
-                    src="assets/img/cm-fellowship.jpg"
+                    src="assets/img/illusion.png"
                     alt="Banner Image"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -56,7 +56,11 @@ const About = () => {
                     <div className="container">
                         <div className="row gutter-24 d-flex justify-content-center align-items-center">
                             <div className="text-center mb-5">
+<<<<<<< HEAD
                                 <h2 className="title">About Us</h2>
+=======
+                                <h2 className={`title ${darkMode && "text-white"}`} style={{fontSize:fontsize + 8}}>About Us</h2>
+>>>>>>> be19eaa (dark mode light mode change final)
                             </div>
 
                             <div className="col-lg-6">
@@ -64,6 +68,7 @@ const About = () => {
                                     language === 'English' ? (
                                         <>
                                             <div className="about-content bg-white shadow py-4 px-5">
+<<<<<<< HEAD
                                                 <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Vision</h1>
                                                 <p className="py-3 text-xl">
                                                     To inspire and nurture talent, creating a platform where innovation meets impact. We aim to
@@ -76,6 +81,19 @@ const About = () => {
                                                 </p>
                                                 <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Objective</h1>
                                                 <p className="py-3 text-xl">
+=======
+                                                {/* <h1 className="about-subtitle text-2xl font-semibold mt-4" style={{fontSize:fontsize + 8}}>Our Vision</h1> */}
+                                                <p className="py-3 text-xl" style={{fontSize:fontsize + 4}}>
+                                                •	Guided by the leadership of Honorable Prime Minister, Hon CM Shri Bhupendra Bhai Patel aims to enhance Good  Governance in the state. <br />
+                                                •	Sardar Patel Good Governance CM Fellowship Program has been implemented by the Hon. Chief Minister. The plan is to appoint fellows who can contribute towards good governance in the state of Gujarat by using a modern and effective approach in policy making and service delivery processes and serve as catalysts for change in government departments and create an environment of innovation, efficiency and excellence.
+                                                </p>
+                                                <h1 className="about-subtitle text-2xl font-semibold mt-4" style={{fontSize:fontsize + 8}}>Our Purpose</h1>
+                                                <p className="py-3 text-xl" style={{fontSize:fontsize + 8}}>
+                                                    To contribute to the enhancement of governance in the state of Gujarat by infusing innovative and effective approaches into policy-making and service delivery processes. To serve as a catalyst for transformation within government departments promoting a culture of innovation, efficiency, and excellence.
+                                                </p>
+                                                <h1 className="about-subtitle text-2xl font-semibold mt-4" style={{fontSize:fontsize + 8}}>Our Objective</h1>
+                                                <p className="py-3 text-xl" style={{fontSize:fontsize + 8}}>
+>>>>>>> be19eaa (dark mode light mode change final)
                                                     To foster a dynamic ecosystem that encourages lifelong learning, empowers individuals with practical skills,
                                                     and promotes ethical leadership, enabling them to drive transformative change in their communities and beyond.
                                                 </p>

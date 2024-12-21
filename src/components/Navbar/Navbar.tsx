@@ -12,13 +12,25 @@ import {
   decreaseFontSize,
   setFontSize,
 } from "../../store/slice/font_increase_decrease";
+<<<<<<< HEAD
 import { FaPlus } from "react-icons/fa";
 import { FaMinusCircle } from "react-icons/fa";
+=======
+import { toggleTheme, setTheme } from "../../store/slice/themeSlice";
+import { FaPlus } from "react-icons/fa";
+import { FaMinusCircle } from "react-icons/fa";
+import { CgDarkMode } from "react-icons/cg";
+import { MdOutlineLightMode } from "react-icons/md";
+>>>>>>> be19eaa (dark mode light mode change final)
 
 const Navbar = () => {
   const menuRef = useRef(null);
   const dispatch = useDispatch();
   const language = useSelector((state: RootState) => state.language.language);
+<<<<<<< HEAD
+=======
+  const darkMode = useSelector((state: RootState) => state.theme.darkMode);
+>>>>>>> be19eaa (dark mode light mode change final)
 
   const [isMenuVisible, setMenuVisible] = useState(false); 
   const [openDropdownIndex, setOpenDropdownIndex] = useState(null); 
@@ -50,6 +62,13 @@ const Navbar = () => {
     setOpenDropdownIndex(openDropdownIndex === index ? null : index);
   };
 
+<<<<<<< HEAD
+=======
+  const handleThemeToggle = () => {
+    dispatch(toggleTheme());
+  };
+
+>>>>>>> be19eaa (dark mode light mode change final)
   useEffect(() => {
     if (isMenuVisible) {
       // Animate the menu when it's visible
@@ -83,7 +102,15 @@ const Navbar = () => {
 
   return (
     <header>
+<<<<<<< HEAD
       <div className="tg-header__top tg-header__top-two">
+=======
+      <div
+        className={`tg-header__top tg-header__top-two ${
+          darkMode && "bg-black"
+        }`}
+      >
+>>>>>>> be19eaa (dark mode light mode change final)
         <div className="container-fluid p-0">
           <div className="row align-items-center">
             <div className="col-xl-6">
@@ -118,8 +145,31 @@ const Navbar = () => {
                   <FaPlus onClick={handleIncrease} className="cursor-pointer" />
                 </li>
                 <li>
-                  <FaMinusCircle onClick={handleDecrease} className="cursor-pointer" />
+                  <FaMinusCircle
+                    onClick={handleDecrease}
+                    className="cursor-pointer"
+                  />
                 </li>
+<<<<<<< HEAD
+=======
+                {darkMode ? (
+                  <li>
+                    <MdOutlineLightMode
+                      size={20}
+                      onClick={handleThemeToggle}
+                      className="cursor-pointer"
+                    />
+                  </li>
+                ) : (
+                  <li>
+                    <CgDarkMode
+                      size={20}
+                      onClick={handleThemeToggle}
+                      className="cursor-pointer"
+                    />
+                  </li>
+                )}
+>>>>>>> be19eaa (dark mode light mode change final)
               </ul>
             </div>
             {/* <div className="col-xl-2 relative">
@@ -135,8 +185,11 @@ const Navbar = () => {
       {/* Sticky Header */}
       <div
         id="sticky-header"
-        className="tg-header__area tg-header__area-two"
-        style={{ backgroundColor: "rgba(255, 255, 255, 1.0)" }}
+        // className="tg-header__area tg-header__area-two"
+        // style={{ backgroundColor: "rgba(255, 255, 255, 1.0)" }}
+        className={`tg-header__area tg-header__area-two ${
+          darkMode ? "bg-black text-white" : "bg-white text-black"
+        }`}
       >
         <div className="container-fluid px-lg-5">
           <div className="row gx-0">
@@ -159,7 +212,7 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
-                            <i className="fa fa-home" />
+                            <i className={`fa fa-home ${darkMode && "text-white"}`} />
                           </NavLink>
                         </li>
                         <li>
@@ -169,7 +222,11 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
+<<<<<<< HEAD
                             <span style={{fontSize:fontSize}}>About Us</span>
+=======
+                            <span style={{ fontSize: fontSize }} className={`${darkMode && "text-white"}`}>About Us</span>
+>>>>>>> be19eaa (dark mode light mode change final)
                           </NavLink>
                         </li>
                         <li>
@@ -179,7 +236,13 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
+<<<<<<< HEAD
                             <span style={{fontSize:fontSize}}>Meet Our Fellows</span>
+=======
+                            <span style={{ fontSize: fontSize }} className={`${darkMode && "text-white"}`}>
+                              Meet Our Fellows
+                            </span>
+>>>>>>> be19eaa (dark mode light mode change final)
                           </NavLink>
                         </li>
                         <li>
@@ -189,7 +252,13 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
+<<<<<<< HEAD
                             <span style={{fontSize:fontSize}}>Academic Partner</span>
+=======
+                            <span style={{ fontSize: fontSize }} className={`${darkMode && "text-white"}`}>
+                              Academic Partner
+                            </span>
+>>>>>>> be19eaa (dark mode light mode change final)
                           </NavLink>
                         </li>
                         <li>
@@ -199,7 +268,11 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
+<<<<<<< HEAD
                             <span style={{fontSize:fontSize}}>Media</span>
+=======
+                            <span style={{ fontSize: fontSize }} className={`${darkMode && "text-white"}`}>Media</span>
+>>>>>>> be19eaa (dark mode light mode change final)
                           </NavLink>
                         </li>
                         <li>
@@ -209,7 +282,11 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
+<<<<<<< HEAD
                             <span style={{fontSize:fontSize}}>Join Us</span>
+=======
+                            <span style={{ fontSize: fontSize }} className={`${darkMode && "text-white"}`}>Join Us</span>
+>>>>>>> be19eaa (dark mode light mode change final)
                           </NavLink>
                         </li>
                         <li>
@@ -219,7 +296,11 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
+<<<<<<< HEAD
                             <span style={{fontSize:fontSize}}>FAQ's</span>
+=======
+                            <span style={{ fontSize: fontSize }} className={`${darkMode && "text-white"}`}>FAQ's</span>
+>>>>>>> be19eaa (dark mode light mode change final)
                           </NavLink>
                         </li>
                         <li>
@@ -229,7 +310,11 @@ const Navbar = () => {
                               isActive ? activeTabStyle : inactiveTabStyle
                             }
                           >
+<<<<<<< HEAD
                             <span style={{fontSize:fontSize}}>Contact</span>
+=======
+                            <span style={{ fontSize: fontSize }} className={`${darkMode && "text-white"}`}>Contact</span>
+>>>>>>> be19eaa (dark mode light mode change final)
                           </NavLink>
                         </li>
                       </ul>

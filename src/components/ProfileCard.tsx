@@ -17,10 +17,16 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
     imageUrl
 }) => {
     return (
+<<<<<<< HEAD
         <div className="flex justify-center items-center">
             <div className="relative w-[250px] h-[255px] mb-8">
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[250px] h-[255px] rounded-lg overflow-hidden shadow-lg cursor-pointer transition-transform duration-500 group">
                     {/* Card Image */}
+=======
+        <div className="flex justify-center items-center" onClick={onClick}>
+            <div className="relative w-[250px] h-[255px] mb-8 cursor-pointer">
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[250px] h-[255px] rounded-lg overflow-hidden shadow-xl transition-transform duration-500 group">
+>>>>>>> be19eaa (dark mode light mode change final)
                     <div className="relative w-full h-full">
                         <img
                             src={imageUrl}

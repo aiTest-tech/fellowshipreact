@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const About = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
+    const fontsize = useSelector((state: RootState) => state.fontSize.size);
     const language = useSelector((state: RootState) => state.language.language);
     const updateScrollProgress = () => {
         // Get total scrollable height
@@ -56,25 +57,25 @@ const About = () => {
                     <div className="container">
                         <div className="row gutter-24 d-flex justify-content-center align-items-center">
                             <div className="text-center mb-5">
-                                <h2 className="title">About Us</h2>
+                                <h2 className="title" style={{fontSize:fontsize + 8}}>About Us</h2>
                             </div>
 
                             <div className="col-lg-6">
                                 {
                                     language === 'English' ? (
-                                        <>
+                                            <>
                                             <div className="about-content bg-white shadow py-4 px-5">
                                                 {/* <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Vision</h1> */}
-                                                <p className="py-3 text-xl">
+                                                <p className="py-3 text-xl" style={{fontSize:fontsize + 8}}>
                                                 •	Guided by the leadership of Honorable Prime Minister, Hon CM Shri Bhupendra Bhai Patel aims to enhance Good  Governance in the state. <br />
                                                 •	Sardar Patel Good Governance CM Fellowship Program has been implemented by the Hon. Chief Minister. The plan is to appoint fellows who can contribute towards good governance in the state of Gujarat by using a modern and effective approach in policy making and service delivery processes and serve as catalysts for change in government departments and create an environment of innovation, efficiency and excellence.
                                                 </p>
-                                                <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Purpose</h1>
-                                                <p className="py-3 text-xl">
+                                                <h1 className="about-subtitle text-2xl font-semibold mt-4" style={{fontSize:fontsize + 8}}>Our Purpose</h1>
+                                                <p className="py-3 text-xl" style={{fontSize:fontsize + 8}}>
                                                     To contribute to the enhancement of governance in the state of Gujarat by infusing innovative and effective approaches into policy-making and service delivery processes. To serve as a catalyst for transformation within government departments promoting a culture of innovation, efficiency, and excellence.
                                                 </p>
-                                                <h1 className="about-subtitle text-2xl font-semibold mt-4">Our Objective</h1>
-                                                <p className="py-3 text-xl">
+                                                <h1 className="about-subtitle text-2xl font-semibold mt-4" style={{fontSize:fontsize + 8}}>Our Objective</h1>
+                                                <p className="py-3 text-xl" style={{fontSize:fontsize + 8}}>
                                                     To foster a dynamic ecosystem that encourages lifelong learning, empowers individuals with practical skills,
                                                     and promotes ethical leadership, enabling them to drive transformative change in their communities and beyond.
                                                 </p>

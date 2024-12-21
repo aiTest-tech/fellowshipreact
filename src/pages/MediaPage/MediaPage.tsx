@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import "../../index.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useGetMediaDataQuery } from "../../api/mediaApi";
+import { FaYoutube } from "react-icons/fa6";
 
 import Modal from "react-modal";
 
@@ -127,50 +128,91 @@ const VideoCard = () => {
     setMediaSrc(""); // Clear the media source
   };
 
+  const modalStyles = {
+    overlay: {
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: 'rgba(0, 0, 0, 0.8)',
+      zIndex: 1000,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    content: {
+      position: 'relative',
+      width: '80%',
+      maxWidth: '800px',
+      background: '#fff',
+      borderRadius: '8px',
+      overflow: 'hidden',
+    },
+    close: {
+      position: 'absolute',
+      top: '10px',
+      right: '10px',
+      fontSize: '20px',
+      cursor: 'pointer',
+      color: '#000',
+    },
+    iframe: {
+      width: '100%',
+      height: '450px',
+      border: 'none',
+    },
+  };
+
   return (
     <>
-      <section className="ourportfolio section-pt-110 section-pb-110">
-        <div className="container">
-          <div className="row justify-content-center gutter-24">
-            <div className="col-lg-12 col-md-6">
-              <div className="portfoliosub">
-                <a
-                  href="javascript:void(0)"
-                  onClick={() =>
-                    openModal(
-                      "video",
-                      "https://www.youtube.com/embed/T84-zpPbkhM?t=1s"
-                    )
-                  }
-                >
-                  <img
-                    src="https://i.ytimg.com/vi/T84-zpPbkhM/hqdefault.jpg"
-                    alt="img"
-                    className="bg-contain"
-                  />
-                </a>
-                <div className="pgallery">
-                  <img
-                    className="cursor-pointer"
-                    src="assets/img/videogallery.png"
-                    onClick={() =>
-                      openModal(
-                        "video",
-                        "https://www.youtube.com/embed/T84-zpPbkhM?t=1s"
-                      )
-                    }
-                  />
-                  {/* <h5>
-                                        <a href="javascript:void(0)" >
-                                            Video Gallery
-                                        </a>
-                                    </h5> */}
-                </div>
-              </div>
-            </div>
+      <div className="max-w-full sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl rounded overflow-hidden shadow-lg mx-auto">
+        {/* Thumbnail Section */}
+        <div className="relative">
+          <img
+            className="w-full object-cover"
+            src="https://i.ytimg.com/vi/T84-zpPbkhM/hqdefault.jpg"
+            alt="Video Thumbnail"
+          />
+          <div>
+            <FaYoutube
+              className="absolute top-[50%] left-[50%] text-red-500"
+              size={50}
+              onClick={() =>
+                openModal(
+                  "video",
+                  "https://www.youtube.com/embed/T84-zpPbkhM?t=1s"
+                )
+              }
+            />
           </div>
         </div>
-      </section>
+        {/* Content Section */}
+        <div className="px-4 py-3">
+          {/* Title */}
+          <h2 className="text-lg font-semibold text-gray-800 hover:text-blue-600 truncate">
+            How to Build a YouTube Clone with Tailwind CSS
+          </h2>
+          {/* Channel and Date Info */}
+          <div className="flex items-center justify-between mt-2 text-sm text-gray-500">
+            <div className="flex items-center space-x-2">
+              <img
+                className="w-8 h-8 rounded-full"
+                src="https://via.placeholder.com/50"
+                alt="Channel Avatar"
+              />
+              <span className="font-semibold text-gray-700">
+                Coding Academy
+              </span>
+            </div>
+            <span>1 day ago</span>
+          </div>
+          {/* Views Info */}
+          <div className="mt-1 text-sm text-gray-500">
+            <span>5.2K views</span>
+          </div>
+        </div>
+      </div>
 
       {/* Modal for Viewing Media */}
       {isModalOpen && (
@@ -187,20 +229,16 @@ const VideoCard = () => {
             >
               ×
             </span>
-            {mediaType === "photo" ? (
-              <img src={mediaSrc} alt="media" style={modalStyles.media} />
-            ) : (
-              <div style={modalStyles.videoWrapper}>
-                <iframe
-                  src={mediaSrc}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  title="video"
-                  style={modalStyles.iframe}
-                />
-              </div>
-            )}
+            <div style={modalStyles.videoWrapper}>
+              <iframe
+                src={mediaSrc}
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title="YouTube Video"
+                style={modalStyles.iframe}
+              />
+            </div>
           </div>
         </div>
       )}
